@@ -1,0 +1,29 @@
+/* 3. Escreva um algoritmo que leia três números e armazene o maior número na variável de nome 
+"maior" (suponha números diferentes). */
+
+algoritmo numeroMaior
+var
+	inteiro numero1, numero2, numero3, maior;
+		
+inicio
+	escreva("Digite um numero:");
+	leia(numero1);
+	escreva("Digite outro numero:");
+	leia(numero2);
+	escreva("Digite mais um numero:");
+	leia(numero3);
+	se( (numero1>numero2) E (numero1>numero3) )entao
+		inicio
+			maior=numero1;
+		fim
+	senao se( (numero2>numero1) E (numero2>numero3) )entao
+		inicio
+			maior=numero2;
+		fim
+	senao se( (numero3>numero1) E (numero3>numero2) )entao
+		inicio
+			maior=numero3;
+		fim
+	escreva("O numero maior é:",maior);
+fim
+

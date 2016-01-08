@@ -1,0 +1,58 @@
+3 bits = 0 ... 7
+
+2 na 7 potencia: 128 numeros
+
+0x2 = 0
+2x2 = 4
+4x2 = 8
+8x2 = 16
+16x2 = 32
+32x2 = 64
+64 x 2 = 128
+
+decimal para binario divide por 2
+binario para decimal conversao pela devida potencia de cada um
+
+
+binario: 1 0 1 0
+0x2po0=0
+1x2po1=2
+2x2po2=0
+3x2po3=8   
+decimal 10
+
+
+regras de adicao
+0+0:0
+0+1:1
+1+0:1
+1+1:10 (2)
+__________________
+regras de subtração
+0-0:0
+1-0:1
+0-1:1(pede emprestado)
+
+  1 1 0 1
+- 0 0 1 0
+-----------
+  1 0 1 1
+  
+  
+  
+	  1 0 0 1
+	- 0 0 1 1
+	  --------
+	  0 1 1 0
+__________________
+
+
+
+
+
+
+	  
+ 
+
+ 
+ 

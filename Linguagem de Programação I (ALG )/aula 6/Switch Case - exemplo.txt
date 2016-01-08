@@ -1,0 +1,43 @@
+Switch ($Variavel)
+Case 1: <comando1>
+Case 2: <comando2>
+default: <comando3>
+
+
+Escolha SELETOR
+Caso 1: <comando1>
+Caso 2: <comando2>
+caso contrario: <comando3>
+
+
+====================================================================
+Switch, Case e Default
+Uma estrutura muito utilizada em programação é o switch. A estrutura switch verifica uma variável e age de acordo com seus cases. Os cases são as possibilidades de resultados que são obtidos por switch.
+
+Basicamente, o switch serve para controlar várias ações diferentes de acordo com o case definido dentro dele.
+
+A estrutura do Switch é:
+
+SWITCH (variável) {
+CASE valor :
+Código a ser executado caso o valor de case seja o mesmo da variável de switch
+}
+
+Então, detalhadamente, switch recebe uma variável e abre um bloco de dados ( { } ), dentro desse bloco de dados há os cases. 
+====================================================================
+
+
+C#
+int caseSwitch = 1;
+switch (caseSwitch)
+{
+    case 1:
+        Console.WriteLine("Case 1");
+        break;
+    case 2:
+        Console.WriteLine("Case 2");
+        break;
+    default:
+        Console.WriteLine("Default case");
+        break;
+}

@@ -1,0 +1,21 @@
+AULA DIA 02.04
+
+-Acrescentar a coluna [SUBSTITUICAO] NUMERIC(10,2), a coluna [G_SUBSITUIDO] INT e a coluna [DATA_PROVA_SUBSTUTIVA] DATE na tabela [aluno]
+-Acrescentar a coluna [SITUACAO] CHAR(1) na tabela [aluno]
+
+Manipular as informações dos alunos em processo de término de semestre. Para isso:
+1. Para os alunos com nota de G1 inferior a nota 6, deverá ser atualizado o campo, desses alunos, [G_SUBSITUIDO] para '1' e no campo [SUBSTITUICAO] informado '8.5'.
+2. Para os alunos com nota de G2 inferior a nota 6, deverá ser atualizado o campo, desses alunos, [G_SUBSITUIDO] para '2' e no campo [SUBSTITUICAO] informado '5'.
+3. Atualizar a coluna [SITUACAO] de cada conforme sua situação perante o cálculo de avaliação da Ulbra. Ou seja, os alunos com (G1 + (G2*2)) / 3 >= 6 deverão ter o campo com a informação 'A'. Os demais, com a informação 'R'.
+
+A Ulbra precisa das seguintes informações para avaliar o aproveitamento da cadeira/professor:
+4. Informar o total de alunos aprovados.(4)
+5. Informar o total de alunos reprovados.(2)
+6. Informar a média das notas de G1.(7.16)
+7. Informar a média das notas de G2.(7.33)
+
+Acrescentar a coluna [MEDIA_FINAL] NUMERIC(10,2) e salvar a nota de cada aluno, conforme média (G1 +  G2 * 2) / 3
+
+8. Informar a menor nota de MEDIA_FINAL dos reprovados.
+9. Informar a maior nota de MEDIA_FINAL dos aprovados.
+10. Informar a soma de MEDIA_FINAL dos aprovados.

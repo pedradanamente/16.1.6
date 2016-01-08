@@ -1,0 +1,698 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>C# - DataGridView, BindingSource e BindingNavigator</title>
+<style>
+<!--
+#main {
+padding:0;
+width:585px;
+}
+.main .widget {
+margin-top: 4px;
+width: 568px;
+padding: 0 13px;
+}
+.main .Blog {
+margin: 0;
+padding: 0;
+width: 584px;
+}
+.post {
+margin:.3em 0 25px;
+padding:0 13px;
+}
+.post-body {
+padding-top:10px;
+padding-right:14px;
+padding-bottom:1px;
+padding-left:29px;
+}
+.post-body {
+margin:0 0 .75em;
+}
+div{color:#000}div{font-family:arial,sans-serif}.g{margin:1em 0}.r{display:inline;font-weight:normal;margin:0}.r{font-size:100%}a{color:#06c}a{font-family:arial,sans-serif}-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p><font color="#0000A0" size="5" face="Trebuchet MS"><strong>
+<img border="0" src="../../maco10.gif" width="233" height="32">C#
+- DataGridView , BindingSource e BindingNavigator</strong></font></p>
+
+<hr size="0">
+
+<p><font size="3" face="Trebuchet MS">Neste artigo veremos a
+utilização dos componentes<b> BindingSource, BindingNavigator e
+DataGridView</b> em aplicações C#.</font></p>
+
+<p><font size="3" face="Trebuchet MS">Sabe porque é importante
+você conhecer estes componentes ?</font></p>
+
+<p><font size="3" face="Trebuchet MS">O componente <b>BindingSource</b>
+oferece a maneira mais simples e fácil de navegar através de
+registros em uma fonte de dados; ele foi criado justamente para
+simplificar o processo de vinculação com os controles
+relacionados a uma fonte de dados.</font></p>
+
+<p class="MsoNormal" style="MARGIN: 0in 0in 0pt"><font size="3"
+face="Trebuchet MS">Podemos fazer a vinculação do <b>BindingSource</b>
+qualquer um dos seguintes </font><font color="#0000FF" size="3"
+face="Trebuchet MS">objetos/Interfaces</font><font size="3"
+face="Trebuchet MS">:</font></p>
+
+<p class="MsoNormal"
+style="MARGIN: 0in 0in 0pt 0.75in; TEXT-INDENT: -0.25in"><font
+color="#0000FF" size="3" face="Trebuchet MS"><strong>ICollection
+, IList , IListSource, IBindingList e IBindingListViewObject ,&nbsp;
+System.Type , IEnumerable , </strong></font></p>
+
+<p><font size="3" face="Trebuchet MS">O componente <b>BindingSource</b>
+veio substituir o componente <b>CurrencyManager</b>, e, embora você
+ainda possa continuar usando o <b>CurrencyManager</b>, o <b>BindingSource</b>
+deve ter preferência quando houve a necessidade de vincular os
+controles de um formulário Windows a uma fonte de dados; dessa
+forma o componente <b>BindingSource</b> permite criar um vínculo entre
+os controles e a fonte de dados. Ele fornece as seguintes
+vantagens sobre as técnicas de vinculação anteriores:</font></p>
+
+<ul>
+    <li><font size="3" face="Trebuchet MS"><b>Encapsular a
+        funcionalidade do CurrencyManager e expor os eventos do
+        CurrencyManager em tempo de projeto;</b></font></li>
+    <li><b><font size="3" face="Trebuchet MS">Interagir com outros
+        controles windows forms relacionados como por exemplo o
+        BindingNavigator e o DataGridView;</font></b></li>
+</ul>
+
+<p><font size="3" face="Trebuchet MS">A propriedade <font color="#0000FF">DataSource</font> é
+a propriedade padrão para a classe <b>BindingSource</b> e o evento
+padrão é o evento <font color="#0000FF">CurrentChanged</font>. Além disso o <b>BindingSource</b>
+fornece métodos, propriedades e eventos como os eventos
+<font color="#0000FF">CurrentItemChanged</font> e <font color="#0000FF">DataSourceChanged</font> que permite uma certa
+customização.</font></p>
+
+<p><font size="3" face="Trebuchet MS">A propriedade <font color="#0000FF">Positon</font>
+obtêm ou define o índice para o item atual na fonte de dados
+atual enquanto que o método<b> MoveLast() </b>altera o valor atual da
+propriedade <b>Position</b> para o índice do último item na fonte de
+dados que é a mesma coisa que obter o valor pela propriedade
+Count. Ex: <b>Count -1</b>.</font></p>
+
+<p><font size="3" face="Trebuchet MS">O item atual pode ser
+retornado através da propriedade <b>Current</b>, e lista inteira
+pode ser retornada através da propriedade <b>List</b>.&nbsp; </font></p>
+
+<p><font size="3" face="Trebuchet MS">As operações de edição
+são suportadas no item atual através dos métodos : </font><b><font
+color="#0000FF" size="3" face="Trebuchet MS">Current</font><font
+size="3" face="Trebuchet MS"> , </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.removecurrent.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl70',this.href);"><font
+size="3" face="Trebuchet MS">RemoveCurrent</font></a><font
+size="3" face="Trebuchet MS">, </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.endedit.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl71',this.href);"><font
+size="3" face="Trebuchet MS">EndEdit</font></a><font size="3"
+face="Trebuchet MS">, </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.canceledit.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl72',this.href);"><font
+size="3" face="Trebuchet MS">CancelEdit</font></a><font size="3"
+face="Trebuchet MS">, </font><font color="#0000FF" size="3"
+face="Trebuchet MS">Add</font><font size="3" face="Trebuchet MS">
+e </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.addnew.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl73',this.href);"><font
+size="3" face="Trebuchet MS">AddNew</font></a><font size="3"
+face="Trebuchet MS">.</font></b></p>
+
+<p><font size="3" face="Trebuchet MS">Embora o tratamento de
+valores atualizados é feito automaticamente para todos os tipos
+de fonte de dados, a classe fornece os eventos </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.currentitemchanged.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl74',this.href);"><font
+size="3" face="Trebuchet MS">CurrentItemChanged</font></a><font
+size="3" face="Trebuchet MS"> and </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingsource.datasourcechanged.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl75',this.href);"><font
+size="3" face="Trebuchet MS">DataSourceChanged</font></a><font
+size="3" face="Trebuchet MS">, que permitem uma customização.</font></p>
+
+<p><font size="3" face="Trebuchet MS">A fonte de dados que são
+vinculadas ao <b>BindingSource</b> podem ser percorridas e gerenciadas
+com a classe <b>BindingNavigator</b> que fornece uma interface
+para navegação pelos </font><font color="#0000FF" size="3"
+face="Trebuchet MS">itens da lista</font><font size="3"
+face="Trebuchet MS">. Embora o <b>BindingNavigator</b> possa ser
+vinculado a qualquer fonte de dados ele foi criado para ser
+integrado com o <b>BindingSource</b> através da propriedade </font><a
+href="http://msdn2.microsoft.com/en-us/library/system.windows.forms.bindingnavigator.bindingsource.aspx"
+onclick="javascript:TrackThisClick('ctl00_LibFrame_MainContent_ctl64','ctl00_LibFrame_MainContent_ctl64::ctl00_LibFrame_MainContent_ctl77',this.href);"><font
+size="3" face="Trebuchet MS">BindingNavigator.BindingSource</font></a><font
+size="3" face="Trebuchet MS"> </font></p>
+
+<p><font size="3" face="Trebuchet MS">Muitos membros da classe
+<b>BindingSource</b> operam na lista relacionada representada pela
+propriedade <b>List,</b> e, simplesmente referencia suas
+operações para lista relacionada. Desta forma quando o
+<b>BindingSource</b> esta vinculado a uma implementação customizada de
+<b>IList</b>, o comportamento dos membros podem diferir do
+comportamento descrito na documentação da classe.&nbsp; Assim,
+o método <b>RemoveAt</b> chama <b>IList.RemoveAt</b>. Na
+documentação o método <b>RemoveAt</b> é descrito considerando
+que a implementação de <b>IList</b> foi corretamente
+implementada.</font></p>
+
+<p><font size="3" face="Trebuchet MS">A propriedade padrão para
+a classe&nbsp; <b>BindingSource</b>&nbsp; é <b>DataSource</b> e o
+evento padrão é <b>CurrentChanged</b>.</font></p>
+
+<p><font size="3" face="Trebuchet MS">Nota: </font><font
+color="#FF0000" size="3" face="Trebuchet MS"><i>Como o
+BindingSource suporta a vinculação a fonte de dados simples e a
+complexas, a terminologia pode ser confusa. O temo </i><b><i>list
+</i></b><i>refere-se a coleção de dados da fonte de dados , </i><b><i>item
+</i></b><i>denota um simples elemento. Para fonte de dados
+complexas os termos equivalentes </i><b><i>table e row</i></b><i>
+são usados </i></font></p>
+
+<table border="0">
+    <tr>
+        <td bgcolor="#FFFFBF"><b><font face="Trebuchet MS">Exemplos
+        de utilização:</font></b><pre lang="cs"><b><font color="#808000">//vincular o BindingSource a um componente DataGridView</font>
+this.DataGridView1.DataSource = this.clientesBindingSource1;</b></pre>
+        <p><b>ou</b></p>
+        <pre lang="cs"><b><font color="#808000">//obter o número total de items em uma fonte de dados</font>
+int count = this.clientesBindingSource.Count;</b></pre>
+        <p><b>ou</b></p>
+        <pre lang="cs"><b><font color="#808000">//obtem ou define um indice para o item atual</font>
+int pos = this.clientesBindingSource1.Position;</b></pre>
+        <p><b>ou</b></p>
+        <pre lang="cs"><b><font color="#808000">//move para o último item na lista</font>
+this.bindingSource1.Position = this.bindingSource1.Count - 1;</b></pre>
+        <pre lang="cs"><b>ou</b></pre>
+        <pre lang="cs"><b><font color="#808000">//move para o último item na lista</font>
+this.bindingSource1.Position = this.bindingSource1.MoveLast();</b></pre>
+        </td>
+    </tr>
+</table>
+
+<p><b><font face="Trebuchet MS" size="5" color="#000080">Usando BindingSource,
+BindingNavigator e DataGridView</font></b></p>
+
+<p><font face="Trebuchet MS">Veremos agora um exemplo prático
+usando estes componentes e algumas de suas propriedades e
+métodos.</font></p>
+
+<p><font face="Trebuchet MS">Se você deseja navegar através dos
+registros de uma fontes de dados basta vincular o componente
+<b>BindingSource</b> a fonte de dados e em seguida vincular os controles
+do formulário (<font color="#0000FF">TextBox</font>) ao controle <b>BindingSource</b>. Assim
+poderemos usar os métodos : <font color="#0000FF">MoveNext(), MovePrevious(),
+MoveFirst(), and MoveLast()</font> para realizar tal tarefa.</font></p>
+
+<p><font face="Trebuchet MS">Para o exemplo deste artigo eu vou
+usar um banco de dados Microsoft Access que foi criado com o nome<b> Cadastro.mdb</b>&nbsp; 
+que estará em uma pasta <a href="file:///c:/dados">c:\dados</a> e uma tabela <b>Clientes</b> com a seguinte estrutura:</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="15%" id="AutoNumber1">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb1.gif" width="495" height="164"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS"></font>&nbsp;<font face="Trebuchet MS">Abra o <b>
+<font color="#0000FF">Visual C# 2008 Express Edition </font></b>ou o<b> SharpDevelop 2.2</b> e crie uma nova aplicação do tipo
+Windows com o nome <b>DataGridViewBinding</b>;</font></p>
+
+<p><font face="Trebuchet MS">&nbsp;Neste ponto se você selecionar no menu <b>
+Data</b> a opção <b>Add New Data Source</b> e estabelecer uma conexão com o 
+banco de dados <b>Cadastro.mdb</b>, selecionar um <b>DataSet</b> e escolher a 
+tabela Clientes você criará um <font color="#0000FF">DataSet</font> e a partir 
+da janela <b>DataSource</b> poderá selecionar os campos e arrastar para o 
+formulário criando assim de forma automática toda a interface para navegação 
+pelos registros da tabela e o acesso ao banco de dados conforme pode ser visto 
+na figura abaixo:</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="18%" id="AutoNumber2">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb2.gif" width="817" height="455"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Observe que são criados de forma automática os 
+objetos <b><font color="#0000FF">TableAdapter, BindingSource e BindingNavigator</font></b> 
+além do <font color="#0000FF">DataSet</font>.</font></p>
+
+<p><font face="Trebuchet MS">Mas não é isso que queremos mostrar. Queremos 
+mostrar outra forma de obter o mesmo resultado e aproveitar e para mostrar como 
+os componentes <font color="#0000FF"><b>&nbsp;BindingSource e BindingNavigator
+</b></font>trabalham em conjunto.</font></p>
+
+<p><font face="Trebuchet MS">Nosso objetivo será:</font></p>
+
+<ul>
+  <li><b><font face="Trebuchet MS" color="#0000FF">Obter os dados da tabela 
+  Clientes do banco de dados Cadastro.mdb;</font></b></li>
+  <li><b><font face="Trebuchet MS" color="#0000FF">Exibir os dados em um 
+  controle DataGridView;</font></b></li>
+</ul>
+
+<p><font face="Trebuchet MS">Vamos limpar o projeto e ficar somente com o 
+formulário <font color="#0000FF">form1.cs</font>. Agora a partir da <b>ToolBox</b> inclua os seguintes 
+controles no formulário:</font></p>
+
+<ul>
+  <li><font face="Trebuchet MS">Inclua o controle <b>DataGridView</b> no 
+  formulário <font color="#0000FF">form1.cs</font> a partir da 
+  <font color="#0000FF">ToolBox</font> e não use assistente que será aberto 
+  para selecionar um <b>Data Source</b>;</font></li>
+</ul>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="24%" id="AutoNumber4">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb3.gif" width="474" height="256"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Vamos agora ao código do formulário clicando na 
+opção<b> View Code</b>.</font></p>
+
+<p><font face="Trebuchet MS">A primeira coisa que temos que definir é a conexão 
+com o banco de dados, no exemplo estou usando um banco de dados <i>Access</i>, mas 
+poderia usar o SQL Server.</font></p>
+
+<p><font face="Trebuchet MS">Vamos incluir então no início do código do 
+formulário a linha de código abaixo para podermos usar as classes para efetuar a 
+conexão com o banco de dados <b>Cadastro.mdb;</b></font></p>
+
+<font COLOR="#0000ff">
+<p><b><font face="Trebuchet MS"><span style="background-color: #FFFFC1">using</span></font></b></font><b><font face="Trebuchet MS"><span style="background-color: #FFFFC1"> 
+System.Data.OleDb;</span></font></b></p>
+
+<p><font face="Trebuchet MS">A seguir no interior da seção :</font></p>
+
+<font SIZE="2">
+<p></font><font face="Trebuchet MS"><font COLOR="#0000ff">
+<span style="background-color: #FFFFC1"><font size="4">public</font></span></font><font size="4"><span style="background-color: #FFFFC1">
+<font COLOR="#0000ff">partial</font> <font COLOR="#0000ff">class</font>
+<font COLOR="#2b91af">Form1</font> : </span></font> </font>
+<font face="Trebuchet MS" COLOR="#2b91af" size="4">
+<span style="background-color: #FFFFC1">Form</span></font><font face="Trebuchet MS"><span style="background-color: #FFFFC1"><font size="4"><br>
+{</font></span></p>
+</font>
+
+<p><font face="Trebuchet MS">Vamos incluir o código a seguir onde estaremos 
+definindo um objeto do tipo <b>BindingSource</b>:</font></p>
+
+<font COLOR="#2b91af">
+<p><b><font face="Trebuchet MS"><span style="background-color: #FFFFC1">
+BindingSource</span></font></b></font><b><font face="Trebuchet MS"><span style="background-color: #FFFFC1"> 
+bs = <font COLOR="#0000ff">new</font> <font COLOR="#2b91af">BindingSource</font>();</span></font></b></p>
+
+<p><font face="Trebuchet MS">Iremos atribuir os dados obtidos do banco de dados 
+para o objeto<b> bs </b>e assim o <b>DataGridView</b> e o <b>BindingNavigator</b> podem 
+usá-lo como fonte de dados.</font></p>
+
+<p><font face="Trebuchet MS">Vamos agora extrair os dados da nossa base de 
+dados. </font></p>
+
+<p><font face="Trebuchet MS">Vamos usar o evento <b>Load</b> do formulário para 
+efetuar a conexão com o banco de dados usando a seguinte linha de código:</font></p>
+
+<font SIZE="2">
+<p></font><font face="Trebuchet MS" size="4"><font COLOR="#2b91af">
+<span style="background-color: #FFFFC1">OleDbConnection</span></font><span style="background-color: #FFFFC1"> 
+myConn = <font COLOR="#0000ff">new</font> <font COLOR="#2b91af">OleDbConnection</font> 
+(<font COLOR="#a31515">&quot;Provider=Microsoft.Jet.OleDb.4.0; Data Source=c:/dados/Cadastro.mdb&quot;</font>);</span></font></p>
+<p><span style="background-color: #FFFFC1"><font face="Trebuchet MS">Nota: O 
+provedor para um banco de dados Access pode ser definido assim: </font></span>
+</p>
+<p><font face="Trebuchet MS" size="4" color="#0000FF">&quot;Provider=Microsoft.Jet.OLEDB.4.0;Data 
+Source=seu.mdb;Jet OLEDB:Database Password=suasenha;&quot;;</font></p>
+
+<p><font face="Trebuchet MS">Como tratar com banco de dados sempre é uma tarefa 
+sujeita a erros vamos usar o bloco<span style="background-color: #FFFFC1"> <b>Try/Catch/Finally</b></span> para tratar 
+eventuais erros usando o seguinte código:</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="62%" id="AutoNumber3">
+  <tr>
+    <td width="100%" bgcolor="#FFFFC1"><font face="Trebuchet MS">
+    <font COLOR="#0000ff">private</font> <font COLOR="#0000ff">void</font> 
+    Form1_Load(<font COLOR="#0000ff">object</font> sender, <font COLOR="#2b91af">
+    EventArgs</font> e)<br>
+    {</font><p><font face="Trebuchet MS">string </font><b><font face="Trebuchet MS">
+    conexaoBD </font></b><font face="Trebuchet MS">= </font><b>
+    <font COLOR="#a31515" face="Trebuchet MS">&quot;Provider=Microsoft.Jet.OleDb.4.0; 
+    Data Source=c:/dados/Cadastro.mdb&quot;</font></b></p>
+    <p><b><font face="Trebuchet MS"><font COLOR="#2b91af">
+    OleDbConnection</font> conexao = <font COLOR="#0000ff">new</font>
+    <font COLOR="#2b91af">OleDbConnection</font> (conexaoBD);</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#0000ff" face="Trebuchet MS"><b>try</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">{</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#008000" face="Trebuchet MS"><b>&nbsp;&nbsp; //abre a conexão</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp; 
+    conexao.Open();</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#008000" face="Trebuchet MS"><b>&nbsp;&nbsp; //define o comando 
+    sql para selecionar os dados das tabela Clientes</b></p>
+    </font><font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;&nbsp; </font>
+    <b><font face="Trebuchet MS"><font COLOR="#2b91af">OleDbCommand</font> sql =
+    <font COLOR="#0000ff">new</font> <font COLOR="#2b91af">OleDbCommand</font>(<font COLOR="#a31515">&quot;SELECT 
+    * from Clientes&quot;</font>, conexao);</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><b>
+    <font face="Trebuchet MS" color="#008000">&nbsp;&nbsp; </font></b>
+    <font COLOR="#008000" face="Trebuchet MS"><b>//cria um adapter para 
+    preencher um dataset</b></p>
+    </font><font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; </font><b>
+    <font face="Trebuchet MS"><font COLOR="#2b91af">&nbsp;OleDbDataAdapter</font> 
+    da = <font COLOR="#0000ff">new</font> <font COLOR="#2b91af">OleDbDataAdapter</font>(sql);</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">
+    <font color="#808000">&nbsp;&nbsp; //define um objeto DataSet</font><font COLOR="#2b91af"><br>
+&nbsp;&nbsp; DataSet</font> ds = <font COLOR="#0000ff">new</font>
+    <font COLOR="#2b91af">DataSet</font>();</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp; 
+    da.Fill(ds);</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#008000" face="Trebuchet MS"><b>&nbsp;&nbsp;&nbsp; //atribui o 
+    dataset ao DataSource do BindingSource</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp; 
+    bs.DataSource = ds;</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#008000" face="Trebuchet MS"><b>&nbsp;&nbsp;&nbsp; //atribui o 
+    BindingSource ao BindingNavigator</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp; 
+    bs.DataMember = ds.Tables[0].TableName;</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#008000" face="Trebuchet MS"><b>&nbsp;&nbsp;&nbsp; //Atribui o 
+    BindingSource ao DataGridView</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp; 
+    dataGridView1.DataSource = bs;</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">}</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">
+    <font COLOR="#0000ff">catch</font> (<font COLOR="#2b91af">Exception</font>)</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">{</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">
+    <font COLOR="#2b91af">&nbsp;&nbsp;&nbsp; MessageBox</font>.Show(<font COLOR="#a31515">&quot;erro 
+    ao obter os dados.&quot;</font>);</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">}</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font COLOR="#0000ff" face="Trebuchet MS"><b>finally</b></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">{</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp; 
+    conexao.Close();</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">}</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b><font face="Trebuchet MS">}</font></b></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Executando o projeto iremos obter o seguinte:</font></p>
+
+<p><img border="0" src="c_dtb4.gif" width="479" height="256"><br>
+<font face="Trebuchet MS"><br>
+Agora vamos usar um recurso do <b>BindingSource</b> para filtrar os dados na 
+exibição do <font color="#0000FF">DataGridView</font>. Inclua um controle
+<font color="#0000FF">Combobox</font> no formulário e ativando o <b>ComboBox 
+Tasks</b> clique no link <b>Edit Items</b> e informe os valores <b>
+<font color="#0000FF">10, 20, 30 e 40</font></b>.&nbsp; Inclua uma <b>Label</b> 
+com o texto :<font color="#0000FF"><b> Exibir Clientes com idade menor ou igual 
+a:</b></font></font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="33%" id="AutoNumber5">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb5.gif" width="777" height="287"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Agora no evento <b>SelectedIndexChanged</b> do <b>
+Combobox</b> inclua o código abaixo onde estamos usando a propriedade <b>Filter</b> 
+do <b>BindingSource</b>. </font></p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="51%" id="AutoNumber6" bgcolor="#FFFFC1">
+  <tr>
+    <td width="100%"><font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font><font face="Trebuchet MS">
+    <font COLOR="#0000ff">private</font> <font COLOR="#0000ff">void</font> 
+    comboBox1_SelectedIndexChanged(<font COLOR="#0000ff">object</font> sender,
+    <font COLOR="#2b91af">EventArgs</font> e)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">{</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <font COLOR="#0000ff">&nbsp;&nbsp; if</font> (comboBox1.Text ==
+    <font COLOR="#a31515">&quot;10&quot;</font>)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    bs.Filter = </font><font COLOR="#a31515" face="Trebuchet MS">&quot;idade &lt;= 10&quot;</font><font face="Trebuchet MS">;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <font COLOR="#0000ff">&nbsp;&nbsp; if</font> (comboBox1.Text ==
+    <font COLOR="#a31515">&quot;20&quot;</font>)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    bs.Filter = </font><font COLOR="#a31515" face="Trebuchet MS">&quot;idade &lt;= 20&quot;</font><font face="Trebuchet MS">;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <font COLOR="#0000ff">&nbsp;&nbsp; if</font> (comboBox1.Text ==
+    <font COLOR="#a31515">&quot;30&quot;</font>)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    bs.Filter = </font><font COLOR="#a31515" face="Trebuchet MS">&quot;idade &lt;= 30&quot;</font><font face="Trebuchet MS">;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <font COLOR="#0000ff">&nbsp;&nbsp;&nbsp; if</font> (comboBox1.Text ==
+    <font COLOR="#a31515">&quot;40&quot;</font>)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    bs.Filter = </font><font COLOR="#a31515" face="Trebuchet MS">&quot;idade &lt;= 40&quot;</font><font face="Trebuchet MS">;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">}</font></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">A propriedade <b>Filter</b>
+<span sdata="authoredSummary">
+<span class="sentence sentenceHighlight" id="xn1_5ffb0e2a7b10a6322c9037f29a253875">
+obtém ou define a expressão usada para filtrar quais linhas serão exibidas.</span></span></font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="81%" id="AutoNumber7" bgcolor="#FFFFC1">
+  <tr>
+    <td width="100%"><font face="Trebuchet MS" size="2">
+    <span class="sentence" id="xn4_98a3e18a6f76c6168d198a71b819ce47">Geralmente 
+    usada em cenários de ligação de dados complexos, a propriedade <b>
+    <span target="P:System.Windows.Forms.BindingSource.Filter" sdata="cer">
+    <span class="selflink">Filter</span></span></b> permite que você exiba um 
+    subconjunto da sua fonte de dados. </span>
+    <span class="sentence" id="xn5_f8f8e19b4f37aab200bc7390a001572c">Somente 
+    listas subjacentes que implementam a interface <b><font color="#0000FF">
+    IBindingListView</font></b> oferece suporte a filtragem.</span></font><p>
+    <font face="Trebuchet MS" size="2">
+    <span class="sentence" id="xn6_54dc6697322d5176a5deb59eaa486979">Quando&nbsp; 
+    o filtro for não<span sdata="langKeyword" value="null"><span class="nu"> for 
+    referência nula</span></span>, o
+    <span target="T:System.Windows.Forms.BindingSource" sdata="cer">
+    <a id="ctl00_rs1_MtCP_ctl49" onclick="javascript:Track('ctl00_rs1_MtCP_tgt6|ctl00_rs1_MtCP_ctl49',this);" href="http://msdn.microsoft.com/pt-br/library/system.windows.forms.bindingsource.aspx">
+    BindingSource</a></span> passa essa propriedade para a lista subjacente.</span><span class="sentence" id="xn7_dc3e5b1f45239971798cb04d47aad178"> 
+    Se você definir essa propriedade durante a inicialização de objeto, a 
+    chamada será ser adiada até depois de inicialização for concluída.</span></font></p>
+    <p><font face="Trebuchet MS" size="2">
+    <span class="sentence" id="xn8_7b0675adeafbf29731b4d65abaf15598">Para formar 
+    um valor de filtro, especifique o nome de uma coluna seguido por um operador 
+    e um valor para filtrar.</span></font></p>
+    <p><font face="Trebuchet MS" size="2">
+    <span class="sentence sentenceHighlight" id="xn11_a38bd2a6ba8230651f0666a528bce50e">
+    O valor da propriedade <b>
+    <span target="P:System.Windows.Forms.BindingSource.Filter" sdata="cer">
+    <span class="selflink">Filter</span></span></b> serão mantidas quando&nbsp; 
+    fonte de dados for alterada. </span>
+    <span class="sentence" id="xn12_2860b12bd7687d39a525e35066467e1a">Para 
+    interromper a filtragem de da fonte de dados, chame o método <b>RemoveFilter</b></span></font></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Executando o projeto iremos obter :</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="42%" id="AutoNumber9">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb6.gif" width="773" height="281"></td>
+  </tr>
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb7.gif" width="773" height="282"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Inclua também um botão de comando no formulário e 
+no seu evento <b>Click</b> inclua o código para remover o filtro aplicado usando 
+a propriedade <b>RemoveFilter</b>:</font></p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="32%" id="AutoNumber8" bgcolor="#FFFFC1">
+  <tr>
+    <td width="100%"><font SIZE="2"></font><font face="Trebuchet MS">
+    <font SIZE="2" COLOR="#0000ff">private</font><font SIZE="2"> </font>
+    <font SIZE="2" COLOR="#0000ff">void</font><font SIZE="2"> button1_Click(</font><font SIZE="2" COLOR="#0000ff">object</font><font SIZE="2"> 
+    sender, </font><font SIZE="2" COLOR="#2b91af">EventArgs</font></font><font SIZE="2"><font face="Trebuchet MS"> 
+    e)<br>
+    {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bs.RemoveFilter();<br>
+    }</font></font></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Ao clicar no botão o filtro será removido e todos 
+os dados serão exibidos novamente.</font></p>
+
+<p><font face="Trebuchet MS">Podermos implementar outros filtros, como por 
+exemplo filtrar por nome de forma que ao digitar os caracteres de um nome em uma 
+caixa de texto os dados serão sendo filtrados e exibidos dinamicamente no <b>
+DataGridView</b>.</font></p>
+
+<p><font face="Trebuchet MS">Para implementar este recurso inclua uma <i>
+<font color="#0000FF">Label</font></i> com o texto :<b><font color="#0000FF"> 
+Filtrar por nome</font></b> e um <i><font color="#0000FF">TextBox</font></i> -
+<b>txtNome</b> - no formulário <i>form1.cs</i> e no evento <b>TextChanged</b> do
+<i><font color="#0000FF">TextBox</font></i> inclua o código abaixo que usar a 
+propriedade <b>Filter</b>:</font></p>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="48%" id="AutoNumber10" bgcolor="#FFFFC1">
+  <tr>
+    <td width="100%"><font SIZE="2"></font><font face="Trebuchet MS">
+    <font COLOR="#0000ff">private</font> <font COLOR="#0000ff">void</font> 
+    textBox1_TextChanged(<font COLOR="#0000ff">object</font> sender,
+    <font COLOR="#2b91af">EventArgs</font> e)<br>
+    {<br>
+&nbsp;<font size="4">&nbsp;&nbsp; bs.Filter = <font COLOR="#a31515">&quot;Nome like 
+    '%&quot;</font> + txtNome.Text + <font COLOR="#a31515">&quot;%'&quot;</font>;</font><br>
+    }</font></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Executando projeto e digitando as letras Ma 
+teremos:</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="43%" id="AutoNumber11">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb8.gif" width="775" height="280"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Você pode aplicar um filtro e sobre os dados 
+filtrados aplicar outro filtro obtendo assim como resultado os dados que foram 
+filtrados por critérios distintos em duas etapas. No exemplo você pode filtrar a 
+idade primeiro e depois filtrar por nome.</font></p>
+
+<p><font face="Trebuchet MS">Podemos ainda efetuar combinações de condições para 
+criar um filtro com múltiplos critérios sendo aplicados de uma vez. No exemplo 
+acima podemos definir um critério para filtrar por idade e por cidade. </font></p>
+
+<p><font face="Trebuchet MS">Vamos então incluir um controle <b>GroupBox</b> e 
+no seu interior dois controles Label : <font color="#0000FF">Cidade e Idade</font> 
+e dois TextBox : <b>txtCidade e txtIdade</b> e um Button - <b>btnFiltrar</b>. 
+Defina o leiaute conforme a figura abaixo:</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="17%" id="AutoNumber12">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtb9.gif" width="732" height="421"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">&nbsp;No evento <b>Click</b> do botão de comando <b>
+Aplicar Filtro</b> inclua o código abaixo que aplica o filtro usando dois 
+critérios:</font></p>
+
+<ol>
+  <li><font face="Trebuchet MS">Cidade que contenha o caractere digitado;</font></li>
+  <li><font face="Trebuchet MS">E idade maior que a informada;</font></li>
+</ol>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="53%" id="AutoNumber13" bgcolor="#FFFFC1">
+  <tr>
+    <td width="100%"><font SIZE="2"></font><font face="Trebuchet MS">
+    <font COLOR="#0000ff">private</font> <font COLOR="#0000ff">void</font> 
+    btnFiltrar_Click(<font COLOR="#0000ff">object</font> sender,
+    <font COLOR="#2b91af">EventArgs</font> e)</font><p>
+    <font face="Trebuchet MS">{<font COLOR="#0000ff"><br>
+&nbsp;&nbsp; int</font> id = <font COLOR="#2b91af">Convert</font>.ToInt32(txtIdade.Text);</font><font face="Trebuchet MS" SIZE="2"><br>
+&nbsp;&nbsp; </font><font face="Trebuchet MS">&nbsp;bs.Filter =
+    <font size="4" COLOR="#a31515">&quot;cidade like '%&quot;</font><font size="4"> + 
+    txtCidade.Text + <font COLOR="#a31515">&quot;%' AND idade &gt; &quot;</font> + id;</font></font></p>
+    <p><font face="Trebuchet MS">}</font></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Executando o projeto e aplicando o filtro para os 
+dois critérios definidos teremos exibidos os clientes cuja idade for maior que
+<font color="#0000FF">25</font> e que a cidade inicie com <font color="#0000FF">
+San</font>;</font></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="25%" id="AutoNumber14">
+  <tr>
+    <td width="100%"><img border="0" src="c_dtba.gif" width="733" height="420"></td>
+  </tr>
+</table>
+
+<p><font face="Trebuchet MS">Como o foco é mostrar como usar a propriedade <b>
+Filter</b> do <font color="#0000FF">BindingSource</font> eu não estou efetuando 
+validações, o que deve ser feito em uma aplicação de produção.</font></p>
+
+<p><font face="Trebuchet MS">Pegue o projeto completo aqui:
+<img border="0" src="../../downl.gif" width="16" height="16">
+<a href="DataGridViewBinding.zip"><font color="#0000FF">DataGridViewBinding.zip</font></a></font></p>
+
+<p><font face="Trebuchet MS">Eu sei é apenas C# , mas eu
+gosto...</font></p>
+
+<p><font face="Trebuchet MS">Referências:</font></p>
+
+<ul>
+    <li><a
+        href="http://msdn.microsoft.com/pt-br/library/system.windows.forms.bindingnavigator.aspx">
+    <font
+        face="Trebuchet MS" color="#0000FF">http://msdn.microsoft.com/pt-br/library/system.windows.forms.bindingnavigator.aspx</font></a></li>
+    <li><font face="Trebuchet MS">
+    <a href="http://msdn.microsoft.com/en-us/library/system.windows.forms.bindingsource.aspx">
+    <font color="#0000FF" face="Trebuchet MS">http://msdn.microsoft.com/en-us/library/system.windows.forms.bindingsource.aspx</font></a></font></li>
+    <li><font face="Trebuchet MS">
+    <a href="http://msdn.microsoft.com/pt-br/library/system.windows.forms.bindingsource.filter.aspx">
+    <font color="#0000FF" face="Trebuchet MS">http://msdn.microsoft.com/pt-br/library/system.windows.forms.bindingsource.filter.aspx</font></a></font></li>
+    <li>
+    <h2 class="r">
+    <a class="l" onmousedown="return clk(this.href,'','','','1','')" href="http://www.macoratti.net/vbn_dgv2.htm">
+    <font face="Trebuchet MS" color="#0000FF">Vinculando dados ao DataGridView</font></a></h2>
+    </li>
+    <li>
+    <h2 class="r">
+    <a class="l" onmousedown="return clk(this.href,'','','','2','')" href="http://www.macoratti.net/vbn_foan.htm">
+    <font face="Trebuchet MS" color="#0000FF">Filtrando e Ordenando com ADO.NET</font></a></h2>
+    </li>
+    <li>
+    <h2 class="r">
+    <a class="l" onmousedown="return clk(this.href,'','','','6','')" href="http://www.macoratti.net/07/06/vbn5_mdg.htm">
+    <font face="Trebuchet MS" color="#0000FF">Manipulando o DataGridView</font></a></h2>
+    </li>
+    <li>
+    <h2 class="r">
+    <a class="l" onmousedown="return clk(this.href,'','','','8','')" href="http://www.macoratti.net/adn2_dbr.htm">
+    <font face="Trebuchet MS" color="#0000FF">DataBinding Revisitado</font></a></h2>
+    </li>
+    <li>
+    <h2 class="r">
+    <a class="l" onmousedown="return clk(this.href,'','','','1','')" href="http://www.macoratti.net/vbn5awc1.htm">
+    <font face="Trebuchet MS" color="#0000FF">Criando uma aplicação Windows 
+    Completa</font></a></h2>
+    </li>
+</ul>
+
+<hr size="0">
+
+<p align="center"><font size="2" face="Trebuchet MS">José Carlos
+Macoratti</font></p>
+</body>
+</html>

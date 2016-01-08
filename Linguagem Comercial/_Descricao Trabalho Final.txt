@@ -1,0 +1,26 @@
+REGRAS DE NEGÓCIO:
+- O cadastro de produtos não pode aceitar um produto:
+	- sem nome
+	- sem quantidade
+	- sem valor
+	- sem imagens
+- O cadastro de clientes não pode aceitar um cliente:
+	- sem nome
+	- sem cpf
+	- cpf inválido
+- Deverá ser criado um atributo para salvar o saldo do cliente. O saldo não pode ser NULO e deve ter um valor default=0 (no caso de clientes que não forem informados)
+- Não poderá ser fechado pedido de um cliente com saldo inferior ao valor total da compra.
+- Um pedido deverá ter apenas 1 cliente e deve ter no mínimo 1 produto (não havendo quantidade máxima).
+- Para realizar um pedido, somente poderão ser exibidos os produtos ativos e com quantidade maior que zero
+- Para realizar um pedido, somente poderão ser exibidos os clientes com saldo maior que zero
+- Ao fechar o pedido, as quantidades de cada produto devem ser atualizadas (quantidade atual - quantidade do pedido)
+
+
+O QUE SERÁ AVALIADO:
+- Funcionamento do cadastro de cliente
+- Funcionamento do cadastro de produto
+- Funcionamento do pedido
+- Funcionamento da lista de pedidos
+- Regras de negócio atendidas
+- Se não há trechos ou funcionalidades copiadas
+- Leiaute x navegabilidade nas funcionalidades

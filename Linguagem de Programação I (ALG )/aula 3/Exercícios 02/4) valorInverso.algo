@@ -1,0 +1,22 @@
+4) Escreva um algoritmo que leia 2 valores A e B 
+e troque os valores de forma que a variavel A fique com o valor de B 
+e a variavel B fique com o valor de A. 
+==============================================================================
+
+algoritmo valorInverso; 
+var 
+	int A,B,temp; 
+
+inicio 
+	escreva("Digite um numero representando A e B:"); 
+	leia(A, B); 
+	escreva("Agora vamos invertes os numeros! (Pressione Enter para continuar)"); 
+	temp = NumeroA;
+	NumeroA = NumeroB;
+	NumeroB = temp;
+	escreva("Numero A (Pressione Enter para continuar):",A); 
+	escreva("Numero B (Pressione Enter para continuar):",B); 
+	escreva("Volte sempre!"); 
+fim 
+
+

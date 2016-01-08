@@ -1,0 +1,36 @@
+Trabalho - Paradigmas
+Nome: André Silveira Machado
+Haskell 16/08/2014
+========================================================================
+#a) o quadrado de um número:
+#let quadrado x = x^x
+
+#b) o dobro de um número:
+#let dobro x = x*2
+
+#c) a média de dois valores:
+#let media x y = (x+y)/2
+
+#d) o produto de dois números:
+#let produto x y = x*y
+
+#e) incrementar um número recebido por um argumento
+#let incrementa x = x+1
+
+#f) que verifique se 3 argumentos podem ser lados de um triângulo
+#let triangulo a b c = if (a<b+c)&&(b<a+c)&&(c<a+b) then True else False
+
+#g) se 4 valores passados para argumentos são iguais
+#let igual a b c d = if (a==b)&&(a==c)&&(a==d) then "Igual" else "Nao igual"
+
+#h) que recebe como argumento uma idade e retorna True para maioridade
+#let idade x = if (x>=18) then True else False
+
+#i) que receba dois valores e retorno o menor
+#let menor x y = if(x<y) then x else y
+
+#j) que recebe um número e retorna True se ele for par
+#let par x = if (x`mod`2==0) then True else False
+
+#codigo do professor de peso e altura
+#let imc p a = if(p/(a*a)) > 18.5 then "Abaixo do peso" else if(p/(a*a)) < 25 then "Peso normal" else (if(p/(a*a))<30 then "Acima do peso" else "Obeso"

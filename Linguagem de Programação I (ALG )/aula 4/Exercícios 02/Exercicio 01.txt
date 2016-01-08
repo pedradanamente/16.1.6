@@ -1,0 +1,40 @@
+1) DADO O ALGORITMO A SEGUIR RESPONDA
+
+a) Se A == V E B == V E C == V
+Quais comandos serao executados
+
+b) Se A == F E B == V E C == F
+Quais comandos serao executados
+
+c) Se A == F E B == V E C == V
+Quais comandos serao executados
+
+d) Se A == F E B == F E C == V
+Quais comandos serao executados
+
+algoritmo exerc01
+var
+	logico A,B,C;
+inicio
+	se (A) entao
+		inicio
+			<comando C1>;
+		fim
+	senao se (B) entao
+		inicio
+			se (C) entao
+				inicio
+					<comando C2>;
+				fim
+			senao
+				inicio
+					<comando C3>;
+					<comando C4>;
+				fim
+		fim
+	<comando C5>;
+	<comando C6>;
+fim
+
+
+		

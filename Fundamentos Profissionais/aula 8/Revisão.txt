@@ -1,0 +1,25 @@
+Estrutura de um Link: Composto por 3 partes:
+1ª protocolo HTTP
+2ª DOMINIO OU SERVIDOR
+3ª Arquivo requisitado
+http://www.taciano.pro.br/index.html
+------------------------------------------------------------------------
+DNS - Domain Name Service
+Tradução de nome digitado para o IP do servidor onde se encontra a página
+------------------------------------------------------------------------
+Estrutura de HTML é formada por Doctype, Html, Head, Title, Body e Html.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTDXHTML1.0 strict//EN""www.w3.org-xhtml-strict.dtd">
+<html>
+	<head>
+		<title>Titulo</title>
+	</head>
+	<body>
+	</body>
+</html>
+------------------------------------------------------------------------
+Imagem:
+<img src="foto.jpg" alt="titulo" border="1" width="100" height="120"/>
+------------------------------------------------------------------------
+
+
+

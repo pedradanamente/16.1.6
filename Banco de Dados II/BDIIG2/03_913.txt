@@ -1,0 +1,28 @@
+REATE DEFINER=`root`@`localhost` PROCEDURE `transferir`(IN `rem_agencia_numero` INT, IN `rem_conta_numero` INT, IN `dst_agencia_numero` INT, IN `dst_conta_numero` INT, IN `valor` FLOAT(17,2))
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+	/*
+	 Primeiramente, para realizar uma procedure que automatizará a inserção de um registro na tabela transferência, terei que passar os parâmetros desta tabela,
+	 que são a agência e conta de quem está transferindo, a agência e conta para quem está sendo transferido e o valor.
+	 Com esses dados então devo verificar se possuo saldo suficiente para realizar a transferência. Para fazer essa verificação chamarei a função 'saldo', em que passo os
+	 parâmetros que são a a agencia e conta de quem está trasnferindo (parâmetro recebido) e ela verificicará qual é meu saldo.
+	 Assim então faço uma condição, em que se o meu saldo for maior que o valor que estou tentando transferir (parâmetro recebido) então... 
+	*/
+	
+	if (saldo(rem_agencia_numero, rem_conta_numero) > valor) then
+	
+	/*
+	 Se a condição for verdadeira, então fará a inserção de um registro na tabela 'transferencia' com os seguintes valores: Default é o próximo ID; rem_agencia_numero agencia
+	 de quem transfere; rem_conta_numero conta de quem transfere; dst_agencia_numero agencia para quem transfere; dst_conta_numero conta para quem transfere; valor que tranfere.
+	*/
+	
+	insert transferencia values(DEFAULT, rem_agencia_numero, rem_conta_numero, dst_agencia_numero, dst_conta_numero, valor);
+
+	#caso contrário não faz nada.
+
+	end if;
+END

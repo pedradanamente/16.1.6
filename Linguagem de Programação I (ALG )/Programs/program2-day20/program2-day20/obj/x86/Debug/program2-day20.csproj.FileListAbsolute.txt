@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program2-day20\program2-day20\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program2-day20\program2-day20\bin\Debug\program2-day20.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program2-day20\program2-day20\bin\Debug\program2-day20.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program2-day20\program2-day20\obj\x86\Debug\program2-day20.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program2-day20\program2-day20\obj\x86\Debug\program2-day20.pdb

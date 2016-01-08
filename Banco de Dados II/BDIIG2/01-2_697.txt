@@ -1,0 +1,29 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `saldo`(`conta_cli` INT, `agencia_cli` INT)
+	RETURNS float(17,2)
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+
+	# declara a variável que ira receber o resultado do saldo
+
+	declare saldo_conta float(17,2);
+
+	
+	# seleciona o valor total de crédito, menos o valor total de débito e armazena
+	# na variável saldo_conta para que o saldo seja retornado.
+
+	select (
+		 (select sum(valor) from movimentacao where
+		 tipo = 'C' and conta_numero = conta_cli and agencia_numero = agencia_cli) - 
+		
+		 (select sum(valor) from movimentacao where
+		 tipo = 'D' and conta_numero = conta_cli and agencia_numero = agencia_cli)
+	       )
+		into saldo_conta;
+
+	return saldo_conta;
+
+END

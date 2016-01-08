@@ -1,0 +1,25 @@
+/* d) Escrever um algoritmo que lê o nome de um funcionário, seu número de horas trabalhadas, o valor que
+recebe por hora e o número de filhos com idade menor do que 14 anos. Para fins de cálculo, considere que o salário
+família é de R$15,00 para cada filho com idade menor do que 14 anos. Calcular o salário deste funcionário e
+escrevê-lo. 
+============================================================================== */
+
+algoritmo salarioFuncionarios
+var
+	caracter nome;
+	inteiro horasTrabalhadas, quantidadeFilhos;
+	real salarioFamilia, valorHora, salarioFinal;
+	
+inicio
+	escreva("Digite o nome do funcionario:");
+	leia(nome);
+	escreva("Digite a quantidade de filhos menor de 14 anos");
+	leia(quantidadeFilhos);
+	escreva("Digite o valor da hora do funcionario:");
+	leia(valorHora);
+	escreva("Digite o total de horas trabalhadas pelo funcionario");
+	leia(horasTrabalhadas);
+	salarioFamilia=(15.00);
+	salarioFinal=(horasTrabalhadas * valorHora + salarioFamilia * quantidadeFilhos);
+	escreva("Salario final do funcionario:", salarioFinal);
+fim

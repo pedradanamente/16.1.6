@@ -1,0 +1,22 @@
+
+body {
+	background: #000;
+}
+
+h1,h6 {
+	letter-spacing: 5px;
+	text-align: center;
+	color: #fff;
+}
+
+.direita {
+	letter-spacing: 5px;
+	text-align: right;
+	color: #f00;
+}
+
+.esquerda {
+	letter-spacing: 5px;
+	text-align: left;
+	color: #00f;
+}

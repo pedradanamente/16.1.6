@@ -1,0 +1,20 @@
+/* 2) Criar um algorítmo para identificar se um determinado valor inteiro informado pelo usuário é par ou não. */
+
+
+algoritmo numeroPar
+var
+	inteiro numero, resto;
+	
+inicio
+	escreva("Digite um numero:");
+	leia(numero);
+	resto=numero%2;
+	se (resto==0) entao
+		inicio
+			escreva("Este número é par!");
+		fim
+	senao
+		inicio
+			escreva("Este número é impar!");
+		fim
+fim

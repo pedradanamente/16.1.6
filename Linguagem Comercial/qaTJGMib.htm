@@ -1,0 +1,445 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-BR">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Por que eu não uso datasets no ASP.NET | BrunoBemfica.NET</title>
+<meta name="robots" content= "all" />
+<meta name="revisit-after" content="1 day" />
+<meta name="title" content="7 Graus - www.7graus.com" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<style type="text/css" media="screen">
+<!--
+@import url("http://brunobemfica.net/wp-content/themes/tigerpress/style.css");
+-->
+</style>
+<!--[if lt IE 7]><link href="http://brunobemfica.net/wp-content/themes/tigerpress/css/ie6.css" rel="stylesheet" type="text/css" /></script><![endif]-->
+<!--[if IE 7]><link href="http://brunobemfica.net/wp-content/themes/tigerpress/css/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="BrunoBemfica.NET RSS Feed" href="http://brunobemfica.net/?feed=rss2" />
+<link rel="pingback" href="http://brunobemfica.net/xmlrpc.php" />
+				
+	<script type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.1.3 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-12445637-1']);
+	_gaq.push(['_trackPageview'],['_trackPageLoadTime']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></script>
+<link rel="alternate" type="application/rss+xml" title="BrunoBemfica.NET &raquo; Por que eu não uso datasets no ASP.NET  Feed de comentários" href="http://brunobemfica.net/?feed=rss2&amp;p=433" />
+<link rel='stylesheet' id='codecolorer-css'  href='http://brunobemfica.net/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.8' type='text/css' media='screen' />
+<script type='text/javascript' src='http://brunobemfica.net/wp-includes/js/jquery/jquery.js?ver=1.3.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://brunobemfica.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://brunobemfica.net/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='BrunoBemfica.NET' href='http://brunobemfica.net' />
+<link rel='start' title='Enviando emails com ASP.NET' href='http://brunobemfica.net/?p=28' />
+<link rel='prev' title='Cinco dicas de convivência(ou:Como evitar o ódio mortal da sua equipe)' href='http://brunobemfica.net/?p=407' />
+<link rel='next' title='Instalando o Android 2.2(Froyo) no HTC Magic/myTouch 3G' href='http://brunobemfica.net/?p=448' />
+<meta name="generator" content="WordPress 2.8.6" />
+
+<!-- All in One SEO Pack 1.6.13 by Michael Torbert of Semper Fi Web Design[303,374] -->
+<meta name="description" content="Eu particularmente sou um grande opositor de datasets. Existem muitas(e infinitamente melhores) formas de se fazer acesso a uma fonte de dados com o .NET" />
+<meta name="keywords" content=".net,banco de dados,programação" />
+<link rel="canonical" href="http://brunobemfica.net/?p=433" />
+<!-- /all in one seo pack -->
+
+<!-- Protected by WP-SpamFree v2.1.1.2 :: JS BEGIN -->
+<script type="text/javascript" src="http://brunobemfica.net/wp-content/plugins/wp-spamfree/js/wpsf-js.php"></script> 
+<!-- Protected by WP-SpamFree v2.1.1.2 :: JS END -->
+
+<script type='text/javascript' src='http://brunobemfica.net/wp-includes/js/tw-sack.js?ver=1.6.1'></script>
+	<link rel="stylesheet" href="http://brunobemfica.net/wp-content/plugins/snippet-highlight/star-light/star-light.css" type="text/css"/>
+	<link rel="stylesheet" href="http://brunobemfica.net/wp-content/plugins/snippet-highlight/linenumbers.css" type="text/css"/>
+	
+</head>
+
+<body>
+<div id="doc">
+<div id="header">
+<div id="header-content">
+  <p  class="onhome"><a href="http://brunobemfica.net" class="url" title="Home" rel="home">Home</a></p>
+  <h1>BrunoBemfica.NET   &gt; Por que eu não uso datasets no ASP.NET</h1>
+
+<form method="get" id="searchform" action="http://brunobemfica.net/" class="box">
+    <fieldset>
+      <label for="s">Busca</label>
+      <input type="text" name="s" id="s" value="" class="input-txt" /><input id="searchsubmit" value="Search" type="submit" class="submit" />
+    </fieldset>
+</form>
+  
+</div>
+</div><!-- #header -->
+<div id="content"><div id="subcontent">
+
+<div id="about" class="box">
+    <h3>Sobre</h3>
+    <p>
+	Desenvolvimento de software e nerdices aleatórias    </p>
+        
+</div>
+
+<div id="recent" class="box">
+        <h3>Últimos Posts</h3>
+        <ul class="link-list">
+                <li><a href="http://brunobemfica.net/?p=625">Validação manual de formulários HTML com web2py</a></li>
+        <li><a href="http://brunobemfica.net/?p=594">WAT?</a></li>
+        <li><a href="http://brunobemfica.net/?p=589">Pare de choramingar e comece a contratar trabalhadores remotos</a></li>
+        <li><a href="http://brunobemfica.net/?p=579">O lado ruim dos frameworks</a></li>
+        <li><a href="http://brunobemfica.net/?p=568">Windows, distros Linux e por que eu comprei um Mac</a></li>
+        <li><a href="http://brunobemfica.net/?p=535">O Windows Phone 7 chegou. E não está para brincadeira.</a></li>
+        <li><a href="http://brunobemfica.net/?p=521">E se o visual studio tivesse achievements?</a></li>
+        <li><a href="http://brunobemfica.net/?p=504">Meu ambiente de trabalho em 7 itens</a></li>
+        <li><a href="http://brunobemfica.net/?p=495">De um arquiteto para um programador</a></li>
+        <li><a href="http://brunobemfica.net/?p=479">Top 10 jogos para android</a></li>
+        <li><a href="http://brunobemfica.net/?p=448">Instalando o Android 2.2(Froyo) no HTC Magic/myTouch 3G</a></li>
+        <li><a href="http://brunobemfica.net/?p=433">Por que eu não uso datasets no ASP.NET</a></li>
+        <li><a href="http://brunobemfica.net/?p=407">Cinco dicas de convivência(ou:Como evitar o ódio mortal da sua equipe)</a></li>
+        <li><a href="http://brunobemfica.net/?p=341">ASP.NET AJAX &#8211; UpdatePanel não funciona – Problemas mais comuns</a></li>
+        <li><a href="http://brunobemfica.net/?p=338">Encurtando URLs com o tinyURL e C#</a></li>
+        </ul>
+    </div>
+
+<div id="globalnav" class="box">
+        <h3>Páginas</h3>
+        <ul class="link-list">
+    <li class="page_item page-item-2"><a href="http://brunobemfica.net/?page_id=2" title="Sobre o autor">Sobre o autor</a></li>
+ 
+        </ul>
+</div>
+    
+
+<div id="cats" class="box">
+        <h3>Categorias</h3>
+        <ul class="link-list">
+				<li class="cat-item cat-item-1"><a href="http://brunobemfica.net/?cat=1" title="Artigos sobre programação C#, VB.NET, F#, etc.">.net</a>
+</li>
+	<li class="cat-item cat-item-60"><a href="http://brunobemfica.net/?cat=60" title="Artigos sobre celulares com Android">Android</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://brunobemfica.net/?cat=7" title="Artigos sobre ASP.NET Webforms e MVC">ASP.NET</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://brunobemfica.net/?cat=14" title="Ver todos os posts arquivados em Banco de dados">Banco de dados</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://brunobemfica.net/?cat=21" title="Artigos sobre carreira profissional na área de TI.">Carreira</a>
+</li>
+	<li class="cat-item cat-item-59"><a href="http://brunobemfica.net/?cat=59" title="Ver todos os posts arquivados em Gadgets">Gadgets</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://brunobemfica.net/?cat=17" title="Artigos gerais sobre banco de dados.">Outros</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://brunobemfica.net/?cat=5" title="Artigos sobre programação em PHP">PHP</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://brunobemfica.net/?cat=3" title="Artigos sobre desenvolvimento de software">Programação</a>
+</li>
+	<li class="cat-item cat-item-70"><a href="http://brunobemfica.net/?cat=70" title="Artigos sobre python">Python</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://brunobemfica.net/?cat=6" title="Artigos sobre Ruby on Rails">Ruby</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://brunobemfica.net/?cat=18" title="Ver todos os posts arquivados em TI">TI</a>
+</li>
+	<li class="cat-item cat-item-71"><a href="http://brunobemfica.net/?cat=71" title="Atigos sobre o framework web Web2py">Web2py</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="http://brunobemfica.net/?cat=64" title="Ver todos os posts arquivados em Windows Phone 7">Windows Phone 7</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://brunobemfica.net/?cat=8" title="Artigos sobre programação desktop em .NET">WinForms</a>
+</li>
+        </ul>
+    </div>
+    
+<div id="feeds" class="box">
+        <h3>RSS Feeds</h3>
+        <ul class="link-list">
+          <li><a href="http://brunobemfica.net/?feed=rss2">Posts</a></li>
+          <li><a href="http://brunobemfica.net/?feed=comments-rss2">Comentários</a></li>
+        </ul>
+    </div>
+    
+<div id="blogroll" class="box">
+        <h3>Blogroll</h3>
+        <ul class="link-list">
+        <li><a href="http://goncin.wordpress.com/" rel="acquaintance" title="Blog do Fausto Goncin, Developer PHP e advogado nas horas vagas." target="_blank">Blog do Goncin</a></li>
+<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+<li><a href="http://www.fonini.net/" rel="acquaintance" title="Blog sobre desenvolvimento, focado em software livre" target="_blank">Blog do Jonas Fonini</a></li>
+<li><a href="http://www.paulinhawinter.com/" title="Blog sobre desenvolvimento" target="_blank">Blog da Paulinha Winter</a></li>
+<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+        </ul>
+    </div>
+
+<div id="friends" class="box">
+	<h3>Parceiros</h3>
+	<ul class="link-list">
+		<li><a href="http://jobs.smashingmagazine.com">Smashing Jobs</a></li>
+	</ul>
+</div>
+
+</div>
+<div id="maincontent">
+
+	
+		<div class="post single" id="post-433">
+    <p class="date">Postado em julho 16, 2010 às 2:35 am</p>
+			<h2>Por que eu não uso datasets no ASP.NET</h2>
+			<div class="entry">
+				<p>Eu particularmente sou um grande opositor de datasets. Existem muitas(e infinitamente melhores) formas de se fazer acesso a uma fonte de dados com o .NET framework, formas que superam os datasets em simplicidade e desempenho. Aqui vou explicar um pouco disso.</p>
+<h2>Datasets tipados x Datasets não tipados</h2>
+<p><span style="font-weight: normal; font-size: 13px; ">Este artigo é sobre DataSets não-tipados. Por padrão, um DataSet não é tipado, pois as colunas de seus DataTables devem ser referenciadas por uma variável do tipo string, por exemplo: meuDataSet.Tables[0]["ColunaDesejada"]. Existem ainda os DataSets fortemente tipados, que são classes que extendem a classe DataSet(e a classe DataTable) e incluem propriedades e membros específicos aos dados representados pelos dataset.  Apesar desse tipo de dataset sofrer(muito, diga-se de passagem) de problemas de performance(sobre os quais eu irei discorrer ao longo do artigo), eles ainda assim são mais utilizados do que os DataSets não tipados.</span></p>
+<h2><strong>Os fundamentos do DataReader</strong></h2>
+<p><strong> </strong>Antes de explicar por que eu preferi utilizar DataReaders ao invés de DataSets nas minhas aplicações, é necessário que tenhamos conhecimento sobre os DataReaders e DataSets. Estes dois objetos tem regras diferentes: DataSets são projetados para ser uma cópia em memória da fonte de dado, enquanto um DataReader  é projetado para ser um &#8220;motoboy&#8221; entre a camada de banco de dados e uma aplicação .NET.</p>
+<p>No ADO.NET, um provider é uma fonte de dados, e existem classes específicas para trabalhar com alguns tipos de providers. Temos as classes SqlConnection, SqlCommand, SqlDataAdapter, e SqlDataReader para trabalhar com o provider SqlClient ; Temos ainda as classes OleDbConnection, OleDbCommand, OleDbDataAdapter, e OleDbDataReader para trabalhar com o providerOleDb. Objetos prefixados com o nome de um provider (Sql, OleDb, Oracle, Odbc, etc.) são objetos específicos do provider. Eles são projetados para esse provider em particular. O DataReader é um exemplo disso (i.e., SqlDataReader, OleDbDataReader, etc.).</p>
+<p>Para trabalhar com dados utilizando um DataReader, você deve inicialmente estabelecer uma conexão com a base de dados e especificar a query a ser executada. Depois, o DataReader é criado e age como uma ponte entre a aplicação  .NET e a fonte de dados. Por exemplo, podemos utilizar o códigi abaixo:</p>
+<div class="codecolorer-container csharp default" style="overflow:auto;white-space:nowrap;width:550px;"><div class="csharp codecolorer"><span class="co1">//Estabelece a conexão</span><br />
+var oConexao <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> SqlConnection<span class="br0">&#40;</span>connection <span class="kw4">string</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+oConexao<span class="sy0">.</span><span class="me1">Open</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Cria o comando</span><br />
+var oComando <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> SqlCommand<span class="br0">&#40;</span>SQL query ou stored procedure, oConexao<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Cria um DataReader para obter informação do banco de dados</span><br />
+SqlDataReader oReader <span class="sy0">;</span><br />
+oReader <span class="sy0">=</span> oComando<span class="sy0">.</span><span class="me1">ExecuteReader</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Itera o resultado</span><br />
+<span class="kw1">while</span><span class="br0">&#40;</span>oReader<span class="sy0">.</span><span class="me1">Read</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#123;</span><br />
+<span class="co1">//trabalha com o registro atual</span><br />
+<span class="br0">&#125;</span><br />
+<br />
+<span class="co1">//Fecha a conexão(automaticamente, fecha o DataReader)</span><br />
+oConexao<span class="sy0">.</span><span class="me1">Close</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></div></div>
+<p>O DataReader carrega um registro da base de dados de cada vez. Cada vez que o método Read() é chamado, o DataReader discarta o registro atual, volta ao banco de dados e traz o próximo resultado do resultset. O método Read()  retorna <em>true </em>se uma linha é lida na base de dados, e <em>false </em>se  não houver mais nenhuma linha.</p>
+<p>DataReaders  são objetos de dados conectados, pois necessitam de uma conexão com o banco de dados ativa. Lembre-se, o DataReader é somente um &#8220;motoboy&#8221;  entre a aplicação e a base de dados. Obviamente, não podem trazer informações do banco depois que a conexão foi fechada. Além disso, um DataReader é limitado a ser <span style="text-decoration: underline;">somente leitura</span>, e só lê &#8220;para frente&#8221;, ou seja: As informações obtidas do banco de dados através do DataReader não podem ser modificadas por ele, nem serem trazidas em ordem aleatória. Ao invés disso, um  DataReader está limitado a acessar os registros em ordem sequencial, do primeiro ao último, um de cada vez.<br />
+<span id="more-433"></span></p>
+<h2><strong>Os fundamentos do DataSet</strong></h2>
+<p><strong> </strong>DataSets são objetos mais complexos e cheios de característica do que os DataReaders. Enquanto DataReaders simplesmente &#8220;passam&#8221; pelos dados de uma base de dados, DataSets podem ser pensados como uma base de dados em memória(e é exatamente isso que eles são &#8211; uma cópia do banco de dados na memória). Do mesmo jeito que uma base de dados é composta por um conjunto de tabelas, um DataSet é composto de uma coleção de objetos DataTable. Enquanto uma base de dados tem relacionamentos entre suas tabelas, extendidos através de várias constraints de integridade de dados nos campos das tabelas, um DataSet pode também ter relacionamentos entre seus DataTables e constraints nos campos dos DataTables.</p>
+<p>Ao contrário do DataReader, o DataSet é um objeto de dados neutro com relação a providers. Não existe SqlDataSet ou OleDbDataSet &#8211; apenas o bom e único DataSet. É responsabilidade do  provider do objeto DataAdapter &#8220;traduzir&#8221; os dados de um provider específico em um DataSet netro de providers. O trecho de código abaixo ilustra como popular um DataSet com os dados de uma query:</p>
+<div class="codecolorer-container csharp default" style="overflow:auto;white-space:nowrap;width:550px;"><div class="csharp codecolorer"><span class="co1">//Estabelece a conexão</span><br />
+var oConexao <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> SqlConnection<span class="br0">&#40;</span>connection <span class="kw4">string</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+oConexao<span class="sy0">.</span><span class="me1">Open</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Cria o comando</span><br />
+var oComando <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> SqlCommand<span class="br0">&#40;</span>SQL query ou stored procedure, oConexao<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Cria o &nbsp;DataAdapter</span><br />
+var oDataAdapter <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> SqlDataAdapter<span class="br0">&#40;</span>oComando<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Cria o DataSet</span><br />
+var oDataSet <span class="sy0">=</span> <a href="http://www.google.com/search?q=new+msdn.microsoft.com"><span class="kw3">new</span></a> DataSet<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Preenche o DataSet</span><br />
+oDataAdapter<span class="sy0">.</span><span class="me1">Fill</span><span class="br0">&#40;</span>oDataSet<span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Fecha a conexão</span><br />
+oConexao<span class="sy0">.</span><span class="me1">Close</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><br />
+<br />
+<span class="co1">//Trabalha com o conteúdo do DataSet</span></div></div>
+<p>Como o trecho de código acima mostrou, o método Fill() do DataAdapter popula o DataSet com os resultados da query específica. Por trás disso, o DataAdapter está utilizando um DataReader para ler os resultados da query e popular o DataSet. O DataSet é um objeto de dados desconectado. Uma bez preenchido, a conexão é fechada e o conteúdo do DataSet pode ser manipulado e examinado.</p>
+<p>Partindo do princípio que o DataSet representa uma coleção de dados separada e desconectada, não é surpresa nenhuma que seus dados sejam manipuláveis. Adicionalmente, o DataSet tem algumas capacidade de XML muito boas. Por exemplo, podemos serializar um DataSet em XML utilizando seu método WriteXml() ; Adicionalmente, pode-se popular um DataSet de um XML previamente formadado, utilizando o método ReadXml().</p>
+<h2>O &#8220;comércio&#8221; entre DataSet e DataReader</h2>
+<p>Independentemente de trazer ou não seus dados usando um DataSet ou um DataReader, podemos exibí-los em DataGrids, DataLists, or Repeaters utilizando exatamente o mesmo código. Na prática, definimos a propriedade <i>DataSource </i>dos Web Controls  como um DataReader ou um DataSet, e então chamamos o método <i>DataBind()</i>. O ASP.NET transforma o trabalho com dados em algo tão fácil que os desenvolvedores talvez não parem pra pensar qual a melhor forma de se utilizar.&#8221;É tudo igual&#8221;, não importa o jeito de acessar.</p>
+<p>Mas nem tudo é igual.Claramente, há uma grande diferença entre os atributos de um dataset e um datareader, logo também há uma diferença enorme de performance entre eles. Resumindo, a quantidade de atributos de um DataSet&#8217;s faz com que sua performance seja bem menor, comparada com o DataReader.</p>
+<p>De acordo com <a href="http://www.devx.com/vb2themax/Article/19887/1954">este artigo</a>, o DataReader é aproximadamente TRINTA VEZES mais rápido que o DataSet. Para volumes grande de dados, a diferença entre ambos é bem acentuada. O gráfico abaixo, por exemplo, ilustra os resultados de um teste efetuado pelo autor do artigo citado acima buscando de 100 a 1000 registros usando um DataSet (a linha rosa) e um DataReader (a linha azul marinho). Como mostra o gráfico, trazer 1000 registros com um DataReader é mais de 30 mais rápido do que utilizando um DataSet (0.28 segundos contra 8.89 segundos). Notável, não?<br />
+<a href="http://brunobemfica.net/wp-content/uploads/2010/07/comparacao_performance.gif"><img src="http://brunobemfica.net/wp-content/uploads/2010/07/comparacao_performance.gif" alt="comparacao_performance" title="comparacao_performance" width="453" height="356" class="aligncenter size-full wp-image-434" /></a></p>
+<p>Outros gráficos de desempenho podem ser observados <a href="http://msdn.microsoft.com/en-us/library/ms978388">aqui</a>, em comparações entre DataSet e DataReader em um cenário com um número comum de acessos. O resultado final é o mesmo. No entanto, o artigo diz:</p>
+<p>Em todos os testes, percebemos que a performance doDataReader foi melhor que a do DataSet. Como mencionado anteriorment, o DataReader oferece uma performance melhor pois evita a sobrecarga de memória associada à criação do DataSet.(&#8230;) O DataReader é uma escolha melhor para aplicações que necessitam de leitura optizimada dos dados. O quanto antes os dados traduzidos do DataReader forem utilizados, o DataReader e a conexão fechados, maior será a performance.</p>
+<h2>Quando um DataSet é útil?</h2>
+<p>Apesar das limitações,  o DataSet tem seus usos, caso contrário ele não seria um componente central do .NET Framework. No entando, creio que é raro(isto é, se existir) um uso para o DataSet em uma aplicação Web. Em toda a minha experiência, só vi uso para DataSets em duas ocasiões:</p>
+<p>Em aplicações desktop(WinForms). Considere uma aplição desktop de entrada de dados. Um usuário pode iniciar o programa, carregar os dados de vendas do servidor de banco de dados, fazer algumas alterações, e então salvá-las. Esta é a situação ideal para se utilizar um DataSet. Ele permite serem lidos em um DataSet residente na memória do computador do usuário, o que confere ao usuário a habilidade de trabalhar com os dados sem fazer constantes consultas ao banco de dados. Após editar os dados, eles podem fazer um batch update, gerenciando de forma harmoniosa quaisquer mudanças ocorridas enquanto o usuário trabalhava desconectado. Além disso, considerando que o DataSet é uma armazenagem de dados desconectada, estes dados podem ser obtidos offline. Um vendedor visitando um cliente pode carregar estes dados e consultá-los em seu notebook enquanto está no trânsito, ou no escritório do cliente.</p>
+<p>Uma situação como esta pode surgir em uma aplicação web. Porém, é um caso específico. Eu aconselharia nesse caso um dataset em sessão, utilizando as mesmas técnicas de batch editing e updating, ou &#8211; o mais indicado &#8211; uma cópia dos dados não em um dataset, mas em um XML local(por exemplo, consumindo um WebService que automaticamente serialize esse DataSet em um XML).</p>
+<p>Agora, quantas vezes você já fez isso no seu desenvolvimento ASP.NET diário? Quase sempre, eu aposto que é porque você provavelmente não deveria estar usando DataSets! Enquanto os controles ASP.NET não diferenciam quais objetos estão sendo sua fonte de dados, você provavelmente deve estar sofrendo coma perda de performance escolhendo usar DataSets.</p>
+<h2>Razões para utilizar um DataSet&#8230; e razões pelas quais você provavelmente não deve utilizá-lo</h2>
+<p>Neste artigo, eu implicitamente afirmei: &#8220;Utilizem DataReades em aplicações web, não DataSets!&#8221; Existem alguns cenários em uma aplicação web em que o DataSet parece ser a única saída. Por exemplo, imagine que você quer armazenar em cache algumas informações do banco de dados que serão utilizadas em várias páginas ao longo do site. Estes dados podem ser específicos de um usuário, e armazenados em sessão, ou podem ser os mesmos para todos os usuários ou podem ser os mesmos para todos os usuários e, portanto, armazenados no cache de dados. No entanto, um DataReader não pode ser armazenado em cache porque ele é um objeto de dados conectado, e conexões com um banco de dados deve ser de curta duração. Ou seja, a última coisa na vida que queremos é uma conexão aberta armazenada no cache. Portanto, se você quiser ter dados armazenados em cache do banco de dados pode parecer que a única opção é usar um DataSet.</p>
+<p>Mas não é a única opção. Você pode, ao invés disso, criar uma classe que tem as propriedades dos campos da tabela que você está armazenando no DataSet(em resumo, um objeto de negócio). E então, quando precisar você precisar armazenar os dados, utilizará um DataReader para ler as linhas e para cada iteração, criará um novo objeto dessa classe, e adicionará a um List<T> do tipo criado. Você pode assim guardar essa coleção em cache. Este método não é apenas mais eficiente, mas eu pessoalmente acho que aumenta a facilidade de manutenção do código, diminuindo o acoplamento. Além disso, os DataSources dos WebControls do .NET são do tipo Object, logo, a chamada do método Bind() funcionará igualmente.</p>
+<p>Outra razão pela qual você poderá pensar em utilizar um DataSet é acessar aleatoriamente os dados de uma busca, no caso de serem dados utilizados repetidamente. Por exemplo, popular uma DropDownList em função de outra. Neste caso, ainda assim é melhor acessar o banco com um DataReader, executando a query utilizando como parâmetro o item selecionado na DropDownList &#8220;pai&#8221;, manipular os dados como descrito acima(com uma coleção tipada), e popular a DropDownList dependente com os resultados.</p>
+<p>Conclusão<br />
+Neste artigo, examinamos os fundamentos de dois tipos de acesso a dados fornecidos pelo ADO.NET: O DataReader e o DataSet. Ambos os objetos tem seus usos em aplicações .NET mas, na minha opinião, os DataSets são raramente(quando muito) úteis em aplicações ASP.NET. Existem sempre exceções, mas na ampla maioria dos casos, apenas DataReaders devem ser utilizados.</p>
+<p>Nota: Apesar de existirem formas mais fáceis de se acessar dados atualmente(Como o facílimo LINQ to Entities), a forma mais utilizada(e performática) de acesso a dados ainda é com objetos de ADO.NET puros.</p>
+<p>É isso. Em breve, vem a segunda parte do artigo. Abraços e keep coding!<br />
+<script type="text/javascript"><!--
+google_ad_client = "pub-9762230498944681";
+/* 300x250, criado 10/08/10 */
+google_ad_slot = "5635431464";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+
+				
+	    <p class="tags"> </p>
+		</div>
+    <ul class="actions">
+        <li class="author">by <strong>Bruno Bemfica</strong></li>
+        <li class="cats"><a href="http://brunobemfica.net/?cat=1" title="Ver todos os posts em .net" rel="category">.net</a>,  <a href="http://brunobemfica.net/?cat=14" title="Ver todos os posts em Banco de dados" rel="category">Banco de dados</a>,  <a href="http://brunobemfica.net/?cat=3" title="Ver todos os posts em Programação" rel="category">Programação</a></li>
+    </ul>
+						<h4 class="msg">
+						</h4>
+		</div>
+
+	
+<!-- You can start editing here. -->
+<div id="comments">
+	<h3>9 Respostas para &#8220;Por que eu não uso datasets no ASP.NET&#8221;</h3>
+
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-49">
+			<p class="author-comm"><cite><a href='http://www.msdn.com.br' rel='external nofollow' class='url'>Tiago</a></cite> <em>em <a href="#comment-49" title="">agosto 3rd, 2010 at 04:34</a></em> says:</p>
+						<p>&#8220;Existem ainda os DataSets fortemente tipados, que são classes que extendem a classe DataSet(e a classe DataTable) e incluem propriedades e membros específicos aos dados representados pelos dataset. Apesar desse tipo de dataset sofrer(muito, diga-se de passagem) de problemas de performance(sobre os quais eu irei discorrer ao longo do artigo), eles ainda assim são mais utilizados do que os DataSets não tipados.&#8221;</p>
+<p>Por que?</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li id="comment-50">
+			<p class="author-comm"><cite>Bruno Bemfica</cite> <em>em <a href="#comment-50" title="">agosto 3rd, 2010 at 12:31</a></em> says:</p>
+						<p>Olá Tiago, obrigado pelo comentário. Os DataSets tipados são mais utilizados por oferecerem um controle maior dos dados ao desenvolvedor, já que na verdade são uma classe que extende a classe DataSet, com atributos próprios, ou seja: Conseguimos visualizar claramente quais são as propriedades desta classe, o que a torna mais facilmente manipulável na hora de codificar. </p>
+<p>Abraços e keep coding.</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-156">
+			<p class="author-comm"><cite>Jesus, E. O.</cite> <em>em <a href="#comment-156" title="">dezembro 15th, 2010 at 10:24</a></em> says:</p>
+						<p>do you already have the second part for this article?</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li id="comment-158">
+			<p class="author-comm"><cite>Bruno Bemfica</cite> <em>em <a href="#comment-158" title="">dezembro 15th, 2010 at 14:17</a></em> says:</p>
+						<p>I&#8217;m finishing. It will be available soon <img src='http://brunobemfica.net/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-203">
+			<p class="author-comm"><cite>Marcos</cite> <em>em <a href="#comment-203" title="">março 12th, 2011 at 23:37</a></em> says:</p>
+						<p>Um curso muito bom, que eu achei principalmente para iniciante </p>
+<p> é  o curso online de asp do curso24h</p>
+<p> um material super interativo, bem mais fácil de aprender.</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li id="comment-373">
+			<p class="author-comm"><cite>Diego Sayron</cite> <em>em <a href="#comment-373" title="">novembro 24th, 2011 at 15:04</a></em> says:</p>
+						<p>Homi.. Tu nasceu pra falar especificamente sobre esse assunto? Vai esclarecer as dúvidas assim na casa de São Pedro!</p>
+<p>Parabéns. Sempre utilizei dataset e datareader aleatoriamente sem a engenharia da história.</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-409">
+			<p class="author-comm"><cite>Tiago J</cite> <em>em <a href="#comment-409" title="">outubro 14th, 2012 at 10:30</a></em> says:</p>
+						<p>Parabéns pelo artigo!! Muito bom!!</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li id="comment-417">
+			<p class="author-comm"><cite>Leandro</cite> <em>em <a href="#comment-417" title="">abril 12th, 2013 at 21:48</a></em> says:</p>
+						<p>Bruno, e quanto a utilização de DataSets como parâmetros de entrada e saída para consumo de webservices? Isso pode gerar alguma incompatibilidade com o wsdl importer do Delphi por exemplo? E no Python?</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+		<li class="alt" id="comment-418">
+			<p class="author-comm"><cite>Bruno Bemfica</cite> <em>em <a href="#comment-418" title="">abril 29th, 2013 at 22:24</a></em> says:</p>
+						<p>Leandro, incompatibilidade não vai gerar. Mas vai gerar um tráfego de dados absurdamente grande e completamente desnecessário. Evite datasets ao máximo, especialmente em ambientes web. Datasets tem seu uso, mas devem ser exceção e não regra.</p>
+			<p class="commentmetadata"> </p>
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+<h3 id="respond">Deixar um comentário</h3>
+
+
+<form action="http://brunobemfica.net/wp-comments-post.php" method="post" id="commentform">
+<fieldset>
+<ol>
+<li><textarea name="comment" id="comment" cols="45" rows="10" tabindex="1" class="input-txt"></textarea></li>
+
+
+<li><label for="author">Name</label>
+<input type="text" name="author" id="author" value="" size="22" tabindex="2" class="input-txt" /></li>
+
+<li><label for="email">Mail (will not be published)</label>
+<input type="text" name="email" id="email" value="" size="22" tabindex="3" class="input-txt" /></li>
+
+<li><label for="url">Website (optional)</label>
+<input type="text" name="url" id="url" value="" size="22" tabindex="4" class="input-txt" />
+</li>
+
+<li><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="submit" /><input type="hidden" name="comment_post_ID" value="433" /></li>
+</ol>
+	<script type='text/javascript'>
+	<!--
+	refJS = escape( document[ 'referrer' ] );
+	document.write("<input type='hidden' name='refJS' value='"+refJS+"'>");
+	// -->
+	</script>
+	<noscript><p><strong>Currently you have JavaScript disabled. In order to post comments, please make sure JavaScript and Cookies are enabled, and reload the page.</strong> <a href="http://www.google.com/support/bin/answer.py?answer=23852" rel="nofollow external" >Click here for instructions</a> on how to enable JavaScript in your browser.</p></noscript>
+<script type="text/javascript">
+//<![CDATA[
+	function gethash(){
+		document.getElementById('commentform').onsubmit = null;
+		if(document.getElementById('submit')) document.getElementById('submit').value='Please wait...';
+		var mysack = new sack("http://brunobemfica.net/wp-content/plugins/captcha-free.php");
+		mysack.execute = 1;
+		mysack.method = 'POST';
+		mysack.onError = function() { alert('Unable to get Captcha-Free Hash!') };
+		mysack.setVar('post_id', 433);
+		mysack.runAJAX();
+		return false;
+	}
+	function gothash(myhash){
+		document.getElementById('captchafree').value = myhash;
+		// Workaround for Wordpress' retarded choice of naming the submit button same as a JS function name >:-(
+		document.getElementById('submit').click();
+	}
+	document.getElementById('commentform').onsubmit = gethash;
+//]]>
+</script>
+<input type="hidden" id="captchafree" name="captchafree" value="" />
+<noscript><p><strong>Please note:</strong> JavaScript is required to post comments.</p></noscript>
+<p style="font-size: small"><a href="http://wordpresssupplies.com/wordpress-plugins/captcha-free/">Spam protection by WP Captcha-Free</a></p></fieldset>
+</form>
+
+
+
+</div>
+
+	
+</div><!-- #maincontent -->
+
+<br class="clr" />
+</div><!-- #content -->
+<div id="footer">
+<p><span>Leopress</span> <a href="http://www.7graus.com/tech/wordpress/" id="themes-link"><strong>Theme for Wordpress</strong></a> <span>by</span> <a href="http://www.7graus.com" title="Cria&ccedil;&atilde;o de Sites, Web design" id="seteg-link"><strong>7Graus</strong></a> <span>(design based on Apple's Leopard Mac OS X)</span></p>
+</div><!--footer-->
+</div><!--doc-->
+				<!-- Advertising Manager v3.4.19 (0,531 seconds.) -->
+		<!-- 25 queries. 0,531 seconds. -->
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+===================================================================
+NOME CLASSE - PARTE DO CODIGO
+ATRIBUTOS - VARIAVEIS
+METODOS - FUNCOES
+===================================================================
+ENCAPSULAMENTO
+- Privadas
+- Publicas
+- Protegidas
+===================================================================
+HERANCA
+Performace
+Economia de codigo com reducao de duplicações
+Acessos privilegiados -------------------- > Protegidas

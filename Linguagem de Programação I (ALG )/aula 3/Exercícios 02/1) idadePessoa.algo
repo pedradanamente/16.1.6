@@ -1,0 +1,28 @@
+1) Escreva um algorítmo que receba o ano de nascimento de um usuário e o ano atual, calcule e mostre: 
+A) A idade desse usuário; 
+B) Quantos anos essa pessoa terá em 2010; 
+Entrada: Informa ano de nascimento e ano atual; 
+==============================================================================
+
+algoritmo idadePessoa; 
+var 
+	inteiro anoNascimento,anoAtual,idade; 
+
+inicio 
+	escreva("No portunhol estruturado posso puxar o ano atual, escreva para mim:"); 
+	leia(anoAtual); 
+	escreva("Digite o seu ano de nascimento:"); 
+	leia(anoNascimento); 
+	idade=anoAtual-anoNascimento; 
+	escreva("Sua idade é:",idade); 
+	idade=idade+(2020-anoAtual); 
+	escreva("Em 2020 sua idade será:",idade); 
+fim 
+
+
+
+
+
+
+
+

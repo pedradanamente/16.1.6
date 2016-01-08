@@ -1,0 +1,17 @@
+Calcular:
+a) o quadrado de um número:
+b) o dobro de um número:
+c) a média de dois valores:
+d) o produto de dois números:
+
+Criar uma função para calcular:
+a) o quadrado de um número:
+b) o dobro de um número:
+c) a média de dois valores:
+d) o produto de dois números:
+e) incrementar um número recebido por um argumento
+f) que verifique se 3 argumentos podem ser lados de um triângulo
+g) se 4 valores passados para argumentos são iguais
+h) que recebe como argumento uma idade e retorna True para maioridade
+i) que receba dois valores e retorno o menor
+j) que recebe um número e retorna True se ele for par

@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\[EXERC 02][G1][ALG II]\[EXERC 02][G1][ALG II]\bin\Release\[EXERC 02][G1][ALG II].exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\[EXERC 02][G1][ALG II]\[EXERC 02][G1][ALG II]\bin\Release\[EXERC 02][G1][ALG II].pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\[EXERC 02][G1][ALG II]\[EXERC 02][G1][ALG II]\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\[EXERC 02][G1][ALG II]\[EXERC 02][G1][ALG II]\obj\x86\Release\[EXERC 02][G1][ALG II].exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\[EXERC 02][G1][ALG II]\[EXERC 02][G1][ALG II]\obj\x86\Release\[EXERC 02][G1][ALG II].pdb

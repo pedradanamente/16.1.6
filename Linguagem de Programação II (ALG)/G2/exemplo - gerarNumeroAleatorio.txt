@@ -1,0 +1,24 @@
+/* exemplo de como gerar um número aleatório
+ */ 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random r = new Random();
+            int numeroAleatorio;          
+
+            numeroAleatorio = r.Next(0,100);//gera um num aleatório entre 0 e 100 e armazena na variável numeroAleatorio
+            Console.Write("Número aleatório gerado: "+numeroAleatorio);  
+
+            Console.ReadKey();
+        }        
+    }
+}
+

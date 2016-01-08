@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\RESPOSTA DA PROVA G2\RESPOSTA DA PROVA G2\bin\Debug\RESPOSTA DA PROVA G2.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\RESPOSTA DA PROVA G2\RESPOSTA DA PROVA G2\bin\Debug\RESPOSTA DA PROVA G2.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\RESPOSTA DA PROVA G2\RESPOSTA DA PROVA G2\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\RESPOSTA DA PROVA G2\RESPOSTA DA PROVA G2\obj\x86\Debug\RESPOSTA DA PROVA G2.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\RESPOSTA DA PROVA G2\RESPOSTA DA PROVA G2\obj\x86\Debug\RESPOSTA DA PROVA G2.pdb

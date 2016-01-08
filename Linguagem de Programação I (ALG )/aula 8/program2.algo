@@ -1,0 +1,19 @@
+(EXERC #03) 2- Escreva um algoritmo que leia numeros inteiros e finaliza quando a soma destes numeros atingir um valor superior ou igual a 30
+
+algoritmo program2
+var
+	inteiro numero, soma;
+	
+inicio
+	soma=0;
+	escreva("Digite um numero:");
+	leia(numero);
+	enquanto (soma<30) entao
+	inicio
+		soma=numero+soma;
+		escreva("Digite um novo numero:");
+		leia(numero);
+	fim
+	escreva("Limite de 30 foi atingido.");
+fim
+

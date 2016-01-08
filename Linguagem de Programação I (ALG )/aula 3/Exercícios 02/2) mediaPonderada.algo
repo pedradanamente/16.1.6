@@ -1,0 +1,20 @@
+2) Escreva um algorítmo que calcula a media ponderada de um aluno considerando os critérios: 
+Trabalho I tem peso: 2 
+Trabalho II tem peso: 3 
+Prova tem peso: 5 
+==============================================================================
+
+algoritmo mediaPonderada; 
+var 
+	real nT1,nT2,nProva,media; 
+
+inicio 
+	escreva("Digite a nota do Trabalho I"); 
+	leia(nT1); 
+	escreva("Digite a nota do Trabalho II"); 
+	leia(nT2); 
+	escreva("Digite a nota da Prova"); 
+	leia(nProva); 
+	media=(nT1*2)+(nT2*3)+(nProva*5)/10; 
+	escreva("Sua media final:",media); 
+fim 

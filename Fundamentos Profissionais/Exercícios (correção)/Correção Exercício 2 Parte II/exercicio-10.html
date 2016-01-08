@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="author" content="Taciano Balardin" />
+		<meta name="description" content="Atividade 01 da disciplina de Fundamentos Profissionais" />
+		<meta name="keywords" content="aula, fundamentos, profissionais" />
+		<title>Exercício nº 10</title>
+	</head>
+	<body>
+
+	<form method="post" action="">
+
+	<fieldset>
+		<legend>Dados Pessoais</legend>
+		<p><label>Nome: <input type="text" name="nome" value="" size="30" /></label></p>
+		<p><label>E-mail: <input type="text" name="email" value="" size="30" /></label></p>
+		<p><label>
+			Em qual moeda prefere receber o seu salário? <br />
+			<input type="radio" name="moeda" value="Real" /> Real <br /> 
+			<input type="radio" name="moeda" value="Dolar" /> Dolar <br /> 
+			<input type="radio" name="moeda" value="Euro" /> Euro <br /> 
+			<input type="radio" name="moeda" value="Yen" /> Yen <br /> 
+		</label></p>
+		<p><label>Anexar Currículo: <input type="file" name="curriculo" /></label></p>
+		<p><label>
+			Seus times favoritos? <br />
+			<select multiple="multiple" size="4" name="times">
+				<option>Internacional</option>
+				<option>Grêmio</option>
+				<option>Caxias</option>
+				<option>Juventude</option>
+				<option>São Paulo</option>
+				<option>Santos</option>
+				<option>Palmeiras</option>
+				<option>Real Madrid</option>
+				<option>Barcelona</option>
+			</select>
+		</label></p>
+		<p><label>Outro(s) time(s). Qual(is)? <input type="text" name="times" value="" size="30" /></label></p>
+		<p><label>
+			Gostaria de fazer comentários? <br />
+			<textarea name="comentario" rows="5" cols="70">Faça seu comentário aqui.</textarea>
+		</label></p>
+	</fieldset>
+
+	<p><input type="submit" name="bt1" value="Enviar" />
+	<input type="reset" name="bt2" value="Limpar" /></p>
+
+	</form>
+
+	</body>
+</html>

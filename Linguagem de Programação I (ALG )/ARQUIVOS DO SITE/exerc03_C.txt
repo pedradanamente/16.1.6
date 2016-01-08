@@ -1,0 +1,60 @@
+/*Escreva um programa para ler um número não determinado de pares de valores
+ * (x,y), calcular e escrever a soma dos valores entre m e n. Usar o seguinte
+ * menu:
+ * (1) continuar
+ * (2) sair
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y, menu,i, soma=0;
+            Console.SetCursorPosition(30, 0);            
+            Console.WriteLine("MENU:");
+            Console.WriteLine("(1) Continuar");
+            Console.WriteLine("(2) Sair");
+            menu = Convert.ToInt16(Console.ReadLine());
+            while (menu != 2)
+            {
+                if (menu == 1)
+                {
+                    Console.WriteLine("Informe o primeiro valor: ");
+                    x = Convert.ToInt16(Console.ReadLine());
+                    Console.WriteLine("Informe o segundo valor: ");
+                    y = Convert.ToInt16(Console.ReadLine());
+                    if (x < y)
+                    {
+                        for (i = x; i <= y; i++)
+                        {
+                            soma = soma + i;
+                        }
+                        Console.WriteLine("Soma = " + soma);
+                        soma = 0;
+                    }
+                    else
+                    {
+                        Console.WriteLine("O primeiro valor deve ser menor do que o segundo valor");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Opção inválida! Digite novamente!");
+                }
+                Console.WriteLine("MENU:");
+                Console.WriteLine("(1) Continuar");
+                Console.WriteLine("(2) Sair");
+                menu = Convert.ToInt16(Console.ReadLine());
+            }
+            Console.WriteLine("saindo do sistema...");
+            Console.ReadKey();
+        }
+    }
+}
+

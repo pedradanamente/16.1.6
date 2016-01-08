@@ -1,0 +1,48 @@
+(EXERC #06) 5- Escreva um algoritmo que leia um numero não determinado de valores, finalizando a leitura com o numero zero.
+O algoritmo deve fornecer como saida:
+a) A quantidade de numeros lidos (exceto o zero)
+b) a soma dos numeros que pertencem ao intervalo 10 a 20
+c) a media dos numeros que pertencem ao intervalo 1 a 10
+d) o menor valor lido
+
+algoritmo program5
+var
+	inteiro numero, contador, quantidade, valorMenor, soma1, soma2;
+	real media;
+
+inicio
+	quantidade=0;
+	contador=0;
+	soma1=0;
+	soma2=0;
+	escreva("Digite um numero:");
+	leia(numero);
+	enquanto (numero!=0) faça
+	inicio
+		se (contador==0) entao
+		inicio
+			menorValor=numero;
+		fim
+		senao se (numero<menorValor) entao
+		inicio
+			menorValor=numero;
+		fim
+		se ((numero>=10) E (numero=<20)) entao
+		inicio
+			soma1=numero+soma1;
+		fim
+		se ((numero>=1) E (numero<=10)) entao
+		inicio
+			soma2=numero+soma2;
+			quantidade=quantidade+1;
+		fim
+		media=soma2/quantidade;
+		contador=contador+1;
+		escreva("Digite um novo numero:");
+		leia(numero);
+	fim
+	escreva("A - Quantidade de numeros lidos:", contador);
+	escreva("B - Soma dos numeros pertencentes ao intervalo de 10 a 20:", soma1); 
+	escreva("C - A media dos numeros pertencentes ao intervalo de 1 a 10:", media); 
+	escreva("D - O menor valor lido é:", valorMenor);
+fim

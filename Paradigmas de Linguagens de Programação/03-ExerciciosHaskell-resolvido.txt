@@ -1,0 +1,36 @@
+Calcular:
+a) o quadrado de um número:
+	x * x
+b) o dobro de um número:
+	x * 2
+c) a média de dois valores:
+	(x + y) / 2
+d) o produto de dois números:
+	x * y 
+
+Criar uma função para calcular:
+a) o quadrado de um número:
+	let quadrado x = x * x
+b) o dobro de um número:
+	let quadrado x = x * 2
+c) a média de dois valores:
+	let media x y = (x + y) / 2
+d) o produto de dois números:
+	let produto x y = x * y 
+e) incrementar um número recebido por um argumento
+	let incremento x = x + 1
+f) que verifique se 3 argumentos podem ser lados de um triângulo
+	let triangulo a b c = if(a < b+c) && (b<a+c) && (c<a+b) then True else False
+g) se 4 valores passados para argumentos são iguais
+	let iguais a b c d = if(a==b) && (a==c) && (a==d) then True else False
+h) que recebe como argumento uma idade e retorna True para maioridade
+	let maioridade x = if(x >=18) then True else False
+	let maioridade x = if(x >=18)
+	let maioridade x |(x >=18) = True |otherwise = False
+i) que receba dois valores e retorno o menor
+	let menor x y = if(x > y) then y else x
+	let menor x y | (x > y) = y | otherwise = x
+j) que recebe um número e retorna True se ele for par
+	let par x = if(x mod 2 ==0) then True else False
+	let par x = (x mod 2 ==0)
+	let par x |(x mod 2 ==0) = True |otherwise = False

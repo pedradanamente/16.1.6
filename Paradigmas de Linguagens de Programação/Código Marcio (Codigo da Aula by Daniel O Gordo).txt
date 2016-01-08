@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Loja objLoja = new Loja();
+            objLoja.nome = "Lojão 10 Reáu";
+
+            Produto objProduto = new Produto();
+            objProduto.nome = "caneca";
+            objProduto.valor = 5.00;
+            objProduto.Desconto = 1.00;
+            objProduto.Desconto = objLoja.Calcula_desconto(objProduto.valor, objProduto.desconto);
+
+            objLoja.Imprime(objProduto);
+            Console.ReadKey();
+        }
+    }
+
+    public class Loja
+    {
+        public string nome;
+        public double Calcula_desconto(double valorProduto, double valorDesconto)
+        {
+	    return valorProduto - valorDesconto
+        }
+
+        public void Imprime(Produto Prod){
+            Console.WriteLine(nome);
+            Console.WriteLine("Produto: " + Prod.nome);
+            Console.WriteLine("Valor: " + Prod.valor);
+            Console.WriteLine("Desconto: " + Prod.Desconto);
+            Console.WriteLine("Valor Total: " + valorProduto);
+        }
+
+    }
+    }
+}

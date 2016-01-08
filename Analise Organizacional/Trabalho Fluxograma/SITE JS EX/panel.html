@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Sistema Intranet de RMA</title>
+	<script src="js/script.js"></script>
+</head>
+<p class="title-icone fl"><img src="images/panel.png" alt="" width="50" height="50"/></p>
+<p class="title-comicone fl">Painel de Controle</p>
+<p class="both"><hr/></p>
+
+<p class="panel-add" onclick="expande('panel1')" onDblClick="minimize('panel1')">[<a href="#">EXPANDIR</a>] ADICIONAR ASSISTÊNCIA TÉCNICA</p>
+<hr/>
+<div id="panel1" style="display:none;">
+	<form action="#" method="post">
+		<p class="p-assistenciaPanel fl">Assistência Técnica:</p><p class="fl">
+		<input class="assistenciaInput" type="text" name="assistenciaAddInput"/></p>
+		<p class="fl"><button class="assistenciaButtonAdd" name="assistenciaButtonAdd">ADICIONAR</button></p>
+	</form>
+	<p class="both"><hr/></p>
+</div>
+<p class="panel-add" onclick="expande('panel2')" onDblClick="minimize('panel2')">[<a href="#">EXPANDIR</a>] DELETAR ASSISTÊNCIA TÉCNICA</p>
+<hr/>
+<div id="panel2" style="display:none;">
+	<form action="#" method="post">
+		<p class="p-assistenciaPanel fl">Assistência Técnica:</p><p class="fl">
+		<input class="assistenciaInput" type="text" name="assistenciaDelInput"/></p>
+		<p class="fl"><button class="assistenciaButtonDel" name="assistenciaButtonDel">DELETAR</button></p>
+	</form>
+	<p class="both"><hr/></p>
+</div>
+<p class="panel-add" onclick="expande('panel3')" onDblClick="minimize('panel3')">[<a href="#">EXPANDIR</a>] LISTAR USUARIOS CADASTRADOS</p>
+<hr/>
+<div id="panel3" style="display:none;">
+	<table width="100%" style="border:1px solid rgba(0,0,0,0.2);margin-bottom:20px;">
+		<tr style="background-color:rgba(0,0,0,0.4);height:30px;font-family:verdana;border:1px solid rgba(0,0,0,0.2);text-align:center;">
+			<th>Nome</th><th>Endereço de e-mail</th><th>IP</th>
+		</tr>
+			<?php
+			$sql = $conexao->query("SELECT * FROM usuarios"); 
+			while($linha =  $sql->fetch_array()) {
+			?>
+		<tr width="100%" style="background-color:rgba(255,255,255,0.2);height:20px;font-family:verdana;border:1px solid rgba(0,0,0,0.2);text-align:left;">
+			<td width="33%" style="padding-left:5px;padding-right:5px;"><?php echo $linha['nome']; ?></td>
+			<td width="43%" style="padding-left:5px;padding-right:5px;"><?php echo $linha['email']; ?></td>
+			<td width="23%" style="text-align:center;"><?php echo $linha['ip']; ?></td>
+		</tr>
+			<?php
+			}
+			?>
+	</table>
+	<p class="both"><hr/></p>
+</div>
+<p class="panel-add" onclick="expande('panel4')" onDblClick="minimize('panel4')">[<a href="#">EXPANDIR</a>] ADICIONAR USUARIO NA BLACKLIST</p>
+<hr/>
+<div id="panel4" style="display:none;">
+	<form action="#" method="post">
+		<p class="p-blistAddPanel fl">E-mail:</p><p class="fl">
+		<input class="blistAddInput" type="text" name="blistAddInput"/></p>
+		<p class="fl"><button class="blistAddButton" name="blistAddButton">ADICIONAR</button></p>
+	</form>
+	<p class="both"><hr/></p>
+</div>
+
+<p class="panel-add" onclick="expande('panel5')" onDblClick="minimize('panel5')">[<a href="#">EXPANDIR</a>] DELETAR UMA SOLICITAÇÃO DE RMA</p>
+<hr/>
+<div id="panel5" style="display:none;">
+	<form action="post/deleta_solicitacao.php" method="post">
+		<p class="p-chavePanel fl">CHAVE:</p><p class="fl">
+		<input class="chaveInputDel" type="text" name="chaveInputDel"/></p>
+		<p class="fl"><button class="chaveButtonDel" name="chaveButtonDel">DELETAR</button></p>
+	</form>
+	<p class="both"><hr/></p>
+</div>
+<p class="panel-add" onclick="expande('panel6')" onDblClick="minimize('panel6')">[<a href="#">EXPANDIR</a>] DELETAR UM USUÁRIO</p>
+<hr/>
+<div id="panel6" style="display:none;">
+	<form action="post/deleta_usuario.php" method="post">
+		<p class="p-usuarioPanel fl">E-mail:</p><p class="fl">
+		<input class="usuarioInputDel" type="text" name="usuarioInputDel"/></p>
+		<p class="fl"><button class="usuarioButtonDel" name="usuarioButtonDel">DELETAR</button></p>
+	</form>
+	<p class="both"><hr/></p>
+</div>
+</body>
+</html>

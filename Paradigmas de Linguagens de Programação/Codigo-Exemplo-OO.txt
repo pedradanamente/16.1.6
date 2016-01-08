@@ -1,0 +1,159 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculadora_Projeto
+{
+    enum Opcao
+    {
+        SOMAR, SUBTRAIR, MULTIPLICAR, DIVIDIR, TERMINAR
+    }
+    class Program
+    {
+        double valor1, valor2;
+
+
+        //------------------------------------------
+
+
+        static void Main(string[] args)
+        {
+            new Program().Inicio();
+        }
+
+        private void Inicio()
+        {
+            Opcao opcao;
+            Calculadora.Operacoes objOperacao = new Calculadora.Operacoes();
+            while ((opcao = Menu()) != Opcao.TERMINAR)
+            {
+                InformarValores();
+                switch (opcao)
+                {
+                    case Opcao.SOMAR:
+                        ApresentarResultado(Somar());
+                        break;
+                    case Opcao.SUBTRAIR:
+                        ApresentarResultado(Subtrair(), opcao);
+                        break;
+                    case Opcao.MULTIPLICAR:
+                        ApresentarResultado(Multiplicar(), opcao);
+                        break;
+                    case Opcao.DIVIDIR:
+                        ApresentarResultado(Dividir(), opcao);
+                        break;
+                }
+
+            }
+        }
+
+        private void ApresentarResultado(double resultado, Opcao opcao)
+        {
+            switch (opcao)
+            {
+                case Opcao.SOMAR:
+                    Console.WriteLine("\n RESULTADO DA SOMA: {0}", resultado);
+                    break;
+                case Opcao.SUBTRAIR:
+                    Console.WriteLine("\n RESULTADO DA SUBTRACAO: {0}", resultado);
+                    break;
+                case Opcao.MULTIPLICAR:
+                    Console.WriteLine("\n RESULTADO DA MULTIPLICACAO: {0}", resultado);
+                    break;
+                case Opcao.DIVIDIR:
+                    Console.WriteLine("\n RESULTADO DA DIVISAO: {0}", resultado);
+                    break;
+            }
+            Console.ReadKey();
+        }
+       
+        private void ApresentarResultado(double resultado)
+        {
+            Console.WriteLine("\n RESULTADO EH: {0}", resultado);
+            Console.ReadKey();
+        }
+
+        private void InformarValores()
+        {
+            Console.Clear();
+            Console.WriteLine("INFORME O VALOR 1:");
+            valor1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("INFORME O VALOR 2:");
+            valor2 = Convert.ToDouble(Console.ReadLine());
+        }
+
+        double Somar()
+        {
+            return valor1 + valor2;
+        }
+
+        double Subtrair()
+        {
+            return valor1 - valor2;
+        }
+        double Multiplicar()
+        {
+            return valor1 * valor2;
+        }
+        double Dividir()
+        {
+            if (valor2 != 0)
+                return valor1 / valor2;
+            else
+                return 0;
+        }
+
+
+
+        private Opcao Menu()
+        {
+            bool invalido = false;
+            Opcao opcao = Opcao.TERMINAR;
+            int tecla;
+            do
+            {
+                if (invalido)
+                    Console.WriteLine("   \n Opção invalida. Tente novamente! Opcao:\n ");
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Operacoes:");
+                    Console.WriteLine("   \n 1 Somar");
+                    Console.WriteLine("   \n 2 Subtrair");
+                    Console.WriteLine("   \n 3 Multiplicar");
+                    Console.WriteLine("   \n 4 Dividir");
+                    Console.WriteLine("   \n 5 Encerrar ");
+                    Console.WriteLine("   \nInforme a opcao: ");
+                }
+                tecla = Convert.ToInt16(Console.ReadLine());
+                invalido = false;
+                switch (tecla)
+                {
+                    case 1:
+                        opcao = Opcao.SOMAR; ;
+                        break;
+                    case 2:
+                        opcao = Opcao.SUBTRAIR;
+                        break;
+                    case 3:
+                        opcao = Opcao.MULTIPLICAR;
+                        break;
+                    case 4:
+                        opcao = Opcao.DIVIDIR;
+                        break;
+                    case 5:
+                        opcao = Opcao.TERMINAR;
+                        break;
+                    default:
+                        invalido = true;
+                        break;
+                }
+            }
+            while (invalido);
+            return opcao;
+        }
+
+    }
+}

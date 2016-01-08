@@ -1,0 +1,43 @@
+/* 4. Criar um algoritmo que receba o nome e a idade de uma pessoa e mostre o nome dessa pessoa
+e o valor que ela deverá pagar de mensalidade por um plano de saúde de acordo com a tabela
+abaixo:*/
+
+algoritmo planoSaude
+var
+	caracter nome;
+	inteiro idade;
+	real valor;
+
+inicio
+	escreva("Digite seu nome:");
+	leia(nome);
+	escreva("Digite sua idade:");
+	leia(idade);
+	se (idade<=10) entao
+		inicio
+			valor=30.00;
+		fim
+	senao se( (idade>10) E (idade<=29) )entao
+		inicio
+			valor=60.00;
+		fim
+	senao se( (idade>29) E (idade<=45) )entao
+		inicio
+			valor=120.00;
+		fim
+	senao se( (idade>45) E (idade<=59) )entao
+		inicio
+			valor=150.00;
+		fim
+	senao se( (idade>59) E (idade<=65) )entao
+		inicio
+			valor=250.00;
+		fim
+	senao se (idade>65) entao
+		inicio
+			valor=400.00;
+		fim
+	escreva("Seu nome é:",nome);
+	escreva("O valor da mensalidade a ser pago será: R$",valor);
+fim
+	

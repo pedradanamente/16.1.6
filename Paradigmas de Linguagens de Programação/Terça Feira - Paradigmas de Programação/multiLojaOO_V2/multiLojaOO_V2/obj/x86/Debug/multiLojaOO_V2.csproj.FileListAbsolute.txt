@@ -1,0 +1,5 @@
+C:\Users\UNO\Desktop\Terça Feira - Paradigmas de Programação\multiLojaOO_V2\multiLojaOO_V2\bin\Debug\multiLojaOO_V2.exe
+C:\Users\UNO\Desktop\Terça Feira - Paradigmas de Programação\multiLojaOO_V2\multiLojaOO_V2\bin\Debug\multiLojaOO_V2.pdb
+C:\Users\UNO\Desktop\Terça Feira - Paradigmas de Programação\multiLojaOO_V2\multiLojaOO_V2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\UNO\Desktop\Terça Feira - Paradigmas de Programação\multiLojaOO_V2\multiLojaOO_V2\obj\x86\Debug\multiLojaOO_V2.exe
+C:\Users\UNO\Desktop\Terça Feira - Paradigmas de Programação\multiLojaOO_V2\multiLojaOO_V2\obj\x86\Debug\multiLojaOO_V2.pdb

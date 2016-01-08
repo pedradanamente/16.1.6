@@ -1,0 +1,20 @@
+Algorítmos: 
+
+1) Escreva um algorítmo que receba o ano de nascimento de um usuário e o ano atual, calcule e mostre: 
+A) A idade desse usuário; 
+B) Quantos anos essa pessoa terá em 2010; 
+Entrada: Informa ano de nascimento e ano atual; 
+
+2) Escreva um algorítmo que calcula a media ponderada de um aluno considerando os critérios: 
+Trabalho I tem peso: 2 
+Trabalho II tem peso: 3 
+Prova tem peso: 5 
+
+3) Escreva em algorítmo que calcule o dobro de um valor informado pelo usuário. 
+
+4) Escreva um algoritmo que leia 2 valores A e B 
+e troque os valores de forma que a variavel A fique com o valor de B 
+e a variavel B fique com o valor de A. 
+
+
+

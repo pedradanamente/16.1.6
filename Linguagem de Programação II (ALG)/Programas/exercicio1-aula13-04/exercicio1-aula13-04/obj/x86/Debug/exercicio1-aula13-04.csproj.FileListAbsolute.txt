@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exercicio1-aula13-04\exercicio1-aula13-04\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exercicio1-aula13-04\exercicio1-aula13-04\bin\Debug\exercicio1-aula13-04.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exercicio1-aula13-04\exercicio1-aula13-04\bin\Debug\exercicio1-aula13-04.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exercicio1-aula13-04\exercicio1-aula13-04\obj\x86\Debug\exercicio1-aula13-04.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exercicio1-aula13-04\exercicio1-aula13-04\obj\x86\Debug\exercicio1-aula13-04.pdb

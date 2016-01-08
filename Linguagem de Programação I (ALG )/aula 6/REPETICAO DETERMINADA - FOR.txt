@@ -1,0 +1,102 @@
+Faça algoritmo que calcule as medias de 20 alunos de uma turma, conderando que cada aluno tem 2 notas (trabalho e da prova).
+Estara aprovado o aluno que tiver media superior ou igual a 7
+
+Construir algoritmo que calcule a media de todos voces e msotre no final a media e a informacao se esta aprovado ou reprovado.
+REPETICAO DETERMINADA: PARA
+REPETICAO INDETERMINADA: ENQUANTO, REPITA
+----------------------------------
+linguagem C 
+
+int main(){ 
+
+int i; 
+for(i=0;i<=100;i++){ 
+} 
+
+... 
+
+} 
+----------------------------------
+Sintaxe EM 1 EM 1:
+
+para VariavelDeControle = valorInicial até valorFinal faça
+inicio
+	<bloco de comandos>
+fim
+----------------------------------
+----------------------------------
+Sintaxe INCREMENTA: EM 2 EM 2:
+
+para VariavelDeControle = valorInicial até valorFinal passo 2 faça
+inicio
+	<bloco de comandos>
+fim
+----------------------------------
+----------------------------------
+Sintaxe DECREMENTA: EM -1 EM -1:
+
+para VariavelDeControle = valorInicial até valorFinal passo -1 faça
+inicio
+	<bloco de comandos>
+fim
+----------------------------------
+----------------------------------
+VariavelDeControle: Somente INTEIRO
+valorInicial: 1
+valorFinal: 10
+Repete 10 Vezes
+----------------------------------
+================================
+PARA 1 ALUNO
+================================
+algoritmo media
+var
+	real trabalho, prova, media;
+	caracter nome;
+
+inicio
+	escreva("Informe o nome do aluno:");
+	leia(nome);
+	escreva("Informe nota do trabalho:");
+	leia(trabalho);
+	escreva("Informe nota da prova:");
+	leia(prova);
+	media=trabalho+prova/2;
+	se (media>=7) entao
+	inicio
+		escreva(nome," aprovado! Media:,media);
+	fim
+	senao
+	inicio
+		escreva(nome," reprovado! Sua media foi:",media);
+	fim
+fim	
+================================
+PARA 20 ALUNOS
+================================
+algoritmo media
+var
+	real trabalho, prova, media;
+	caracter nome;
+	inteiro x;
+
+inicio
+	para x=1 até 10 faça
+	inicio
+		escreva("Informe o nome do aluno:");
+		leia(nome);
+		escreva("Informe nota do trabalho:");
+		leia(trabalho);
+		escreva("Informe nota da prova:");
+		leia(prova);
+		media=trabalho+prova/2;
+		se (media>=7) entao
+		inicio
+			escreva(nome," aprovado! Media:,media);
+		fim
+		senao
+		inicio
+			escreva(nome," reprovado! Sua media foi:",media);
+		fim
+	fim
+fim

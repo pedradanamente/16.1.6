@@ -1,0 +1,27 @@
+/* c) Sabendo-se que 100 quilowatts de energia custa um sétimo do salário mínimo, fazer um algoritmo que
+receba o valor do salário mínimo e a quantidade de quilowatts consumida por uma residência e em seguida, calcule e
+escreva:
+1. o valor em reais R$ de cada kilowatt;
+2. o valor em reais R$ a ser pago;
+3. o novo valor a ser pago por essa residência com um desconto de 10%
+============================================================================== */
+
+algoritmo consumoEnergia
+var
+	real salarioMinimo, quantidadeKwConsumido, valorKw, valorTotal, valorFinal, percentual, desconto;
+
+inicio
+	escreva("Digite o valor do salário minimo:");
+	leia(salarioMinimo);
+	escreva("Digite a quantidade de kw consumido:");
+	leia(quantidadeKwConsumido);
+	valorKw=(salarioMinimo/7);
+	valorTotal=(valorKw*quantidadeKwConsumido);
+	percentual=(10.0 / 100.0);
+	desconto=(percentual * valorTotal);
+	valorFinal(valorTotal - desconto);
+	escreva("1. Valor do Kw: R$", valorKw);
+	escreva("2. Valor Total a ser pago:", valorTotal);
+	escreva("3. Valor final a ser pago com o desconto de 10%:", valorFinal);
+fim
+

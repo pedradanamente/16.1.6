@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `transferencia_after_insert` AFTER INSERT ON `transferencia` FOR EACH ROW
+
+BEGIN
+	# após inserir uma nova transferência na tabela movimentação é inserida movimentação de débito 'D' no rementente.
+	insert movimentacao values(DEFAULT, new.rem_agencia_numero, new.rem_conta_numero, 'D', new.valor);
+
+	# após ser abatido o valor da conta do remente, este insert irá movimentar o crédito 'C' para o destinatário.
+	insert movimentacao values(DEFAULT, new.dst_agencia_numero, new.dst_conta_numero, 'C', new.valor);
+END

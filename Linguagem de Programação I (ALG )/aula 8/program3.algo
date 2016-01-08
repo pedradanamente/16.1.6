@@ -1,0 +1,40 @@
+(EXERC #04) 3 - Escreva um algoritmo que leia um numero não determinado de valores positivos, encontre o menor e o maior valor.
+Numero zero informado encerra a execução do algoritmo.
+
+algoritmo program3
+var
+	real numero, maiorValor, menorValor;
+	inteiro contador;
+	
+inicio
+	contador=0;
+	escreva("Digite um numero:");
+	leia(numero);
+	enquanto (numero!=0) faça
+	inicio
+		se (numero>0) entao
+		inicio
+			se (contador==0) entao
+			inicio
+				maiorValor=numero;
+				menorValor=numero;
+			fim
+			senao
+			inicio
+				se (numero>maiorValor) entao
+				inicio
+					maiorValor=numero;
+				fim
+				se (numero<menorValor) entao
+				inicio
+					menorValor=numero;
+				fim
+			fim
+			contador=contador+1;
+		fim
+	escreva("Digite um novo numero:");
+	leia(numero);
+	fim
+	escreva("O maior numero é:", maiorValor);
+	escreva("O menor numero é:", menorValor);
+fim

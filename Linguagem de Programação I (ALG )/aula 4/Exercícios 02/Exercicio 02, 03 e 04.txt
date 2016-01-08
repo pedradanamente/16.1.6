@@ -1,0 +1,15 @@
+2) Faça um algoritmo que leia 2 valores A e B e apresente o maior valor.
+(Suponha valores diferentes)
+
+3) Tendo como dados de entrada a altura e o sexo de uma pessoa, contrua um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+	* para homens: (72.7 * altura ) - 58
+	* para mulheres: (62.1 * altura) - 44.7
+
+4) Elabore um algorítmo que dada a idade de um nadador, classifique-o em uma das seguintes categorias:
+
+Idade / Categoria
+5 até 7 anos / Infantil A
+8 até 10 anos / Infantil B
+11 até 13 anos / Juvenil A
+14 até 17 anos / Juvenil B
+maiores de 18 anos / Adulto

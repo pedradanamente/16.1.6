@@ -1,0 +1,16 @@
+AULA DIA 19.03
+
+-Criar tabela aluno CREATE TABLE
+	-CGU, NOME, G1, G2
+-Inserir registros de alunos com notas de G1 e G2 com algumas notas nulas
+-Realizar consultas (SELECT):
+	-Selecionar todos os registros para ter uma visão geral dos alunos
+	-Selecionar nome, g1 e g2 dos alunos
+	-Selecionar nome e g1 dos alunos com media maior/igual que 6
+	-Selecionar nome e g2 dos alunos com media menor que 6
+	-Selecionar os alunos que não tenham nota
+	-Selecionar os alunos em ordem alfabética (ascendente/descendente)
+	-Selecionar os alunos por ordem de nota (ascendente/descendente)
+	-Selecionar os alunos que tenham nota de G1 5 a 9 por ordem de nota
+	-Selecionar os alunos por ordem crescente de nome e por ordem descrecente de g2
+	

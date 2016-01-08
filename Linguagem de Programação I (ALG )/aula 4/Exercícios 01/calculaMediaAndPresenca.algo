@@ -1,0 +1,13 @@
+algoritmo calculaMedia
+var
+	real N1,N2,N3,N4,media;
+inicio
+escreva("Informe as 4 notas do aluno:);
+leia(N1,N2,N3,N4);
+media=(N1,N2.N3.N4)/4;
+se (media >= 6) E (precenca >= 20%) entao
+	inicio
+	escreva("Aluno aprovado");
+	escreva("A media do aluno é:",media);
+	fim
+fim

@@ -1,0 +1,511 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Diagramação de software - D.F.D - II</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p align="left"><font
+size="5"><img border="0" src="../../maco10.gif" width="233" height="32"><b><font color="#000080" face="Trebuchet MS">Diagramação 
+de software - D.F.D - II</font></b></font></p>
+
+<hr>
+
+<p align="left"><font face="Trebuchet MS">No artigo
+<a href="http://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCsQFjAA&url=http%3A%2F%2Fwww.macoratti.net%2Fvb_dfd1.htm&ei=7KLiUaj7IbXB4AOC9ICQAg&usg=AFQjCNFzmN0roG07njnO-J-_8Vum5RbalA&bvm=bv.48705608,d.dmg" onmousedown="return rwt(this,'','','','1','AFQjCNFzmN0roG07njnO-J-_8Vum5RbalA','','0CCsQFjAA','','',event)">
+Diagramação de software - <em>D.F.D</em> e D.E R - <em>Macoratti</em>.net</a> eu 
+apresentei o conceito sobre <b>DFD&nbsp; - Diagrama de Fluxo de Dados - </b>&nbsp;e prometi voltar ao assunto. Pois bem, cá 
+estamos...</font></p>
+
+<p align="left"><font face="Trebuchet MS"><i>Este artigo é na verdade uma compilação do assunto encontrado 
+em vários artigos publicados na internet citados nas referências.</i></font></p>
+<p align="left"><font face="Trebuchet MS">Hoje vou continuar o assunto a partir de onde paramos mostrando 
+outros aspectos do DFD e sua utilização.</font></p>
+<p align="left"><font face="Trebuchet MS">Um <b>DFD</b>&nbsp; pode ser desenhado em vários níveis, 
+dependendo da complexidade e grau de detalhamento do sistema. Pelo menos dois 
+níveis ocorrem em qualquer sistema:</font></p>
+<ol>
+  <li>
+<p align="left"><font face="Trebuchet MS"><b>Diagrama de Contexto </b></font></p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS"><b>Diagrama Nível 0</b></font></p>
+  </li>
+</ol>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="34%">
+  <tr>
+    <td width="100%" bgcolor="#FFFFE1"><font face="Trebuchet MS">Quantos processos por 
+    nível podemos ter em um DFD ?<br>
+    A regra de Miller indica de : 7±2 </font>
+    <p><font face="Trebuchet MS">Até quantos níveis podemos ter ?<br>
+    <br>
+    Para Sistemas simples: 2 a 3 níveis<br>
+    Para Sistemas de médio porte : 3 a 6 níveis<br>
+    Para Sistemas de grande porte : 5 a 8 níveis<br>
+&nbsp;</font></td>
+  </tr>
+</table>
+<p align="left"><b><font face="Trebuchet MS" color="#000080" size="5">DFD - O Diagrama de 
+Contexto</font></b></p>
+<p align="left"><font face="Trebuchet MS">O DFD é modelado em uma série de 
+níveis, para que possa expor suas funções mais detalhadas em um sistema 
+complexo, cada nível oferece mais detalhes que seu nível superior.&nbsp; </font>
+</p>
+<p align="left"><font face="Trebuchet MS">O DFD de nível mais alto consiste em 
+uma única bolha, representando o sistema inteiro; os fluxos de dados mostram as 
+interfaces entre o sistema e as entidades externas, esse diagrama chama-se 
+Diagrama de contexto.</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="18%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS">
+    <img border="0" src="vb_dfd21.gif" width="556" height="296"></font></td>
+  </tr>
+</table>
+<p align="left"><b><font face="Trebuchet MS" color="#000080" size="5">DFD - 
+Nível 0</font></b></p>
+<p align="left"><font face="Trebuchet MS">O DFD imediatamente abaixo do Diagrama 
+de contexto é conhecido como DFD nível 0, e representa a visão de mais alto 
+nível das principais funções do sistema bem como as principais interfaces entre 
+essas funções.</font></p>
+<p align="left"><font face="Trebuchet MS">O detalhamento do Diagrama de contexto 
+gera sub-bolhas que apresenta um maior detalhamento do sistema. Abaixo vemos o 
+DFD nível 0 do diagrama de contexto :</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="28%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS">
+    <img border="0" src="vb_dfd22.gif" width="499" height="407"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS">Em suma o DFD Nível 0 é um detalhamento do Diagrama de Contexto, 
+incluindo as mesmas informações daquele diagrama, acrescentando-se o 
+detalhamento de processos, que operam sobre os fluxos de dados, e os depósitos 
+de dados. </font> </p>
+<p align="left"><b><font face="Trebuchet MS" size="5" color="#800080">DFD - 
+Nível 1</font></b></p>
+<p align="left"><font face="Trebuchet MS">O próximo nível de detalhamento do DFD 
+nível 0 chama-se DFD nível 1, que apresenta uma detalhes das funções ainda maior 
+que seu nível superior. A numeração das bolhas depende da numeração da bolha do 
+DFD de nível imediatamente superior, que descreve o relacionamento com tal 
+bolha, esse tipo de pratica melhora na identificação e organização das funções 
+do sistema. </font></p>
+<p align="left"><font face="Trebuchet MS">Abaixo vemos o exemplo para o 
+detalhamento do processo -<b> Cadastrar Clientes</b> - do DFD Nivel 0:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="25%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS">
+    <img border="0" src="vb_dfd23.gif" width="465" height="431"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS">No DFD Nível 1 aplicam-se as mesmas regras do DFD nível 0, porém 
+sua representação restringe-se ao detalhamento de um determinado processo 
+daquele diagrama, apresentando o contexto com aquele nível <i>(mesmas relações 
+de entrada e saída representados no nível 0.)</i> </font> </p>
+<p align="left"><b><font size="5" color="#800080" face="Trebuchet MS">Dicionário de Dados</font></b></p>
+<p align="left"><font face="Trebuchet MS">O Dicionário de dados é a relação organizada de todos os 
+elementos de dados pertinentes ao sistema, com definições precisas e&nbsp; 
+rigorosas que registra todos os fluxos de entrada e saída,&nbsp; depósitos de 
+dados, fluxos e depósitos de dados temporários.</font></p>
+<p align="left"><font face="Trebuchet MS">Logo, em relação ao DFD o conteúdo de um dicionário de dados é 
+composto por:</font></p>
+<ul>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS"><b>especificação de fluxo de dados</b></font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS"><b>especificação de arquivos</b></font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS"><b>especificação de processos</b></font></p>
+  </li>
+</ul>
+<p align="left"><font face="Trebuchet MS">Assim o dicionário de dados é uma listagem organizada de todos 
+os elementos de dados pertinentes ao sistema, com definições precisas e 
+rigorosas para que o usuário e o analista de sistemas possam conhecer todas as 
+entradas, saídas, componentes de depósitos e cálculos intermediários. A seguir 
+temos alguns símbolos utilizados no Dicionário de dados e seus respectivos 
+significados.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="12%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS">
+    <img border="0" src="vb_dfd27.gif" width="580" height="411"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS">A seguir vemos um exemplo de utilização do Dicionário de Dados 
+em um depósito de dados - DD:</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="16%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS">
+    <img border="0" src="vb_dfd28.gif" width="680" height="193"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS">Outros exemplos:</font></p>
+<p align="left"><font face="Trebuchet MS">1- Exemplo da notação “{ }” -&gt; <b>&nbsp;código_cartão = {número_válido}</b>&nbsp;
+<i>/ número_válido = [0-9]</i><br>
+2- Exemplo da notação de “[ | | ]”.&nbsp;&nbsp; <b>sexo = [F | M]</b><br>
+3- Exemplos de um item de dados elementar: <b>sexo ,&nbsp; numero_valido,&nbsp; 
+caracter_valido</b></font></p>
+<p align="left"><font face="Trebuchet MS">Assim&nbsp; temos que :</font></p>
+<ul>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">Dicionário de dados descreve o significado 
+dos fluxos de dados e dos depósitos de dados.</font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">Descreve a composição de dados agregados&nbsp; 
+Ex.: endereço.</font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">Especifica os valores e unidades 
+relevantes. Descreve os relacionamentos entre depósitos de dados (diagramas E/R)</font></p>
+  </li>
+</ul>
+<p align="left"><font face="Trebuchet MS">Lembre-se :<b><i> &quot;Sem o DD, tudo o que for modelado poderá 
+ficar incompleto ou inconsistente.&quot;</i></b></font></p>
+<p align="left"><font face="Trebuchet MS">A seguir algumas sugestões para a criação de DFDs:</font></p>
+<ul>
+  <li>
+<p align="left"><font face="Trebuchet MS">Escolher nomes sugestivos para processos, fluxos, depósitos e 
+terminadores.</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS">Não usar nomes de pessoas, mas sim a designação do papel que 
+representam;</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS">Não usar nomes de mecanismos, dispositivos ou meios físicos 
+usados para transportar dados. Exemplo: Em vez de “Telefonema” usar “Pedido” e 
+em vez de “Operador de entrada de dados” usar “Cliente”, ou seja a origem;
+</font> </p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS">A política utilizada para dar nomes a processos consiste em 
+utilizar um verbo e um objeto, ou seja, a atividade e o objeto associado. Não se 
+deve usar, contudo, nomes ambíguos do tipo: processar dados, tratar entradas e 
+funções variadas. </font> </p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS">Desenhar DFD com poucos objetos, para facilitar a sua leitura;</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Trebuchet MS">Minimizar cruzamentos entre fluxos de dados;</font></p>
+  </li>
+</ul>
+<p align="left"><font face="Trebuchet MS">Exemplo de um DFD de leitura difícil:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="27%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS" size="4">
+    <img border="0" src="vb_dfd24.gif" width="708" height="448"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS">A construção de um DFD é um processo iterativo. Assim sendo, um 
+DFD deve ser redesenhado várias vezes, de forma a garantir:</font></p>
+<ol>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">A modelação adequada do sistema em estudo;</font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">A correção técnica;</font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">A estética agradável;</font></p>
+  </li>
+  <li>
+<p align="left"><font color="#800080" face="Trebuchet MS">A consistência interna e em relação a 
+outros modelos utilizados, como DER, DTE, DD e especificação de processos.
+</font></p>
+  </li>
+</ol>
+<p align="left"><font face="Trebuchet MS">Exemplo de um Diagrama de contexto e DFD Nível bem desenhados 
+para um sistema de reservas :</font></p>
+<p align="left"><b><font face="Trebuchet MS">1- Diagrama de contexto:</font></b></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="31%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS" size="4">
+    <img border="0" src="vb_dfd25.gif" width="645" height="374"></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Trebuchet MS" size="4">2- Diagrama de Nível 0 :</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="36%">
+  <tr>
+    <td width="100%">
+    <font face="Trebuchet MS" size="4">
+    <img border="0" src="vb_dfd26.gif" width="675" height="453"></font></td>
+  </tr>
+</table>
+<p align="left"><font color="#808000" face="Trebuchet MS" size="4"><b>Nota: Dica de ferramenta para gerar o 
+modelo e dicionário de dados:</b></font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="60%">
+  <tr>
+    <td width="100%" bgcolor="#FFFFE1"><span style="font-family: Trebuchet MS">
+    <a href="http://schemaspy.sourceforge.net/">SchemaSpy</a> que é uma 
+    ferramenta <b>gratuita</b> baseada em Java (requer Java 5 ou superior) que 
+    analisa os metadados de um esquema em um banco de dados e gera uma 
+    representação visual em um formato legível pelo browser. Ele utiliza um 
+    programa chamado <a href="http://www.graphviz.org/">Graphviz</a> para gerar 
+    as representações gráficas dos relacionamentos das tabelas. Vale a pena 
+    salientar que ele permite que você clique através da hierarquia das tabelas 
+    através dos relacionamentos existentes entre as mesmas. O SchemaSpy possui 
+    suporte para vários bancos e utiliza o JDBC para extrair as informações do 
+    banco de dados.</span></td>
+  </tr>
+</table>
+<p align="left" style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+<br>
+&nbsp; </font><font face="Verdana">
+&nbsp; <b><span style="background-color: #FFFFE1">
+<font COLOR="#008080" size="4">João 12:25</font></span></b></font><font SIZE="4"><font face="Verdana"><b><span style="background-color: #FFFFE1"> 
+Quem ama a sua vida, perdê-la-á; e quem neste mundo odeia a a sua vida, 
+guardá-la-á para a vida eterna. </span></b></font></p>
+</font>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="53%" bgcolor="#FFFFE1">
+  <tr>
+    <td width="100%" bordercolor="#FFFFE1"><font face="Trebuchet MS">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875"><a href="http://www.macoratti.net/destaque.htm">
+    Veja os </a>
+<a href="http://www.macoratti.net/destaques.htm">
+    Destaques e novidades do SUPER DVD Visual Basic 
+(sempre atualizado) : clique e confira !</a> </span></font>
+<p align="left"><font face="Trebuchet MS" size="4" color="#800080">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 700">Quer migrar para o 
+VB .NET ?</span></font></p>
+    <ul>
+      <li>
+<p align="left"><font face="Trebuchet MS">
+<span style="letter-spacing: 0.05em; line-height: 1.6875">Veja mais sistemas completos para a 
+plataforma .NET no <b><a href="http://www.macoratti.net/superdvd.htm">
+Super DVD .NET</a></b> 
+, confira...</span></font></p>
+      </li>
+      <li>
+
+<p align="left">
+<a href="http://www.macoratti.net/curso_vbnet_basico.htm">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 700">
+<font face="Trebuchet MS" size="4">Curso Básico VB .NET - 
+Vídeo Aulas</font></span></a></p>
+
+      </li>
+    </ul>
+<p align="left"><font face="Trebuchet MS" color="#800080" size="4">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 700">Quer aprender C# 
+??</span></font></p>
+    <ul>
+      <li>
+<p align="left"><font face="Trebuchet MS">
+<span style="letter-spacing: 0.05em; line-height: 1.6875">Chegou o <b>
+<a href="http://www.macoratti.net/superdvdc.htm">
+Super DVD C#</a></b> com exclusivo material de 
+suporte e vídeo aulas com curso básico sobre C#.</span></font></p>
+
+      </li>
+      <li>
+<p align="left">
+<a class="dt" title="ir para Curso C# Basico " href="http://www.macoratti.net/curso_cshp_basico.htm">
+<font face="Trebuchet MS" size="4">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 700">Curso C# Basico - Video Aulas</span></font></a></p>
+
+      </li>
+    </ul>
+
+    </td>
+  </tr>
+</table>
+
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+
+<p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+<span style="letter-spacing: 0.05em; line-height: 1.6875">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gostou ?
+&nbsp;<img border="0" src="../../face32.jpg" width="32" height="32">
+
+<a href="#"
+onclick="
+window.open(
+'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+'facebook-share-dialog',
+'width=626,height=436');
+return false;">
+Compartilhe no Facebook
+</a>
+
+&nbsp; 
+<img border="0" src="../../twiter32.jpg" width="32" height="32"> 
+<a href="javascript: void(0);" onclick="window.open('https://twitter.com/intent/tweet?original_referer=http://macoratti.net&source=tweetbutton&text=Quase tudo para VB - &url=http://macoratti.net','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');">Compartilhe no Twitter</a>
+<br>
+&nbsp;</span></font></p>
+
+<p style="margin-top: 0; margin-bottom: 0"><font size="3" face="Trebuchet MS">
+<span style="letter-spacing: 0.05em; line-height: 1.6875">Referências:</span></font></p>
+
+<ul>
+    <li
+    style="BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; LINE-HEIGHT: 1.2; PADDING-TOP: 0px; BORDER-BOTTOM: 0px">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875">
+    <font face="Trebuchet MS">
+    <a
+        href="http://www.macoratti.net/pageview.aspx?catid=1">Seção VB .NET do Site Macoratti.net</a>
+    </font></span></li>
+    <li
+    style="BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; LINE-HEIGHT: 1.2; PADDING-TOP: 0px; BORDER-BOTTOM: 0px">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875">
+    <font face="Trebuchet MS"><a
+        href="http://www.macoratti.net/superdvd.htm">Super DVD .NET - A sua
+        porta de entrada na plataforma .NET</a> </font></span></li>
+    <li>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875">
+    <font face="Trebuchet MS"><a
+        href="http://www.macoratti.net/Vendas/Produtos.aspx?ID=22">Super DVD Vídeo Aulas - Vídeo
+        Aula sobre VB .NET, ASP .NET e C#</a> </font></span></li>
+    <li>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <a href="http://www.macoratti.net/pageview.aspx?catid=18"
+        style="letter-spacing:0.05em; line-height:1.6875">
+    <font face="Trebuchet MS">Seção C# do site Macoratti.net</font></a></li>
+    <li>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875">
+    <a class="dt" title="ir para Super DVD C# " href="http://www.macoratti.net/superdvdc.htm">
+    Super DVD C#</a> </span></font></li>
+    <li>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Trebuchet MS">
+    <span style="letter-spacing: 0.05em; line-height: 1.6875">
+    <a class="dt" title="ir para Super CD Visual Basic " href="http://www.macoratti.net/supercd.htm">
+    Super DVD Visual Basic</a> </span></font></li>
+    <li>
+    <p style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/curso_vbnet_basico.htm">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; ">
+    <font face="Trebuchet MS">Curso Básico VB .NET - 
+Vídeo Aulas</font></span></a></li>
+    <li>
+
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/curso_cshp_basico.htm">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; ">
+<font face="Trebuchet MS">Curso C# Básico - Vídeo Aulas</font></span></a></p>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a onmousedown="return rwt(this,'','','','1','AFQjCNFdqyfIhDlLCSHVE0PDVmDyq88bCA','','0CCoQFjAA','','',event)" href="http://www.macoratti.net/07/06/aspn_smt.htm">
+<font face="Trebuchet MS" size="3">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">ASP 
+- Navegação com Site Map , Menu , TreeView e Master ...</span></font></a></h3>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/11/12/vbn_tvw1.htm" onmousedown="return rwt(this,'','','','2','AFQjCNEXIqnhIscbsTdaeiFY-a0t7nuK_A','','0CDAQFjAB','','',event)">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">
+<font face="Trebuchet MS" size="3">VB .NET - Populando o controle TreeView com 
+tabelas e ...</font></span></a></h3>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/11/11/c_tvw1.htm" onmousedown="return rwt(this,'','','','3','AFQjCNFbjEPZJJwKOZN_Fx3CikEFSTrBjQ','','0CDYQFjAC','','',event)">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">
+<font face="Trebuchet MS" size="3">C # - Usando o controle TreeView - Macoratti.net</font></span></a></h3>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/aspn_cvd.htm" onmousedown="return rwt(this,'','','','4','AFQjCNGBlUUmTHtBcP4Csm-TDCI0CIb7Qg','','0CD4QFjAD','','',event)">
+<font face="Trebuchet MS" size="3">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">Os 
+novos controles de vinculação de dados - Macoratti.net</span></font></a></h3>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/net2_xml.htm" onmousedown="return rwt(this,'','','','1','AFQjCNEQJWvUPv9Fn_hBEi_4D1VawqszNg','','0CCwQFjAA','','',event)">
+<font face="Trebuchet MS" size="3">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">
+Usando XmlDataSource - Macoratti.net</span></font></a></h3>
+
+    </li>
+    <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<a href="http://www.macoratti.net/07/11/aspn_edx.htm" onmousedown="return rwt(this,'','','','2','AFQjCNFNNS6IfpD_Ze2ArL4N8PlPrNuijw','','0CDIQFjAB','','',event)">
+<font face="Trebuchet MS" size="3">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">
+Exibindo dados XML e filtrando com XPath - Macoratti.net</span></font></a></h3>
+
+    </li>
+  <li>
+
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Trebuchet MS" size="3">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">SISTEMA DE 
+GERENCIAMENTO INFORMATIZADO DE UMA OFICINA MECÂNICA E LOJA DE AUTO PEÇAS, Olidiomar dos Santos da Cunha</span></font></p>
+
+  </li>
+  <li>
+
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Trebuchet MS" size="3">
+<a href="http://eduardolegatti.blogspot.com.br/2013/02/gerando-o-modelo-e-o-dicionario-de.html">
+<span style="letter-spacing: 0.05em; line-height: 1.6875; font-weight: 400">http://eduardolegatti.blogspot.com.br/2013/02/gerando-o-modelo-e-o-dicionario-de.html</span></a></font></p>
+
+  </li>
+  <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<span style="font-weight: 400; line-height:1.6875; letter-spacing:0.05em"><font face="Trebuchet MS" size="3">
+<a onmousedown="return rwt(this,'','','','5','AFQjCNFini6Ef00Xk1D-OPTYy371NCAwCw','IUJpImi0K3U3HmSMJybK-A','0CEwQFjAE','','',event)" href="http://www.macoratti.net/vb_uml2.htm">
+UML - Conceitos Básicos III - Macoratti.net</a></font></span></h3>
+
+  </li>
+  <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<span style="font-weight: 400; line-height:1.6875; letter-spacing:0.05em"><font face="Trebuchet MS" size="3">
+<a href="http://www.macoratti.net/proc_sw1.htm" onmousedown="return rwt(this,'','','','4','AFQjCNESpySTt6aW_QD1n_ZiCyrGNgIuOw','ZATy4a9O-boPvG0CcWt1Sw','0CEQQFjAD','','',event)">
+Conceitos - O processo de software. - Macoratti.net</a></font></span></h3>
+
+  </li>
+  <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<span style="font-weight: 400; line-height:1.6875; letter-spacing:0.05em"><font face="Trebuchet MS" size="3">
+<a href="http://www.macoratti.net/vb_conc2.htm" onmousedown="return rwt(this,'','','','1','AFQjCNHpzu9ZWwC4jIaPTXgaDERyfe71ug','-rzzqvw2h98jVdLQYM4D6w','0CCwQFjAA','','',event)">
+Gestão de requisitos - Macoratti.net</a></font></span></h3>
+
+  </li>
+  <li>
+
+<h3 class="r" style="margin-top: 0; margin-bottom: 0">
+<span style="font-weight: 400; line-height:1.6875; letter-spacing:0.05em"><font face="Trebuchet MS" size="3">
+<a href="http://www.macoratti.net/vb_dfd1.htm" onmousedown="return rwt(this,'','','','1','AFQjCNFzmN0roG07njnO-J-_8Vum5RbalA','ejAGn2WOtJiIqw_4Q2H_eQ','0CCwQFjAA','','',event)">
+Diagramação de software - D.F.D e D.E R - Macoratti.net</a></font></span></h3>
+
+  </li>
+</ul>
+
+<hr size="0">
+
+<p align="center"><a href="http://www.macoratti.net"><font
+size="2" face="Verdana">José Carlos Macoratti</font></a></p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicio 1.1 - Procedimentos e Funcoes\Exercicio 1.1 - Procedimentos e Funcoes\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicio 1.1 - Procedimentos e Funcoes\Exercicio 1.1 - Procedimentos e Funcoes\bin\Debug\Exercicio 1.1 - Procedimentos e Funcoes.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicio 1.1 - Procedimentos e Funcoes\Exercicio 1.1 - Procedimentos e Funcoes\bin\Debug\Exercicio 1.1 - Procedimentos e Funcoes.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicio 1.1 - Procedimentos e Funcoes\Exercicio 1.1 - Procedimentos e Funcoes\obj\x86\Debug\Exercicio 1.1 - Procedimentos e Funcoes.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicio 1.1 - Procedimentos e Funcoes\Exercicio 1.1 - Procedimentos e Funcoes\obj\x86\Debug\Exercicio 1.1 - Procedimentos e Funcoes.pdb

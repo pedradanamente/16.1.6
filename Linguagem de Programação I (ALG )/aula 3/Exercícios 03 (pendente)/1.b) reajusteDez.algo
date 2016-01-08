@@ -1,0 +1,16 @@
+/* b) Faça um algoritmo que possa receber um valor que representa o saldo de uma aplicação e imprimir o novo
+saldo considerando um reajuste de 10%.
+============================================================================== */
+
+algoritmo reajusteDez
+var
+	real saldo, saldoFinal, reajuste, percentual;
+
+inicio
+	escreva("Digite o saldo:");
+	leia(saldo);
+	percentual=(10.0 / 100.0);
+	reajuste=(percentual * saldo);
+	saldoFinal=(saldo + reajuste);
+	escreva("Seu novo saldo com o reajuste de 10%:",saldoFinal);
+fim

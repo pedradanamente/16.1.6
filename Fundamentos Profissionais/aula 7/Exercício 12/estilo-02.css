@@ -1,0 +1,25 @@
+.conteudo {
+	border-top: 5px solid #0f0;
+	border-bottom: 5px solid #0f0;
+	width: 350px;
+}
+.destaque {
+	font-family:Times New Roman;
+	font-wheight:bold;
+	font-size:20px;
+	color:red;
+}
+span {
+	font-style: italic;
+}
+.Vermelho {
+	color:red;
+	text-decoration:underline;
+}
+.Azul {
+	color:blue;
+	text-decoration:none;
+}
+p {
+	text-align:justify;
+}

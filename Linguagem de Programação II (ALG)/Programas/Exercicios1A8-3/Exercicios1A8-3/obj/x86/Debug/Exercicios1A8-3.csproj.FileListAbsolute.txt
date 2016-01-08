@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicios1A8-3\Exercicios1A8-3\bin\Debug\Exercicios1A8-3.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicios1A8-3\Exercicios1A8-3\bin\Debug\Exercicios1A8-3.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicios1A8-3\Exercicios1A8-3\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicios1A8-3\Exercicios1A8-3\obj\x86\Debug\Exercicios1A8-3.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\Exercicios1A8-3\Exercicios1A8-3\obj\x86\Debug\Exercicios1A8-3.pdb

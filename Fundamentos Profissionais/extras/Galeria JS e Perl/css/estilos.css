@@ -1,0 +1,330 @@
+/* TAGS */
+body {
+	margin:0;
+	color:#FFF;
+	font-family:Tahoma, Arial, Verdana;
+	font-size:12px;
+	background-image: url(../images/bg.jpg);
+	background-repeat:repeat;
+}
+ul {
+	list-style:none;
+	margin:0px;
+}
+li {
+	list-style:none;
+}
+a {
+	color:#FFF;
+	text-decoration:none;
+}
+a:visited {
+	color:#FFF;
+}
+a:hover {
+	color:#ffff00;
+}
+p {
+	padding-bottom:8px;
+	margin:0px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family:Arial;
+	font-weight:bold;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:10px;
+}
+hr {
+	background-color:rgba(255,255,255,0.2);
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:15px;
+	margin-top:15px;
+	padding:0.05em;
+	border:0px;
+}
+input {
+	color:#ffff00;
+}
+/* IDS */
+#base {
+	margin:0 auto;
+	width:1024px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:10px;
+	border:1px solid rgba(0,0,0,0);
+}
+#base-topo {
+	font-family:Arial;
+	position: fixed;	
+	width:100%;
+	border:1px solid rgba(0,0,0,0.1);
+	margin-bottom:0px;
+	background-color:rgba(0,0,0,0.8);
+	border-bottom:1px solid rgba(255,255,255,0.4);
+}
+#topo {
+	margin:0 auto;
+	width:1024px;
+	height:40px;
+}
+#menu-topo {
+	margin-left:0px;
+	margin-top:18px;
+}
+#conteudo {
+	padding:15px;
+	width:855px;
+	min-height:280px;
+	background-color:rgba(0,0,0,0.5);
+	border:1px solid rgba(0,0,0,0.1);
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+#rodape {	
+	clear:both;
+	text-align:center;
+	padding:20px;
+	font-size:11px;
+	color:rgba(255,255,255,0.5);
+}
+
+#linha {
+	height:35px;
+	border:1px solid rgba(0,0,0,0.1);
+	padding-top:5px;
+	margin-bottom:10px;
+	background-color:rgba(0,0,0,0.2);
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+#backtopo {
+    display: scroll;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+	margin-top:50px;
+	clear:both;
+	float:right;
+}
+
+/* CLASSES */
+.fl {float:left; }
+.fr {float:right;}
+.both { clear:both; }
+.active { font-weight:bold; }
+.arredonda {
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.linha-usuario {
+	margin-top:7px;
+	padding-left:15px;
+}
+.li-menu-topo {
+	font-size:14px;
+	margin-right:50px;
+}
+.menu-right {
+	font-family:Arial;
+	padding-left:0px;
+	padding-right:0px;
+	width:120px;
+	min-height:25px;
+	background-color:rgba(0,0,0,0.2);
+	border:1px solid rgba(0,0,0,0.1);
+	margin-left:0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.ul-menu-right {
+	margin-top:5px;
+	padding-left:22px;
+	margin-left:-18px;
+	padding-bottom:5px;
+}
+.li-menu-right {
+	margin-left:0;
+	font-size:12px;
+	padding:3px;
+}
+.li-perl {
+	margin-right:30px;
+}
+.denied-warning {
+	margin-left:8px;
+	margin-top:13px;
+	font-size:12px;
+	color:yellow;
+}
+.menu-rodape {
+	font-family:Arial;
+	padding-right:75px;
+	padding-bottom:25px;
+	padding-top:10px;
+	margin-left:-40px;
+	font-weight:bold;
+}
+.image-topo {
+	margin-top:5px;
+	height:50px;
+	width:45px;
+}
+.image-html5 {
+	margin-right:135px;
+	margin-top:-100px;
+	margin-left:600px;
+	
+}
+.image-mineiro {
+	width:175px;
+	height:200px;
+}
+.mineirinho {
+	margin-bottom:-18px;
+	margin-top:-185px;
+}
+.kenny {
+	float:right;
+	margin-bottom:-18px;
+}
+.image-mta {
+	height:80px;
+	width:120px;
+}
+.image-servers {
+	width:300px;
+	height:300px;
+	margin-top:-10px;
+	margin-right:10px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.cifra {
+	padding-left:15px;
+	padding-right:15px;
+}
+.tableCor {
+	color:black;
+	font-size:10px;
+	font-family:verdana;
+}
+.myName {
+	font-family:tahoma;
+}
+.hommer {
+	position:absolute;
+	margin-top:-288px;
+	margin-left:400px;
+}
+.sobre {
+	padding-right:35px;
+}
+.formCadastroTermos {
+	border:1px solid rgba(255,255,255,0.2);
+	width:75%;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.formCadastroFormulario {
+	width:20%;
+}
+.formCadastroInput { 
+	height:22px;
+	padding-top:0px;
+	padding-left:5px;
+	margin-left:0px;
+	background-color:rgba(255,255,255,0.3);
+	border:0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.button-signup {
+	width:100px;
+}
+.formDivSignUpButton {
+	margin-top:15px;
+}
+.formCadastroDiv {
+	width:158px;
+}
+.formCadastroAlert {
+	margin-top:15px;
+	height:25px;
+	display:none;
+	font-size:14px;
+}
+.formCadastroTable {
+	margin-bottom:5px;
+}
+.formSignInDiv {
+	padding-right:6px;
+}
+.cadeado {
+	margin-right:5px;
+	margin-top:5px;
+}
+.formSignInInput {
+	padding:5px;
+	background-color:rgba(255,255,255,0.5);
+	border:0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.formButton {
+	border-style: solid;
+	border-width: 0px;
+	cursor: pointer;
+	line-height: normal;
+	text-decoration: none;
+	text-align: center;
+	padding:5px;
+	background-color: rgba(0,0,0,0.5);
+	border-color: #007295;
+	color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+.ul-GaleriaLightbox {
+	margin-left:-12px;
+	/*margin-left:-40px;*/
+}
+.li-ImagemLightbox {
+	border:1px solid rgba(255,255,255,0.8);
+	margin-right:10px;
+	margin-top:10px;
+	padding:0px;
+	height:120px;
+	width:150px;
+}
+/* ESPECIAIS */
+::-webkit-input-placeholder {
+/* navegadores Webkit */
+    color:    #DDD;
+}
+:-moz-placeholder {
+/* Mozilla Firefox 4 até 18 */
+    color:    #DDD;
+}
+::-moz-placeholder {
+/* Mozilla Firefox 19+ */
+    color:    #DDD;
+}
+:-ms-input-placeholder {
+/* Internet Explorer 10+ */
+    color:    #DDD;
+}

@@ -1,0 +1,56 @@
+CREATE TABLE aluno
+(
+cgu varchar (20) not null,
+nome varchar (50)not null,
+g1 decimal (2,2),
+g2 decimal (2,2)
+)
+
+ALTER TABLE aluno ALTER COLUMN 
+g1 decimal (10,2)
+
+ALTER TABLE aluno ALTER COLUMN
+g2 decimal (10,2)
+
+
+insert into aluno
+(cgu,nome,g1,g2) values ('001','Adão da Silva','5.5','6.1')
+go
+insert into aluno
+(cgu,nome,g1,g2) values ('002', 'Ana Rosa','7.1','8.9')
+go
+insert into aluno
+(cgu,nome,g1,g2) values ('003', 'Felipe Batista','4.3','3.4')
+go
+insert into aluno
+(cgu,nome, g1,g2) values ('004', 'Lucas Gonsales', '8.8', '9.5')
+go
+insert into aluno
+(cgu,nome,g1,g2) values ('005', 'Caio Souza', '9.9', '5.1')
+go
+insert into aluno
+(cgu,nome,g1,g2) values ('006', 'Juca Oliveira',null, '5,0')
+go
+insert into aluno
+(cgu,nome,g1,g2) values ('007', 'Marco Solto', '5.0', null)
+
+SELECT * FROM aluno
+
+SELECT cgu,nome,g1 FROM aluno
+where g1 >= 6
+
+SELECT nome FROM aluno
+where g1 is null
+
+SELECT nome,g1 FROM aluno
+ORDER BY nome DESC, g1 ASC
+
+
+
+SELECT nome,g1 FROM aluno
+where g1>5 AND g1<9
+ORDER BY nome ASC
+
+SELECT g1 FROM aluno
+where g1>5 AND g1<9
+ORDER BY g1 DESC

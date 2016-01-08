@@ -1,0 +1,13 @@
+3) Escreva em algorítmo que calcule o dobro de um valor informado pelo usuário. 
+==============================================================================
+
+algoritmo dobroValor; 
+var 
+	real numero,dobro; 
+
+inicio 
+	escreva("Digite um valor para calcular o dobro:");	
+	leia(numero); 
+	dobro=numero*2; 
+	escreva("O dobro é:",dobro); 
+fim 

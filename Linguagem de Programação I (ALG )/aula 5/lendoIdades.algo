@@ -1,0 +1,7 @@
+/* 3) Escrever um algorítmo que leia a idade de dois homens e duas mulheres (considere que a idade dos homens será sempre diferente, assim como a das mulheres).
+Calcule e escreva a soma das idades do homem MAIS VELHO com a MULHER MAIS NOVA e o produto das idades do HOMEM MAIS NOVO com a MULHER MAIS VELHA. */
+
+
+algoritmo lendoIdades
+var
+	idade

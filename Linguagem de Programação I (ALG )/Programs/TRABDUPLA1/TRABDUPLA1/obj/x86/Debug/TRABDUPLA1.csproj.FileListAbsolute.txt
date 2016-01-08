@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\TRABDUPLA1\TRABDUPLA1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\TRABDUPLA1\TRABDUPLA1\bin\Debug\TRABDUPLA1.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\TRABDUPLA1\TRABDUPLA1\bin\Debug\TRABDUPLA1.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\TRABDUPLA1\TRABDUPLA1\obj\x86\Debug\TRABDUPLA1.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\TRABDUPLA1\TRABDUPLA1\obj\x86\Debug\TRABDUPLA1.pdb

@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\EXERCICIO01-DANITRABALHODUPLAG1\EXERCICIO01-DANITRABALHODUPLAG1\bin\Debug\EXERCICIO01-DANITRABALHODUPLAG1.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\EXERCICIO01-DANITRABALHODUPLAG1\EXERCICIO01-DANITRABALHODUPLAG1\bin\Debug\EXERCICIO01-DANITRABALHODUPLAG1.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\EXERCICIO01-DANITRABALHODUPLAG1\EXERCICIO01-DANITRABALHODUPLAG1\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\EXERCICIO01-DANITRABALHODUPLAG1\EXERCICIO01-DANITRABALHODUPLAG1\obj\x86\Debug\EXERCICIO01-DANITRABALHODUPLAG1.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\EXERCICIO01-DANITRABALHODUPLAG1\EXERCICIO01-DANITRABALHODUPLAG1\obj\x86\Debug\EXERCICIO01-DANITRABALHODUPLAG1.pdb

@@ -1,0 +1,83 @@
+/* CORPO */
+body {
+	font-family:arial;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+a:link {
+	color:yellow;
+	text-decoration:no-underline;
+}
+a:visited {
+	color:green;
+}
+a:hover {
+	color:blue;
+}
+p {
+text-align:justify;
+margin:0;
+font-size:13px;
+font-family:Arial;
+color:blue;
+}
+
+/* IDS */
+#base {
+	width:970px;
+	margin:0 auto;
+	background-color:#FFF;
+	color:#333;
+	border:1px solid gray;
+	font-family: Arial;
+}
+#topo {
+	background-color:#ddd;
+	border-botton:1px solid gray;
+	padding:20px;
+	height:100px;
+}
+#menu {
+	width:170px;
+	padding:15px;
+	font-size:20px;
+}
+#conteudo {
+	width:740px;
+	padding:15px;
+	min-height:250px;
+	height:240px;
+	background-color:#eee;
+}
+#rodape {
+	border-top:1px solid gray;
+	margin:0;
+	padding:20px;
+	background-color:#ddd;
+	clear:both;
+	text-align:center;
+	font-size:12px;
+}
+
+/* CLASSES */
+.fl { float:left; }
+.fr { float:right; }
+.topo-image { float:left; }
+.menu-item {
+	text-align:left;
+	font-family:verdana;
+	font-size:12px;
+}
+.ul { list-style:none; }
+
+
+
+
+
+
+
+
+
+
+

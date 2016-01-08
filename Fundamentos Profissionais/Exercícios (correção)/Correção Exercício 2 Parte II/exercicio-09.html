@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="author" content="Taciano Balardin" />
+		<meta name="description" content="Atividade 01 da disciplina de Fundamentos Profissionais" />
+		<meta name="keywords" content="aula, fundamentos, profissionais" />
+		<title>Exercício nº 9</title>
+	</head>
+	<body>
+
+	<form method="post" action="">
+
+	<fieldset>
+		<legend>Dados Pessoais</legend>
+		<p><label>Nome: <input type="text" name="nome" value="" size="30" /></label></p>
+		<p><label>E-mail: <input type="text" name="email" value="" size="30" /></label></p>
+		<p><label>Senha: <input type="password" name="senha" value="" size="30" /></label></p>
+		<p><label>Sexo: <input type="radio" name="sexo" value="M" checked="checked" /> Masculino <input type="radio" name="sexo" value="F" /> Feminino</label></p>
+		<p><label>
+			Cidade:
+				<select name="lista" size="4">
+				<option>Caçapava do Sul</option>
+				<option selected="selected">Cachoeira do Sul</option>
+				<option>Candelária</option>
+				<option>Encruzilhada do Sul</option>
+				<option>Santa Cruz do Sul</option>
+				<option>Santa Maria</option>
+				<option>Outra</option>
+			</select>
+
+		</label></p>
+	</fieldset>
+
+	<fieldset>
+		<legend>Disciplinas que já cursei</legend>
+		<table border="0" width="100%">
+		<tr>
+			<td><input type="checkbox" name="cursadas" value="FSI" />Fundamentos de Sistemas de Informação</td>
+			<td><input type="checkbox" name="cursadas" value="ALP" />Algoritmos e Programação</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cursadas" value="FP" />Fundamentos Profissionais</td>
+			<td><input type="checkbox" name="cursadas" value="AO" />Análise Organizacional</td>
+		</tr>
+		</table>
+	</fieldset>
+
+	<p><input type="submit" name="bt1" value="Enviar" />
+	<input type="reset" name="bt2" value="Limpar" /></p>
+
+	</form>
+
+	</body>
+</html>

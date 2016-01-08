@@ -1,0 +1,45 @@
+CREATE DEFINER=`root`@`localhost` FUNCTION `saldo`(`agencia_numero` INT, `conta_numero` INT)
+	RETURNS float
+	LANGUAGE SQL
+	NOT DETERMINISTIC
+	CONTAINS SQL
+	SQL SECURITY DEFINER
+	COMMENT ''
+BEGIN
+	/* Declara variáveis para utilização dentro da function */
+
+	DECLARE credito FLOAT(17,2); 
+	DECLARE debito FLOAT(17,2);
+	
+	/* Soma todos os Créditos da Agência e Conta passadas por parâmetro */
+
+	SELECT SUM(movimentacao.valor) INTO credito 
+	FROM movimentacao
+	WHERE agencia_numero = movimentacao.agencia_numero 
+	AND conta_numero = movimentacao.conta_numero 
+	AND movimentacao.tipo = 'C';
+
+	/* Soma todos os Débitos da Agência e Conta passadas por parâmetro */
+
+	SELECT SUM(movimentacao.valor) INTO debito
+	FROM movimentacao 
+	WHERE agencia_numero = movimentacao.agencia_numero 
+	AND conta_numero = movimentacao.conta_numero 
+	AND movimentacao.tipo = 'D';
+
+	/* Se crédito e débito não forem nulo, retorna a subtração do crédito com débito */
+
+	IF credito IS NOT NULL AND debito IS NOT NULL THEN 
+		RETURN credito - debito; 
+
+	/* Se crédito é nulo e débito não for, retorna somente o débito */
+
+	ELSEIF credito IS NULL AND debito IS NOT NULL THEN 
+		RETURN debito;
+
+	/* Senão, retorna o crédito */ 
+	ELSE
+		RETURN credito;
+
+	END IF;
+END

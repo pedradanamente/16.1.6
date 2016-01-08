@@ -1,0 +1,4 @@
+C:\Users\Mac\Documents\Visual Studio 2008\Projects\C_Arrays\C_Arrays\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Mac\Documents\Visual Studio 2008\Projects\C_Arrays\C_Arrays\obj\Release\C_Arrays.Form1.resources
+C:\Users\Mac\Documents\Visual Studio 2008\Projects\C_Arrays\C_Arrays\obj\Release\C_Arrays.Properties.Resources.resources
+C:\Users\Mac\Documents\Visual Studio 2008\Projects\C_Arrays\C_Arrays\obj\Release\C_Arrays.csproj.GenerateResource.Cache

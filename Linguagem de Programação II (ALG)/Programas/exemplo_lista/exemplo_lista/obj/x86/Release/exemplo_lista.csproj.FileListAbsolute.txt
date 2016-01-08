@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exemplo_lista\exemplo_lista\bin\Release\exemplo_lista.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exemplo_lista\exemplo_lista\bin\Release\exemplo_lista.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exemplo_lista\exemplo_lista\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exemplo_lista\exemplo_lista\obj\x86\Release\exemplo_lista.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\exemplo_lista\exemplo_lista\obj\x86\Release\exemplo_lista.pdb

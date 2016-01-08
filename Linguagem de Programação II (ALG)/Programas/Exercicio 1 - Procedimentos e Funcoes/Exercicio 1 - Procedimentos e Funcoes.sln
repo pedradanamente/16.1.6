@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio 1 - Procedimentos e Funcoes", "Exercicio 1 - Procedimentos e Funcoes\Exercicio 1 - Procedimentos e Funcoes.csproj", "{476192FC-4116-4D73-A963-6979F92AB8CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{476192FC-4116-4D73-A963-6979F92AB8CB}.Debug|x86.ActiveCfg = Debug|x86
+		{476192FC-4116-4D73-A963-6979F92AB8CB}.Debug|x86.Build.0 = Debug|x86
+		{476192FC-4116-4D73-A963-6979F92AB8CB}.Release|x86.ActiveCfg = Release|x86
+		{476192FC-4116-4D73-A963-6979F92AB8CB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

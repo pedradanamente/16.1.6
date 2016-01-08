@@ -1,0 +1,29 @@
+(EXERC #02) 1- Faça um algoritmo que calcule a media aritmetica dos numeros pares fornecidos pelo usuario. O valor de finalizacao deve ser a entrada do numero zero.
+O usuario pode entrar com numeros impares, mas estes não serão acumulados.
+
+algoritmo program1
+var
+	inteiro numero, contador;
+	real media, soma;
+inicio
+	contador=0;
+	soma=0;
+	escreva("Digite um numero:");
+	leia(numero);
+	enquanto (numero != 0) faça
+	inicio
+		se (numero%2==0) entao
+		inicio
+			contador=contador+1;
+			soma=soma+numero;
+		fim
+		escreva("Digite um novo numero:");
+		leia(numero);
+	fim
+	se (contador>0) entao
+	inicio
+		media=soma/contador;
+		escreva("A média é:", media);
+	fim
+	escreva("Fim!");
+fim

@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\SUPERTRABALHOG2\SUPERTRABALHOG2\bin\Debug\SUPERTRABALHOG2.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\SUPERTRABALHOG2\SUPERTRABALHOG2\bin\Debug\SUPERTRABALHOG2.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\SUPERTRABALHOG2\SUPERTRABALHOG2\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\SUPERTRABALHOG2\SUPERTRABALHOG2\obj\x86\Debug\SUPERTRABALHOG2.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\SUPERTRABALHOG2\SUPERTRABALHOG2\obj\x86\Debug\SUPERTRABALHOG2.pdb

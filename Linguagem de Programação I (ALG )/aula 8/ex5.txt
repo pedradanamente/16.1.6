@@ -1,0 +1,27 @@
+5) Faça um algoritmo que receba o salário de um funcionário chamado Carlos. Sabe-se que outro funcionário, João tem salário equivalente a um terço do salário de Carlos. Carlos aplicará seu salário integralmente na caderneta de poupança que rede 2% ao mês, e João aplicará seu salário no fundo de renda fixa que rende 5% ao mês. O algoritmo deve calcular e mostrar a quantidade de meses necessários para que o valor de João iguale ou ultrapasse o valor de Carlos.
+
+
+algoritmo salario
+
+var
+real salarioCarlos,  
+
+
+inicio
+	escreva("Informe o salário de Carlos:");
+	leia(salarioCarlos);
+	terco = salarioCarlos / 3;
+	salarioJoao = terco;
+	enquanto (salarioCarlos >= salarioJoao) faça
+	inicio
+		jurosJoao = (salarioJoao * 5)/100;
+		salarioJoao = salarioJoao + jurosJoao;
+		contmesj = contmesj + 1;
+		
+		jurosCarlos = (salarioCarlos * 2)/100;
+		salarioCarlos = salarioCarlos + jurosCarlos;
+	fim
+	escreva("A qtde de meses necessários para que o valor de João iguale ou ultrapasse o valor de Carlos é", contmesj);
+fim
+	
+

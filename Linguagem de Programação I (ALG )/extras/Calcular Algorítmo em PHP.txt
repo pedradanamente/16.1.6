@@ -1,0 +1,57 @@
+Calcular Porcentagens no PHP
+
+Ex: 1 - Um produto com valor de R$ 178,00. Quanto fica um desconto de 15%? Veja o código em PHP:
+
+$valor = 178.00; // valor original
+$percentual = 15.0 / 100.0; // 15%
+$valor_final = $valor + ($percentual * $valor);
+echo "O valor final do produto é: " . $valor_final;
+// O resultado será 204,70
+
+Ex: 2 - Um produto, cujo valor original era de R$ 250,00, teve um desconto de 8%. Qual foi seu valor final? Veja o código em PHP:
+
+$valor = 250.00; // valor original
+$percentual = 8.0 / 100.0; // 8%
+$valor_final = $valor - ($percentual * $valor);
+echo "O valor final do produto é: " . $valor_final;
+// O resultado será 230,00
+
+Ex: 3 - Em um concurso de perguntas e respostas, um jovem acertou 72 das 90 perguntas apresentadas. Qual foi a porcentagem de acertos? E a porcentagem de erros? Veja o código em PHP:
+
+$perguntas = 90;
+$acertos = 72;
+echo "Porcentagem de acertos: " .
+(($acertos / $perguntas) * 100) . "%" . "
+";
+
+echo "Porcentagem de erros: " .
+((($perguntas - $acertos) / $perguntas) * 100) . "%";
+
+// Os resultados serão 80% e 20%
+
+Ex: 4 - Um aparelho de CD foi adquirido por R$ 300,00 e revendido por R$ 240,00. Qual foi a porcentagem de lucro na transação? Veja o código em PHP:
+
+$v_ant = 300; // valor anterior
+$v_nov = 340; // valor novo
+$p_lucro = 0; // porcentagem de lucro
+
+while($v_ant + (($p_lucro / 100) * $v_ant) < $v_nov){
+$p_lucro = $p_lucro + 0.1;
+}
+
+echo "A porcentagem de lucro foi de: " .
+$p_lucro . "%";
+
+// O resultado será 13,39
+
+Ex: 5 - Uma loja repassa 5% do lucro a seus vendedores. Se um produto custa R$ 70,00, qual o valor em reais repassado a um determinado vendedor? Veja o código em PHP:
+
+$valor = 70; // valor do produto
+$porcent = 5 / 100; // 5%
+
+$comissao = $porcent * $valor;
+
+echo "O valor repassado ao vendedor e: " .
+$comissao;
+
+// O resultado será 3,5

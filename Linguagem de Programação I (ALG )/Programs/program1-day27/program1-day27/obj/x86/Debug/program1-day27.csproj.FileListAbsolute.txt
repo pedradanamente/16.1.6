@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program1-day27\program1-day27\bin\Debug\program1-day27.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program1-day27\program1-day27\bin\Debug\program1-day27.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program1-day27\program1-day27\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program1-day27\program1-day27\obj\x86\Debug\program1-day27.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação I\Programs\program1-day27\program1-day27\obj\x86\Debug\program1-day27.pdb

@@ -1,0 +1,53 @@
+==12.03==
+
+--------------DDL-----------------------
+
+A. Adicionando uma nova coluna
+
+CREATE TABLE <nome_tabela> (coluna_1 INT) ;
+GO
+ALTER TABLE <nome_tabela> ADD coluna_2 VARCHAR(20) NULL ;
+GO
+DROP TABLE <nome_tabela> ;
+GO
+
+B. Descartando uma coluna
+ALTER TABLE <nome_tabela> DROP COLUMN coluna_1 ;
+GO
+
+
+C. Alterando o tipo de dados de uma coluna
+
+ALTER TABLE <nome_tabela> ALTER COLUMN coluna_2 DECIMAL (5, 2);
+GO
+
+
+D. Adicionando uma coluna com uma restrição
+
+ALTER TABLE <nome_tabela> ADD coluna_3 VARCHAR(20) NULL CONSTRAINT c3_unique UNIQUE ;
+GO
+
+
+E. Adicionando uma restrição DEFAULT a uma coluna existente
+
+ALTER TABLE <nome_tabela> ADD CONSTRAINT col_4_def DEFAULT 5 FOR coluna_4 ;
+GO
+INSERT INTO <nome_tabela> (coluna_3) VALUES ( '10' ) ;
+GO
+SELECT * FROM <nome_tabela> ;
+GO
+
+F. Adicionando chave primária
+
+ALTER TABLE <nome_tabela> ADD CONSTRAINT ID_PK PRIMARY KEY (ColumnID)
+
+--------------DML-----------------------
+
+1. Selecionando todos itens
+SELECT * FROM <nome_tabela>
+
+2. Selecionando itens por nome
+SELECT <coluna_1>, <coluna_2>, <coluna_N> FROM <nome_tabela>
+
+1. Selecionando todos itens com cláusula
+SELECT * FROM <nome_tabela> WHERE coluna_3 = '10'

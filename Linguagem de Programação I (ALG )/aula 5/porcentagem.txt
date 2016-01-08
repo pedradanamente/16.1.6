@@ -1,0 +1,20 @@
+			-----
+			*aumenta 10%
+			percentual=(10.0 / 100.0);
+			juros=(percentual * valor);
+			valor=(valor + juros);
+			-----
+			*aumenta 10%
+			valor=valor+(10*valor)/100;
+			-----
+			*diminui 10%
+			valor=valor-(10*valor)/100;
+			-----
+			*diminui 10%
+			desconto=(10*valor)/100;
+			valor=valor-desconto;
+			-----
+			*aumenta 10%
+			acrescimo=(10*valor)/100;
+			valor=valor+acrescimo;
+			-----

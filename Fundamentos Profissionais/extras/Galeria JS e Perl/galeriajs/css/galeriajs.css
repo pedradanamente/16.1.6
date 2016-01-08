@@ -1,0 +1,31 @@
+#screen {
+	position:absolute;
+	width:850px;
+	height:400px;
+	margin-left:0px;
+	margin-top:0px;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+#screen span {
+	position:absolute;
+	overflow:hidden;
+	border:1px solid gray;
+	background:#FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+}
+#screen img{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+#caption {
+	clear:both;
+	color: #FFF;
+	font-family: Tahoma;
+	text-align: right;
+}
+

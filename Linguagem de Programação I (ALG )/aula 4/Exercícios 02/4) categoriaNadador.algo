@@ -1,0 +1,46 @@
+4) Elabore um algorítmo que dada a idade de um nadador, classifique-o em uma das seguintes categorias:
+
+Idade / Categoria
+5 até 7 anos / Infantil A
+8 até 10 anos / Infantil B
+11 até 13 anos / Juvenil A
+14 até 17 anos / Juvenil B
+maiores de 18 anos / Adulto
+
+#############################################
+
+algoritmo categoriaNadador
+var
+	inteiro idade;
+	caracter categoria;
+inicio
+	escreva("Digite a sua idade:");
+	leia(idade);
+	se (idade>=5) E (idade<=7) entao
+		inicio
+			categoria="Infantil A";
+		fim
+	senao se (idade>=8) E (idade<=10) entao
+		inicio
+			categoria="Infantil B";
+		fim
+	senao se (idade>=11) E (idade <=13) entao 
+		inicio
+			categoria="Juvenil A";
+		fim
+	senao se (idade>=14) E (idade<=17) entao
+		inicio
+			categoria="Juvenil B";
+		fim
+	senao se (idade>18) entao
+		inicio
+			categoria="Adulto";
+		fim
+	senao 
+		inicio
+			categoria="não definida";
+		fim
+	escreva("Sua categoria é:",categoria);
+fim
+
+

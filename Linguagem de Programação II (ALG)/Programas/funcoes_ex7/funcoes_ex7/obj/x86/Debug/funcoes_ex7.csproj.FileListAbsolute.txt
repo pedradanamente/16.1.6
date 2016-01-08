@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\funcoes_ex7\funcoes_ex7\bin\Debug\funcoes_ex7.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\funcoes_ex7\funcoes_ex7\bin\Debug\funcoes_ex7.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\funcoes_ex7\funcoes_ex7\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\funcoes_ex7\funcoes_ex7\obj\x86\Debug\funcoes_ex7.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\funcoes_ex7\funcoes_ex7\obj\x86\Debug\funcoes_ex7.pdb

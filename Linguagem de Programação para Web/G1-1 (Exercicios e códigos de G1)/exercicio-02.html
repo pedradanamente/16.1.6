@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulário</title>
+</head>
+<body>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Dados Pessoais</legend>
+			<p>Nome: <input type="text" name="nome" placeholder="Informe seu nome" required autofocus/></p>
+			<p>E-mail: <input type="email" name="email" placeholder="Informe seu e-mail"/></p>
+			<p>Data de Nascimento: <input type="date" name="date"/></p>
+			<p>Cor: <input type="color" name="color"/></p>
+			<p>Em qual moeda prefere receber o seu salário?<br/>
+				<input type="radio" name="moeda" id="real"/><label for="real">Real</label><br/>
+				<input type="radio" name="moeda" id="dolar"/><label for="dolar">Dolar</label>
+			</p>
+			<p>Anexar currículo: <input type="file" name="file"/></p>
+			<p>Seu time favorito?<br/>
+				<select name="time">
+				<option value="1">Internacional</option>
+				<option value="2">Grêmio</option>
+				</select>
+				Outro time? Qual? <input type="text" name="time_alternativo" placeholder="Informe o nome do time"/>
+			</p>
+			<p>
+				Gostaria de fazer comentários?<br/>
+				<textarea maxlenght="255" rows="10" cols="100" placeholder="Faça seu comentário aqui"></textarea>
+			</p>
+		</fieldset>
+		<p>
+			<button name="envia">Enviar</button>
+			<input type="reset" value="Reset"/>
+		</p>
+	</form>
+</body>
+</html>

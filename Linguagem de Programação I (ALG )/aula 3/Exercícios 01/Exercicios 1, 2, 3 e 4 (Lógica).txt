@@ -1,0 +1,19 @@
+1) Considerando x=1, y=2 e z=5 desenvolva: 
+1.1) (z % y / y) 
+
+2) Sendo A=Verdadeiro, B=Falso apresente os resultados das expressões abaixo: 
+2.1) NÃO(NÃO(A OU B) E (A OU B)) 
+
+3) Resolva as relações abaixo: 
+3.1) Falso OU 20 % 18 / 3 != 18 / 3 % 20 
+
+4) Se a variavel x possui o valor 15 e forem executados os seguintes comandos: 
+x=x+3; 
+x=x-6; 
+x=3*x; 
+Qual será o valor armazenado em x? 
+
+
+
+
+

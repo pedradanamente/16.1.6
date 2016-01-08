@@ -1,0 +1,5 @@
+C:\Users\UNO\OneDrive\Ulbra - Sistemas de Informação\Paradigmas de Linguagens de Programação\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\UNO\OneDrive\Ulbra - Sistemas de Informação\Paradigmas de Linguagens de Programação\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\bin\Debug\multiLoja_AulaMarcioPuntel.exe
+C:\Users\UNO\OneDrive\Ulbra - Sistemas de Informação\Paradigmas de Linguagens de Programação\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\bin\Debug\multiLoja_AulaMarcioPuntel.pdb
+C:\Users\UNO\OneDrive\Ulbra - Sistemas de Informação\Paradigmas de Linguagens de Programação\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\obj\x86\Debug\multiLoja_AulaMarcioPuntel.exe
+C:\Users\UNO\OneDrive\Ulbra - Sistemas de Informação\Paradigmas de Linguagens de Programação\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\multiLoja_AulaMarcioPuntel\obj\x86\Debug\multiLoja_AulaMarcioPuntel.pdb

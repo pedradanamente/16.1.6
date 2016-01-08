@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>TNT</title>
+	<meta charset="UTF-8" />
+	<meta name="author" content="André Silveira Machado" />
+	<meta name="description" content="Disciplina de Fundamentos Profissionais" />
+	<meta name="keywords" content="aula, fundamentos, profissionais, arquivo, modelo" />
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css" />
+	<link rel="icon" href="../images/favicon.png" sizes="16x16"/>
+	<script src="../lightbox/js/script.js"></script>	
+	<!-- Inicio da referencia ao ficheiro lightbox -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../lightbox/css/lightbox.css">
+	<script src="../lightbox/js/jquery-1.11.0.min.js"></script>
+	<script src="../lightbox/js/lightbox.js"></script>
+	<!-- Fim da referencia ao ficheiro lightbox -->
+</head>
+<body>
+	<div id="FIXADO">
+		<div id="backtopo"><a href="#" title="Voltar ao Topo"><img src="../images/arrow-up.png" width="25" height="25" alt=""/></a></div>
+		<div id="TOPO">
+			<div class="image-topo fl"><img src="../images/topicon.png" width="45" height="45" alt=""/></div>
+			<ul class="fl">
+				<li class="li-menu-topo fl"><a href="../index.html">Home</a></li>
+				<li class="li-menu-topo fl"><a href="sobre.html">Sobre</a></li>
+				<li class="li-menu-topo fl"><a href="contato.html">Contato</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="BASE">
+		<div id="LINHA">
+			<div class="linha-usuario fl">Você não está logado</div>
+			<div class="formSignInDiv fr">
+				<div class="cadeado fl"><img src="../images/senha.png" width="20" height="20" alt=""/></div>
+				<div class="fl">
+					<form action="validacao.html" method="post">
+						<input class="formSignInInput" type="text" placeholder="email" name="email" required/>
+						<input class="formSignInInput" type="password" placeholder="senha" name="senha" required/>
+						<button class="formButton" name="enviar">SIGN IN</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="fr">
+			<div class="menu-right">
+				<ul class="ul-menu-right">
+					<li class="li-menu-right"><a href="interesse.html">Interesse</a></li>
+					<li class="li-menu-right"><a href="hobbie.html">Hobbie</a></li>
+				</ul>
+			</div>
+			<div class="menu-right">
+				<ul class="ul-menu-right">
+					<li class="li-menu-right active"><a href="#">Lightbox</a></li>
+					<li class="li-menu-right"><a href="loremipsum.html">Lorem Ipsum</a></li>
+					<li class="li-menu-right"><a href="tabela.html">Table Hexadecimal</a></li>
+					<li class="li-menu-right"><a href="slider.html">Slider Foundation</a></li>
+					<li class="li-menu-right"><a href="modelinho.html">Jailbreak</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div id="CONTEUDO">
+			<h3>jQuery Lightbox</h3>
+			<br/>
+			<p>Com certeza todos já viram em algum site, um efeito quando se clica nas imagens e sobrepõe uma imagem á página.</p>
+			<p>Em quase todos os sites em que aparece este efeito, recorrem ao lightbox, que é um script em javascript que cria este efeito quando se clica numa imagem que linka outra, por ex um thumbnail que é um link para a imagem em tamanho real, em que a segunda aparece sobreposta á página mostrada.</p>
+			<p>Isso acontece por que na Thumbnail que tem o link para a imagem em tamanho real é adicionado o atributo data-lightbox="lightbox"</p>
+			<p>Para que isto funcione é necessário acrescentar no header da página a referencia ao ficheiro onde está o o script do lightbox e suas dependencias e também do css usado pelo lightbox.</p>
+			<p>Você pode fazer download da biblioteca Lightbox, neste endereço: <a href="http://www.lokeshdhakar.com/projects/lightbox2/" target="_blank"><strong>lokeshdhakar.com/projects/lightbox2</strong></a></p>
+			<hr/>
+				<ul class="ul-GaleriaLightbox">
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image1.jpg" data-lightbox="lightbox" title="Imagem 1"><img src="../images/thumbnail/exemplo-image1.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image2.jpg" data-lightbox="lightbox" title="Imagem 2"><img src="../images/thumbnail/exemplo-image2.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image3.jpg" data-lightbox="lightbox" title="Imagem 3"><img src="../images/thumbnail/exemplo-image3.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image4.jpg" data-lightbox="lightbox" title="Imagem 4" ><img src="../images/thumbnail/exemplo-image4.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image5.jpg" data-lightbox="lightbox" title="Imagem 5"><img src="../images/thumbnail/exemplo-image5.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image6.jpg" data-lightbox="lightbox" title="Imagem 6"><img src="../images/thumbnail/exemplo-image6.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image7.jpg" data-lightbox="lightbox" title="Imagem 7"><img src="../images/thumbnail/exemplo-image7.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image1.jpg" data-lightbox="lightbox" title="Imagem 8"><img src="../images/thumbnail/exemplo-image1.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image2.jpg" data-lightbox="lightbox" title="Imagem 9"><img src="../images/thumbnail/exemplo-image2.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image3.jpg" data-lightbox="lightbox" title="Imagem 10"><img src="../images/thumbnail/exemplo-image3.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image4.jpg" data-lightbox="lightbox" title="Imagem 11"><img src="../images/thumbnail/exemplo-image4.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image5.jpg" data-lightbox="lightbox" title="Imagem 12"><img src="../images/thumbnail/exemplo-image5.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image6.jpg" data-lightbox="lightbox" title="Imagem 13"><img src="../images/thumbnail/exemplo-image6.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image7.jpg" data-lightbox="lightbox" title="Imagem 14"><img src="../images/thumbnail/exemplo-image7.thumbnail.jpg" alt=""/></a></li>
+					<li class="li-ImagemLightbox fl"><a href="../images/exemplo-image1.jpg" data-lightbox="lightbox" title="Imagem 15"><img src="../images/thumbnail/exemplo-image1.thumbnail.jpg" alt=""/></a></li>
+				</ul>
+				<div class="both" style="height:30px;"></div>
+		</div>
+		<div id="RODAPE">
+			<div>Desenvolvido por <strong>André</strong></div>
+			<div class="both">
+				<ul>
+					<li class="menu-rodape fl"><a href="../index.html">Home</a></li>
+					<li class="menu-rodape fl"><a href="signup-formulario.html">Sign Up</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

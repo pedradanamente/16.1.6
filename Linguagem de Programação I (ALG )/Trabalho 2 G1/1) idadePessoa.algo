@@ -1,0 +1,23 @@
+/* 1. Escreva um algoritmo que receba a idade de uma pessoa e informe se ela é MAIOR DE IDADE, MENOR DE IDADE ou se é MAIOR DE 65 anos. */
+
+algoritmo idadePessoa
+var
+	inteiro idade;
+
+inicio
+	escreva("Digite a sua idade:");
+	leia(idade);
+	se( (idade>=18) E (idade<=65) )entao
+		inicio
+			escreva("Você é Maior de Idade");
+		fim
+	senao se (idade<18) entao
+		inicio
+			escreva("Você é Menor de Idade");
+		fim
+	senao se (idade>65) entao
+		inicio
+			escreva("Você é Maior de 65 anos");
+		fim
+fim
+	

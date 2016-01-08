@@ -1,0 +1,42 @@
+27/02/2012
+
+http://ulbra.puntel.org
+
+________________________________________________________________
+
+
+SGDB = conceitual
+
+DDL = Create, Drop, Alter...
+DML = Select, Insert, Delete, Update ...        HD
+
+
+MYSQL (WAMP)  
+SQL SERVER (EXPRESS)   <<<<<<<<<<<<<<<<<<< Escolhido
+
+ORACLE
+D32  FIREBIRD
+POST GREE
+*ACESS
+FOXFRO
+PARADOX
+SQLITE
+
+__________________________________________________________________
+
+
+ENTIDADES = TABELA
+
+TUPLAS =  LINHAS ONDE TEM REGISTROS DA TABELA
+
+__________________________________________________________________
+
+[CLIENTE]
+Código Int
+Nome Varchar(60)
+Endereço Varchar (60)
+Telefone Varchar (15)
+Data_Nascimento Date (((Time))) se preiso hora
+Cidade  Varchar (30)
+Cep Char (10)
+CPF  Char (14)

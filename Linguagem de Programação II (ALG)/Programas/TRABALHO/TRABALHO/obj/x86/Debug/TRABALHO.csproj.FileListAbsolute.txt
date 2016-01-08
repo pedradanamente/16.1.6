@@ -1,0 +1,5 @@
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\TRABALHO\TRABALHO\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\TRABALHO\TRABALHO\bin\Debug\TRABALHO.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\TRABALHO\TRABALHO\bin\Debug\TRABALHO.pdb
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\TRABALHO\TRABALHO\obj\x86\Debug\TRABALHO.exe
+E:\Google Drive\Ulbra - Sistemas de Informação\Linguagem de Programação II\Programas\TRABALHO\TRABALHO\obj\x86\Debug\TRABALHO.pdb

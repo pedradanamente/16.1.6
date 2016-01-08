@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteRule ^inicial/?$ index.php?url=inicial [NC,L]
+	RewriteRule ^exemplo/?$ index.php?url=exemplo [NC,L]
+
+	RewriteRule ^insert/?$ index.php?url=insert [NC,L]
+	RewriteRule ^update/?$ index.php?url=update [NC,L]
+	RewriteRule ^select/?$ index.php?url=select [NC,L]
+	RewriteRule ^delete/?$ index.php?url=delete [NC,L]
+
+	RewriteRule ^alter/?$ index.php?url=alter [NC,L]
+	RewriteRule ^create/?$ index.php?url=create [NC,L]
+	RewriteRule ^drop/?$ index.php?url=drop [NC,L]
+
+	RewriteRule ^grant/?$ index.php?url=grant [NC,L]
+	RewriteRule ^revoke/?$ index.php?url=revoke [NC,L]
+	
+	RewriteRule ^begin_work/?$ index.php?url=begin_work [NC,L]
+	RewriteRule ^commit/?$ index.php?url=commit [NC,L]
+	RewriteRule ^rollback/?$ index.php?url=rollback [NC,L]
+
+	RewriteRule ^exemplo/([0-9]+)/?$ index.php?url=exemplo&id=$1 [NC]
+</IfModule>

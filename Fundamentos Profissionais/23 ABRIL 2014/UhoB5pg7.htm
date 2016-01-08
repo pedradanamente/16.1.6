@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head profile="http://www.w3.org/2000/08/w3c-synd/#"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="HTML Tidy for Mac OS X (vers 1st March 2004), see www.w3.org" />
+<title>Guia de Referência Rápida CSS</title>
+<meta name="keywords" content="W3C, World Wide Web, Web, WWW, Consortium, computer, access, accessibility, semantic, worldwide, W3, HTML, XML, standard, language, technology, link, CSS, RDF, XSL, Berners-Lee, Berners, Lee, style sheet, cascading, schema, XHTML, mobile, SVG, PNG, PICS, DOM, SMIL, MathML, markup, Amaya, Jigsaw, free, open source, software" />
+<meta name="description" content="O Consórcio World Wide Web é um consórcio internacional no qual organizações afiliadas, funcionários de tempo integral e o público afim trabalham juntos para desenvolver padrões para a Web. Para atingir sua missão, a atividade principal do W3C é criar manuais e padrões que garantam o crescimento da Web no longo prazo. Mais de 400 organizações são membros do Consórcio que é dirigido conjuntamente pelo Laboratório de Ciência da Computação e Inteligência Artificial do MIT, nos EUA, pelo Consórcio Europeu de Pesquisa em Informática e Matemática, com sede na França, e pela Universidade Keio, no Japão. W3C tem escritórios ao redor do mundo. " />
+  <link type="text/css" rel="stylesheet" href="../../../css/base.css" />
+  <link type="text/css" rel="stylesheet" href="../../../css/guiaxhtml.css" />
+  <link type="text/css" media="print" rel="stylesheet" href="../../../print.css"/>
+  <link type="text/css" media="aural" rel="stylesheet" href="../../../aural.css"/>
+</head>
+
+
+<body>
+<h1><a href="http://www.w3c.br/"><img src="../../../img/brlogo-portuguese.gif" alt="W3C Escritório Brasil"/></a> Guia de Referência
+<acronym title="eXtensible HyperText Markup Language" xml:lang="en">CSS</acronym> 2.1</h1>
+<br />
+
+
+
+<h2 id="contenidos">Conteúdo</h2>
+<ul class="contenidos">
+  <li>Módulos
+    <ul>
+   	    <li><a href="#mod-seletores">Seletores</a></li>
+    	<li><a href="#mod-notacao">Notação</a></li>
+    	<li><a href="#mod-tipos">Tipos de mídias</a></li>
+    	<li><a href="#mod-sintaxe">Sintaxe</a></li>
+    	<li><a href="#mod-unidades">Unidades</a></li>
+    	<li><a href="#mod-caixa">Modelo de caixa</a></li>
+    	<li><a href="#mod-bordas">Bordas</a></li>
+    	<li><a href="#mod-margens">Margens</a></li>
+    	<li><a href="#mod-espacamento">Espaçamento</a></li>
+    	<li><a href="#mod-formatacao">Modelo de formatação visual</a></li>
+    	<li><a href="#mod-formatacao-det">Detalhes do modelo de formatação visual</a></li>
+    	<li><a href="#mod-efeitos">Efeitos visuais </a></li>
+    	<li><a href="#mod-agregador">Agregador de conteúdo, numeração automática e listas</a></li>
+    	<li><a href="#mod-cores">Cores e fundo</a></li>
+    	<li><a href="#mod-paginacao">Paginação para impressão</a></li>
+    	<li><a href="#mod-fontes">Fontes tipográficas</a></li>
+    	<li><a href="#mod-texto">Texto</a></li>
+    	<li><a href="#mod-tabelas">Tabelas</a></li>
+      <li><a href="#mod-interface">Interface de usuário</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="mod-seletores">Seletores</h2>
+<table>
+  <caption>Módulo dos Seletores</caption>
+  <colgroup/><colgroup/><colgroup span="3"/>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Padrão</th>
+      <th class="semantica" scope="col">Significado</th>
+      <th class="atributos" scope="col">Exemplo CSS</th>
+      <th class="atributos" scope="col">Exemplo (X)HTML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>*</code></td>
+      <td><em>Seletor universal:</em> qualquer elemento</td>
+      <td><code>* {<br />
+        color: #000000; <br />
+        }</code></td>
+      <td>Aplicável a todos os elementos</td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e</code></td>
+      <td><em>Seletor de tipo de elemento:</em> seleciona qualquer elemento &lt;e&gt;</td>
+      <td><code>e {<br />
+font-family: sans-serif;}</code></td>
+      <td><code>&lt;e&gt; ... &lt;/e&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e f</code></td>
+      <td><em>Seletor contextual:</em>seleciona qualquer elemento &lt;f&gt; que estiver contido num elemento &lt;e&gt;</td>
+      <td><code>h1 em {<br />
+        color: blue;<br />
+        }</code></td>
+      <td><code>&lt;e&gt;...&lt;f&gt;....&lt;/f&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e &gt; f</code></td>
+      <td><em>Seletor de elementos-filho:</em> seleciona qualquer elemento &lt;f&gt; descendente direto de um elemento &lt;e&gt;</td>
+      <td><code>body &gt; p {<br />
+        line-height: 1.3; <br />
+      }</code></td>
+      <td class="impar"><code>&lt;e&gt;...&lt;f&gt;...&lt;/f&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e + f</code></td>
+      <td><em>Seletor adjacente:</em> seleciona o elemento &lt;f&gt; que estiver imediatamente após um elemento &lt;e&gt;</td>
+      <td><code>h1 + h2 {<br />
+margin-top: -5mm;<br />
+}</code></td>
+      <td><code>&lt;e&gt;...&lt;f&gt; &lt;/f&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e.classe</code></td>
+      <td><em>Seletor de classe:</em> seleciona o(s) elemento(s) &lt;e&gt; em que se aplicou a &quot;classe&quot;</td>
+      <td><code>h1.pastoral {<br />
+color: green;<br />
+}</code></td>
+      <td><code>&lt;e class=&quot;classe&quot;... /&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e#Id</code></td>
+      <td><em>Seletor de ID:</em> seleciona o elemento &lt;e&gt; identificado com Id</td>
+      <td><code>h1#chapter1 {<br />
+        text-align: center;<br />
+        }</code></td>
+      <td><code>&lt;e id=&quot;Id&quot;... /&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e , f</code></td>
+      <td><em>Agrupamento de seletores:</em> Seleciona os elementos &lt;e&gt; e &lt;f&gt; do agrupamento</td>
+      <td><code>h1, h2 {<br />
+        font-family: sans-serif; }</code></td>
+      <td><code>&lt;e&gt; … &lt;/e&gt; … &lt;f&gt; … &lt;/f&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e [atrib]</code></td>
+      <td><em>Seletor de Atributo:</em> seleciona o elemento &lt;e&gt; que contenha o atributo indicado</td>
+      <td><code>h1[title] {<br />
+color: blue; <br />
+}</code></td>
+      <td><code>&lt;e atrib=&quot;valor&quot; ... /&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e [atrib="valor"]</code></td>
+      <td><em>Seletor de Atributo:</em> seleciona o elemento &lt;e&gt; com o mesmo atributo e “valor”</td>
+      <td><code>span[class=exemplo] {<br />
+color: blue; <br />
+}</code></td>
+      <td><code>&lt;e class=&quot;exemplo&quot; ... /&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e [atrib~=&quot;valor&quot;]</code></td>
+      <td><em>Seletor de Atributo:</em> seleciona o elemento &lt;e&gt; em que “valor” de atributo esteja em uma lista de valores separadas por espaços</td>
+      <td><code>a[rel~=&quot;copyright&quot;]{<br />
+                color: red; <br />
+      }?</code></td>
+      <td><code>&lt;a rel=&quot;copyright copyleft copyeditor&quot;...&gt; … &lt;/a&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e [atrib|=&quot;val&quot;]</code></td>
+      <td><em>Seletor de Atributo:</em>  seleciona o elemento &lt;e&gt; em que valor do atributo seja idêntico a “val” ou inicia-se com “val” </td>
+      <td><code>*[lang|=&quot;pt&quot;] {<br />
+        color: red; <br />
+        }</code></td>
+      <td><code>&lt;e lang=&quot;pt-BR&quot; .../&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e:first-child</code></td>
+      <td><em>Pseudo-classe primeiro filho:</em> seleciona o primeiro elemento &lt;e&gt; descendente do elemento-pai</td>
+      <td><code>div &gt; p:first-child {<br />
+text-indent: 0; <br />
+}</code></td>
+      <td><code>&lt;P&gt; Último P antes de 'nota'<br />
+        &lt;DIV class=&quot;nota&quot;&gt;<br />
+        &lt;P&gt; Primeiro P após nota'.<br />
+      &lt;/DIV&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>a:link</code></td>
+      <td><em>Pseudo-classe link:</em> aplica-se ao elemento &lt;a&gt; com hiperlinks ou âncoras ainda não visitados</td>
+      <td><code>a:link {<br />
+              color: red;<br />
+            }</code></td>
+      <td><code>&lt;a href=&quot;http://endereço.link/&quot;&gt;link&lt;/a&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>a:visited</code></td>
+      <td><em>Pseudo-classe visited:</em> aplica-se ao elemento &lt;a&gt; com hiperlinks ou âncoras já visitados</td>
+      <td><code>a:visited {<br />
+color: blue; <br />
+}</code></td>
+      <td><code>&lt;a href=&quot;http://endereço.link/&quot;&gt;link&lt;/a&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e:active</code></td>
+      <td><em>Pseudo-classe active:</em> aplica-se ao elemento &lt;e&gt; quando este for ativado pelo usuário</td>
+      <td><code>a:active {<br />
+        color: lime; <br />
+        }</code></td>
+      <td><code>&lt;a href=&quot;http://endereço.link/&quot;&gt;link&lt;/a&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e:hover</code></td>
+      <td><em>Pseudo-classe hover:</em> aplica-se ao elemento &lt;e&gt; quando o cursor estiver sobre ele, mas sem ativá-lo</td>
+      <td class="impar"><code>a:hover {<br />
+        color: yellow; <br />
+        }</code></td>
+      <td class="impar"><code>&lt;a href=&quot;http://endereço.link/&quot;&gt;link&lt;/a&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e:focus</code></td>
+      <td><em>Pseudo-classe focus:</em> aplica-se ao elemento &lt;e&gt; quando o foco estiver posicionado nele</td>
+      <td><code>a:focus {<br />
+        background: yellow; <br />
+      }</code></td>
+      <td><code>&lt;a href=&quot;http://endereço.link/&quot;&gt;link&lt;/a&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e:lang(val)</code></td>
+      <td><em>Pseudo-classe lang:</em> aplica-se ao elemento &lt;e&gt; se este estiver marcado com o idioma “val”</td>
+      <td class="impar"><code>html:lang(pt) {quotes: '« ' ' »'; }</code></td>
+      <td><code>&lt;e lang=&quot;pt&quot; ... /&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e:first-line</code></td>
+      <td><em>Pseudo-elemento first-line:</em> aplica-se à primera linha do elemento &lt;e&gt;</td>
+      <td><code>p:first-line {<br />
+text-transform: uppercase; }</code></td>
+      <td><code>&lt;e&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e:first-letter</code></td>
+      <td><em>Pseudo-elemento first-letter:</em> aplica-se à primera letra do elemento &lt;e&gt;</td>
+      <td><code>p:first-letter {<br />
+font-size: 3em; font-weight: normal; <br />
+}</code></td>
+      <td><code>&lt;e&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>e:before</code></td>
+      <td><em>Pseudo-elemento before:</em> aplica conteúdo especificado em posição anterior ao elemento &lt;e&gt;</td>
+      <td><code>e:before {<br />
+        content: open-quote; <br />
+      }</code></td>
+      <td><code>&lt;e&gt;...&lt;/e&gt;</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>e:after</code></td>
+      <td><em>Pseudo-elemento after:</em> aplica conteúdo especificado em posição posterior ao elemento &lt;e&gt;</td>
+      <td><p><code>e:after {<br />
+      content: close-quote;</code><br /><code>}</code></p></td>
+      <td><code>&lt;e&gt;...&lt;/e&gt;</code></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2 id="mod-notacao">Notação</h2>
+
+<table>
+  <caption>Módulo de notação</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Padrão</th>
+      <th class="semantica" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>a b</code></td>
+        <td>a seguido de b</td>
+    </tr>
+    <tr>
+		<td><code>( a b )</code></td>
+        <td>a e b agrupados</td>
+    </tr>
+    <tr class="impar">
+		<td><code>[ a | b ]</code></td>
+        <td>a ou b</td>
+    </tr>
+    <tr>
+		<td><code>[ a || b ]</code></td>
+        <td>a ou b ou ambos</td>
+    </tr>
+    <tr class="impar">
+		<td><code>a?</code></td>
+        <td>a é opcional</td>
+    </tr>
+    <tr>
+		<td><code>a*</code></td>
+        <td>Zero ou vários a</td>
+    </tr>
+    <tr class="impar">
+		<td><code>a+</code></td>
+        <td>Um ou vários a</td>
+    </tr>
+    <tr>
+		<td><code>a {n, m}</code></td>
+        <td>a no mínimo <em>n</em> vezes e máximo <em>m</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mod-tipos">Tipos de mídia</h2>
+
+<table>
+  <caption>Módulo de tipos de mídia</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Nome</th>
+      <th class="semantica" scope="col">Mídia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>all</code></td>
+        <td>Todos os dispositivos</td>
+    </tr>
+    <tr>
+		<td><code>braille</code></td>
+        <td>Dispositivos táteis braille</td>
+    </tr>
+    <tr class="impar">
+		<td><code>embossed</code></td>
+      <td>Impresoras braille</td>
+    </tr>
+    <tr>
+		<td><code>handheld</code></td>
+        <td>Dispositivos manuais/portáteis (tela pequena, monocromática, gráficos bitmap, banda limitada)</td>
+    </tr>
+    <tr class="impar">
+		<td><code>print</code></td>
+      <td>Impresso, material opaco e documentos visualizados na tela em modo de impressão</td>
+    </tr>
+    <tr>
+		<td><code>projection</code></td>
+      <td>Projetores</td>
+    </tr>
+    <tr class="impar">
+		<td><code>screen</code></td>
+      <td>Telas de computador</td>
+    </tr>
+    <tr>
+		<td><code>speech</code></td>
+      <td>Sintetizadores de voz. Similar a &quot;aural&quot;</td>
+    </tr>
+        <tr class="impar">
+		<td><code>tty</code></td>
+      <td>Mídias que utilizam caracteres de tamanho fixo, como terminais ou dispositivos portáteis com capacidades
+limitadas de tela</td>
+    </tr>
+    <tr>
+		<td><code>tv</code></td>
+      <td>Televisores</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 id="mod-sintaxe">Sintaxe</h2>
+
+<table>
+  <caption>Módulo de sintaxe</caption>
+  <tbody>
+    <tr class="impar">
+		<td><code>@import "folha.css" tipo-midia;</code></td>
+    </tr>
+    <tr>
+		<td><code>/* Comentários */</code></td>
+    </tr>
+    <tr class="impar">
+		<td><code>@media tipo-midia {<br />
+seletor {<br />
+Propriedade: valor(es);<br />
+}<br />
+};</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 id="mod-unidades">Unidades</h2>
+<h3>Unidades de tamanho relativas</h3>
+<table>
+  <caption>Módulo de unidades relativas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Unidade</th>
+      <th class="semantica" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>px</code></td>
+        <td>Tamanho em pixels (relativo ao dispositivo)</td>
+    </tr>
+    <tr>
+		<td><code>em</code></td>
+        <td>Tamanho relativo à fonte utilizada no elemento ao qual está inserido</td>
+    </tr>
+    <tr class="impar">
+		<td><code>ex</code></td>
+        <td>Correspondente à altura da fonte 'x’</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Unidades de tamanho absolutas</h3>
+<table>
+  <caption>Módulo de unidades absolutas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Unidade</th>
+      <th class="semantica" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>in</code></td>
+        <td>Polegadas (1polegada = 2.54 cm)</td>
+    </tr>
+    <tr>
+		<td><code>cm</code></td>
+        <td>Centímetros</td>
+    </tr>
+    <tr class="impar">
+		<td><code>mm</code></td>
+        <td>Milímetros</td>
+    </tr>
+        <tr>
+		<td><code>pt</code></td>
+        <td>Pontos (1pt = 1/72 polegadas)</td>
+    </tr>
+    <tr class="impar">
+		<td><code>pc</code></td>
+        <td>Picas (1pica = 12 pontos)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Porcentagem</h3>
+<table>
+  <caption>Módulo de porcentagem</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Unidade</th>
+      <th class="semantica" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>%</code></td>
+        <td>Porcentagem</td>
+    </tr>
+    <tr>
+		<td><code>0</code></td>
+        <td>Valor '0' não requer atribuição de unidade</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Representação de cores</h3>
+<table>
+  <caption>Módulo de representação de cores</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Unidade</th>
+      <th class="semantica" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+		<td><code>#RRGGBB</code></td>
+        <td>Cor RGB (6 valores hexadecimais)</td>
+    </tr>
+    <tr>
+		<td><code>#RGB</code></td>
+        <td>Notação simplificada (#RGB = #RRGGBB)</td>
+    </tr>
+        <tr class="impar">
+		<td><code>		  rgb(R,G,B)</code></td>
+        <td>Cor RGB (3 valores de 0 a 255)</td>
+    </tr>
+    <tr>
+		<td><code>rgb(R%,G%,B%)</code></td>
+        <td>Cor RGB (3 valores percentuais)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="mod-caixa">Modelo de caixa</h2>
+
+<p><img src="modelo_caixa.gif" width="544" height="328" alt="Modelo de caixa CSS" style="margin-top:15px;" /></p>
+
+<h2 id="mod-bordas">Bordas</h2>
+<table>
+  <caption>Módulo de bordas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>border-top-width<br />
+        border-right-width<br />
+        border-bottom-width<br />
+      border-left-width</code></td>
+      <td>Largura das bordas em cada um dos quatro lados: superior, direito, inferior e esquerdo</td>
+      <td>[ thin | <strong>medium</strong> | thick | &lt;tamanho&gt; ]</td>
+      <td><strong>thin:</strong> espessura fina<br />
+          <strong>medium:</strong> espessura média<br />
+          <strong>thick:</strong> espessura grossa<br /><br />
+        Exemplo:<br />
+      <code>e {border-bottom-width: medium; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>border-width</code></td>
+      <td>Atalho para definir de uma só vez larguras de bordas para todos os lados</td>
+      <td>[ thin | medium | thick | &lt;tamanho&gt; ] {1,4}</td>
+      <td><p>Exemplos:<br />
+        Todas as bordas com espessura 'thin':<br />
+        <code>e {border-width: thin;}</code></p>
+        <p>Bordas superior e inferior com espessura 'thin', bordas direita e esquerda com espessura 'thick':<br />
+        <code>e {border-width: thin thick;}</code></p>
+        <p>Borda superior com espessura 'thin', bordas direita e esquerda com espessura 'thick', borda inferior com espessura 'medium':<br />
+        <code>e {border-width: thin thick medium;}</code></p>
+        <p>Borda superior com espessura 'thin', borda direita com espessura 'thick', borda inferior com espessura 'medium', borda esquerda com espessura 'thin':<br />
+        <code>e {border-width: thin thick medium thin;}</code></p></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>border-top-color<br />
+        border-right-color<br />
+        border-bottom-color<br />
+      border-left-color</code></td>
+      <td>Cor das bordas em cada um dos quatro lados: superior, direito, inferior e esquerdo</td>
+      <td>[ &lt;color&gt; | transparent ]</td>
+      <td><p>Exemplo:<br />
+      <code>e {border-top-color: black; }</code></p></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>border-color</code></td>
+      <td>Atalho para definir de uma só vez cores de bordas para todos os lados</td>
+      <td>[ &lt;color&gt; | transparent ] {1,4}</td>
+      <td class="impar"><p>Exemplos:<br />
+        Todas as bordas com a cor 'black':<br />
+        <code>e {border-color: black;}</code></p>
+        <p>Bordas superior e inferior com a cor 'black', bordas direita e esquerda com a cor 'silver':<br />
+        <code>e {border-color: black silver;}</code></p>
+        <p>Borda superior com a cor 'black', bordas direita e esquerda com a cor 'silver', borda inferior com a cor 'gray':<br />
+        <code>e {border-color: black silver gray; }</code></p>
+        <p>Borda superior com a cor 'black', borda direita com a cor 'silver', borda inferior com a cor 'gray', borda esquerda com a cor 'white':<br />
+        <code>e {border-color: black silver gray white; }</code></p></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>border-top-style<br />
+        border-right-style<br />
+        border-bottom-style<br />
+      border-left-style</code></td>
+      <td>Estilo de bordas em cada um dos quatro lados: superior, direito, inferior e esquerdo</td>
+      <td>[ <strong>none</strong> | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset ]</td>
+      <td><p><strong>none:</strong> nenhuma borda (largura computada como zero)<br />
+          <strong>hidden:</strong> idêntico à 'none', exceto na resolução de conflito de bordas nos elementos de uma tabela<br />
+          <strong>dotted:</strong> série de pontos<br />
+          <strong>dashed:</strong> série de segmentos de pequenas linhas<br />
+          <strong>solid:</strong> segmento de linha simples e contínua<br />
+          <strong>double:</strong> Duas linhas 'solid'. A soma das duas linhas e o espaço entre elas é igual ao valor definido em 'border-width'<br />
+          <strong>groove: </strong>Efeito 3D, entalhada<br />
+          <strong>ridge:</strong> Efeito 3D, oposto de 'groove': ressaltada<br />
+          <strong>inset:</strong> Efeito 3D, baixo relevo<br />
+          <strong>outset:</strong> Efeito 3D, alto relevo</p>
+        <p>Exemplo:<br />
+          <code>e {border-left-style: <br />
+      dotted; }</code></p></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>border-style</code></td>
+      <td>Atalho para definir de uma só vez estilos de bordas para todos os lados</td>
+      <td>[ none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset ] {1,4}</td>
+      <td>Exemplos:
+        Todas as bordas com estilo 'solid':<br />
+        <code>e {border-style: solid;}</code><br /><br />
+        
+        Bordas superior e inferior com estilo 'solid', bordas direita e esquerda com estilo 'dotted':<br />
+        <code>e {border-style: solid dotted;}</code><br /><br />
+        
+        Borda superior com estilo 'solid', bordas direita e esquerda com estilo 'dotted', borda inferior com o estilo 'dashed':<br />
+        <code>e {border-color: solid dotted dashed; }</code><br /><br />
+        
+        Borda superior com estilo 'solid', borda direita com estilo 'dotted', borda inferior com estilo 'dashed', borda esquerda com o estilo 'double':<br />
+        <code>e {border-color: solid dotted dashed double; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>border-top <br />
+        border-right <br />
+        border-bottom <br />
+      border-left</code></td>
+      <td>Atalho para definir largura, estilo e cor das bordas superior, direita, inferior ou esquerda</td>
+      <td>[ &lt;border-top-width&gt; || &lt;border-top-style&gt; || &lt;border-top-color&gt; ]</td>
+      <td>Exemplo:<br />
+      <code>e {border-bottom: thick solid red;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>border</code></td>
+      <td>Atalho para largura, estilo e cor das quatro bordas</td>
+      <td>[ &lt;border-top-width&gt; || &lt;border-top-style&gt; || &lt;border-top-color&gt; ]</td>
+      <td>Exemplo:<br />
+      <code>e {border: thick solid red;}</code></td>
+    </tr>
+  </tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+<h2 id="mod-margens">Margens</h2>
+<table>
+  <caption>Módulo de margens</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>margin-top <br />
+        margin-right <br />
+        margin-bottom <br />
+        margin-left</code></td>
+      <td>Tamaho da margem para cada um dos lados: superior, direito, inferior e esquerdo</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | auto ]</td>
+      <td>Exemplo:<br />
+      <code>body {margin-top: 2em }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>margin</code></td>
+      <td>Atalho para definir de uma só vez o tamanho da margem para todos os lados</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | auto ]{1,4}</td>
+      <td><p>Exemplos:<br />
+        Todas as margens com 2em:<br />
+        <code>body {margin: 2em }</code></p>
+        <p>Margem superior e inferior com 1em, esquerda e direita com 2em:<br />
+          <code>body {margin: 1em 2em }</code></p>
+        <p>Margem superior com 1em; direita com 2em; inferior com 3em; e esquerda com 2em:<br />
+          <code>body {margin: 1em 2em 3em }</code></p>
+        <p>Margem superior com 1em; direita com 2em; inferior com 3em; e esquerda com 4em:<br />
+     <code> body {margin: 1em 2em 3em 4em }</code></p></td>
+    </tr>
+</tbody>
+</table>
+
+<h2 id="mod-espacamento">Espaçamento</h2>
+<table>
+  <caption>Módulo de espaçamento</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>padding-top <br />
+        padding-right <br />
+        padding-bottom <br />
+      padding-left</code></td>
+      <td>Distância utilizada para espaçamento em cada um dos quatro lados: superior, direito, inferior e esquerdo</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; ]</td>
+      <td>Exemplo:<br />
+      <code>body {padding-top: 2em }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>padding</code></td>
+      <td>Atalho para definir de uma só vez a distância de espaçamento para todos os lados</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; ]{1,4}</td>
+      <td><p>Exemplos:<br />
+        Todas as margens com 2em:<br />
+        <code>body {padding: 2em }</code></p>
+        <p>Margem superior e inferior com 1em, esquerda e direita com 2em:<br />
+          <code>body {padding: 1em 2em }</code></p>
+        <p>Margem superior com 1em; direita com 2em; inferior com 3em; e esquerda com 2em:<br />
+        <code>body {padding: 1em 2em 3em }</code></p>
+        <p>Margem superior com 1em; direita com 2em; inferior com 3em; e esquerda com 4em:<br />
+     <code> body {padding: 1em 2em 3em 4em }</code></p></td>
+    </tr>
+</tbody>
+</table>
+
+<h2 id="mod-formatacao">Modelo de formtação visual</h2>
+<table>
+  <caption>
+  Módulo de formatação visual
+  </caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>display</code></td>
+      <td>Modos de exibição do conteúdo</td>
+      <td>[ inline | block | list-item | run-in | inline-block | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | table-caption | none ]</td>
+      <td><strong>inline:</strong> O elemento renderizado em uma ou mais linhas<br />
+        <strong>block:</strong> renderizado como um bloco<br />
+        <strong>list-item:</strong> renderizado como um item de lista e em linha(s)<br />
+        <strong>run-in:</strong> renderizado como bloco ou linha(s), dependendo do contexto<br />
+        <strong>inline-block:</strong> renderizado em uma linha simples, mas comporta-se como um bloco<br />
+        <strong>table, inline-table, table-row-group, table-column, table-column-group, table-header-group, table-footer-group, table-row, table-cell, table-caption:</strong> esses valores farão com que o elemento se comporte como uma tabela (sujeito a restrições descritas no capítulo sobre tabelas)<br />
+        <strong>none:</strong> o elemento não será mostrado no modo visual<br /><br />
+		Exemplo: <code>e {display: none;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>position</code></td>
+      <td>Esquema de posicionamento</td>
+      <td>[ <strong>static</strong> | relative | absolute | fixed ]</td>
+      <td><p><strong>static: </strong>Posicionamento normal de acordo com o fluxo normal dos elementos na página. As proprieades 'top', 'right', 'bottom', e 'left' não se aplicam<br />
+          <strong>relative:</strong> posicionamento é calculado de acordo com o fluxo normal. O efeito de 'position:relative' é indefinido nos elementos 'table-row-group', 'table-header-group', 'table-footer-group', 'table-row', 'table-column-group', 'table-column', 'table-cell', e 'table-caption'<br />
+          <strong>absolute: </strong>Posicionamento (e possivelmente o tamanho) é especificado com as propriedades 'top', 'right', 'bottom', e 'left'. Essas propriedade são especificadas em relação ao conteúdo do bloco<br />
+        f<strong>ixed: </strong>Posicionamento é calculado tal como o modelo 'absolute', mas adicionalmente se manterá fixo, mesmo que se utilize a barra de rolagem<br />
+        Exemplo:<br />
+        <code>@media screen {<br />
+        e#exemplo {position: fixed; }}<br />
+        @media print {<br />
+      e#exemplo {position: static;}}</code></p></td>
+    </tr>
+        <tr class="impar">
+      <td scope="row"><code>top <br />
+        right<br />
+        bottom <br />
+        left</code></td>
+      <td>Distância do elemento com relação à extremidade de seu elemento-pai</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | <strong>auto</strong> ]</td>
+      <td><p><strong>top:</strong> Distância vertical em relação à margem superior<br />
+          <strong>right: </strong>Distância horizontal em relação à margem direita<br />
+          <strong>bottom: </strong>Distância vertical em relação à margem inferior<br />
+        <strong>left:</strong> Distância horizontal em relação à margem esquerda</p>
+        <p>Exemplo:<br />
+          <code>e { top: 20px; left: 40px;}</code></p></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>float</code></td>
+      <td>Posicionamento adjacente à esquerda ou à direita do elemento</td>
+      <td>{ left | right | <strong>none</strong> ]</td>
+      <td><p><strong>left:</strong> o elemento será posicionado flutuando à esquerda. O fluxo do conteúdo não integrante do elemento será posicionado à direita a partir do 'top' do elemento que recebe a propriedade 'float'<br />
+        <strong>right:</strong> similar à 'left', mas com o elemento flutuando à direita<br />
+        <strong>none:</strong> o elemento não flutua<br /><br />
+        
+        Exemplo:<br />
+        <code>e {float: right;}</code></p></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>clear</code></td>
+      <td>Controle para os posicionamentos float</td>
+      <td>[ <strong>none</strong> | left | right | both ]</td>
+      <td><strong>none:</strong> nenhum controle de limpeza de flutuação será executado<br />
+        <strong>left:</strong> limpeza de flutuação à esquerda: o elemento será posicionado abaixo da borda inferior do elemento flutuante à esquerda<br />
+        <strong>right:</strong> limpeza de flutuação à direita: o elemento será posicionado abaixo da borda inferior do elemento flutuante à direita<br />
+        <strong>both:</strong> o elemento será posicionado abaixo da borda inferior de qualquer elemento flutuante, seja à direita ou à esquerda<br /><br />
+        
+        Exemplo: <code>e { clear: both;}</code></td>
+    </tr>
+    
+    <tr>
+      <td scope="row"><code>z-index</code></td>
+      <td>Níveis de profundidade de sobreposição de elementos</td>
+      <td>[ <strong>auto </strong>| &lt;número inteiro&gt; ]</td>
+      <td>Os números serão considerados para ordenar os elementos que ficarão sobrepostos, do mais baixo para o mais alto: 'z-index: 1'; 'z-index:2'; 'z-index: 3'; …<br /><br />
+        
+        Exemplo: <code>e {z-index: 1;}</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>direction</code></td>
+      <td>Define a direção de um texto: esquerda para direita; direita para esquerda</td>
+      <td>[ <strong>ltr</strong> | rtl ]</td>
+      <td><p>Utilizado em clientes que têm suporte a idiomas e escrita bidirecional.<br />
+          <strong>ltr</strong> - direção da esquerda para a direita<br />
+          <strong>rtl</strong> - direção da direita para a esquerda</p>
+        <p>Exemplo:<br />
+          <code>e {direction: rtl;}</code></p>
+        <p>Para que a direção tenha o efeito atribuído, a propriedade 'unicode-bidi' deve conter os valores 'embed' ou <br />
+      'bidi-override'</p></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>unicode-bidi</code></td>
+      <td>Interação entre textos bidirecionais</td>
+      <td>[ <strong>normal</strong> | embed | bidi-override ]</td>
+      <td>Utilizado em clientes que têm suporta a idiomas e escrita bidirecional<br />
+        <strong>normal</strong> – o elemento não embutirá o algoritmo com suporte bidirecional<br />
+        <strong>embed </strong>– embutirá algoritmo bidirecional<br />
+        <strong>bidi-override</strong> – permite a sobreposição</td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+<h2 id="mod-detalhes">Detalhes do modelo de formatação visual</h2>
+<table>
+  <caption>Módulo de detalhes do modelo de formatação visual</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>width</code></td>
+      <td>Largura</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | <strong>auto</strong> ]</td>
+      <td>Exemplo: <code><br />
+      e {width: 25%;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>min-width</code></td>
+      <td>Largura mínima</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt;] </td>
+      <td>Exemplo:<br />
+        <code>e {min-width: 200px;}</code></td>
+    </tr>
+        <tr class="impar">
+      <td scope="row"><code>max-width</code></td>
+      <td>Largura máxima</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+          <code>e {max-width: 600px;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>height</code></td>
+      <td>Altura</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | <strong>auto</strong> ]</td>
+      <td>Exemplo:<br />
+        <code>e {height: 250px;}</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>min-height</code></td>
+      <td>Altura mínima</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt;] </td>
+      <td>Exemplo:<br />
+        <code>e {min-height: 30%;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>max-height</code></td>
+      <td>Altura máxima</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+        <code>e {max-height: 70%;}</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>line-height</code></td>
+      <td>Distância entre as linhas de um texto</td>
+      <td>[ <strong>normal</strong> | &lt;número&gt; | &lt;tamanho&gt; | &lt;porcentagem&gt; ]</td>
+      <td>Exemplo:<br />
+        <code>e {line-height: 1.2em;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>vertical-align</code></td>
+      <td>Alinhamento vertical do texto</td>
+      <td>[ <strong>baseline</strong> | sub | super | top | text-top | middle | bottom | text-bottom | &lt;porcentagem&gt; | &lt;tamanho&gt; ]</td>
+      <td><strong>baseline</strong> - A linha de base do elemento e do elemento superior (elemento-pai) serão consideradas para alinhamento. Se não houver linha de base no elemento, será considerado sua margem inferior<br />
+        <strong>sub</strong> - A linha de base do elemento será alinhada com a linha de base de conteúdo subscrito do elemento superior<br />
+        <strong>super</strong> - A linha de base do elemento será alinhada com a linha de base de conteúdo superescrito do elemento superior<br />
+        <strong>top</strong> - Alinha o topo do elemento com a linha de topo do elemento superior<br />
+        <strong>text-top</strong> - A base superior do elemento será alinhada com a linha superior do conteúdo de textos do elemento-pai<br />
+        <strong>middle</strong> - A linha central do elemento e de seu elemento superior serão consideradas para alinhamento. (linha central do elemento superior = ponto central da altura da letra 'x')<br />
+        <strong>bottom</strong> - Alinha o rodapé do elemento com o rodapé do elemento superior<br />
+        <strong>text-bottom</strong> - A base inferior do elemento será alinhada com a linha inferior do conteúdo de textos do elemento-pai<br /><br />
+        
+        Exemplo:<br />
+        <code>e {vertical-align: sub;}</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-efeitos">Efeitos visuais</h2>
+<table>
+  <caption>Módulo de efeitos visuais</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>overflow</code></td>
+      <td>Comportamento do browser quando o conteúdo do elemento for maior que sua área</td>
+      <td>[ <strong>visible</strong> | hidden | scroll | auto ]</td>
+      <td><strong>visible</strong> - Todo o conteúdo do elemento estará visível (não cortado) e talvez conforme a área seja renderizado para fora do elemento<br />
+        <strong>hidden</strong> - O conteúdo será cortado (se maior que a área disponível) e não haverá barra de rolagens no elemento<br />
+        <strong>scroll</strong> - O conteúdo será cortado (se maior que a área disponível) mas haverá barra de rolagens no elemento. Quando a mídia for especificada como 'print', o conteúdo do elemento poderá ser impresso. <br />
+        <strong>auto</strong> - O método será atribuído pelo browser cliente<br /><br />
+        
+        Exemplo:<br />
+        <code>e {overflow: scroll;}</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>clip</code></td>
+      <td>Especifica região de um elemento a ser exibida </td>
+      <td>[ rect (&lt;tamanho topo&gt;, &lt;tamanho direito&gt;, &lt;tamanho rodapé&gt;, &lt;tamanho esquerdo&gt;) | <strong>auto</strong> ]</td>
+      <td><strong>rect</strong> – Delimita área retangular do elemento (topo, direita, rodapé, esquerda) na qual o conteúdo ficará visível <br />
+		<strong>auto</strong> - O elemento não terá clip e sua própria área será idêntica à de visualização<br /><br />
+      Exemplo:<br />
+        <code>e {clip: rect(5px, 40px, 45px, 5px); }</code></td>
+    </tr>
+        <tr class="impar">
+      <td scope="row"><code>visibility</code></td>
+      <td>Define se um elemento estará ou não visível</td>
+      <td>[ <strong>visible</strong> | hidden | collapse ]</td>
+      <td><strong>visible</strong> - O elemento será exibido<br />
+        <strong>hidden</strong> - O elemento não será exibido, ficando totalmente transparente. Mas o leiaute da página continuará sendo afetado<br />
+        <strong>collapse</strong> - Mesmo efeito que hidden, mas aplicável a elementos de tabela<br /><br />
+      	Exemplo:<br />
+        <code>e {visibility: hidden; }</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-agregador">Agregador de conteúdo, numeração automática e listas</h2>
+<table>
+  <caption>Módulo de agregador de conteúdo, numeração automática e listas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>content</code></td>
+      <td>Agregador de conteúdo para os pseudo-elementos :after e :before</td>
+      <td>[ <strong>normal</strong> | none | [ &lt;texto&gt; | &lt;uri&gt; | &lt;contador&gt; | attr(X) | open-quote | close-quote | no-open-quote | no-close-quote]+ ]</td>
+      <td><strong>none:</strong> Nenhum conteúdo será agregado.<br />
+        <strong>normal:</strong> Como 'none', para os pseudo-elementos :before e :after<br />
+        <strong>&lt;texto&gt;:</strong> Conteúdo de texto específico será agregado. <br />
+        <strong>&lt;uri&gt;:</strong> Valor de uma URI designando um recurso externo (como uma imagem). Se o browser não puder exibir recursos externos, ele não aparecerá ou alguma indicação apontará essa impossibilidade<br />
+        <strong>&lt;counter&gt;:</strong> Contadores cujos valores serão agregados. Podem ser especificados com duas diferentes funções: 'counter()' ou 'counters()'. A primeira pode ser de duas formas: 'counter(name)', para usar estilo padrão; ou 'counter(name, style)', para especificar o estilo. O texto que será agregado corresponde ao valor de incremento do contador para um determinado campo 'name' no pseudo-elemento específico; e sua formatação será a indicada em 'style' (o padrão é 'decimal'). As opções para 'style' são as mesmas possíveis em 'list-style-type'. As seguintes palavras não podem ser usadas para 'name': 'none', 'inherit' ou 'initial'. A outra função também tem duas formas: 'counters(name, string)', para usar estilo padrão; ou 'counters(name, string, style)', para indicar estilo. Para obter mais informações sobre counters, acesse http://www.w3.org/TR/CSS21/generate.html#counters <br />
+        <strong>open-quote | close-quote</strong> - O conteúdo agregado será substituído por aspas<br />
+        <strong>no-open-quote | no-close-quote</strong> - Nenhum conteúdo é introduzido, mas incrementa (decrementa)<br />
+        <strong>attr(X)</strong> - Esta função retorna a 'string' como um valor do atributo X. A 'string' não será interpretada pelo processador do CSS<br /><br />
+        
+        Exemplo:<br />
+        <code>H1:before {content: counter(secao, upper-roman) "-" }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>quotes</code></td>
+      <td>Especifica aspas utilizadas em citações</td>
+      <td>[ [ &lt;texto&gt; &lt;texto&gt; ]+ | none ]</td>
+      <td>Exemplo, especificando dois pares de aspas para idiomas diferentes:<br /><br />
+        <code>e:lang(en) {quotes: '"' '"' "'" "'" }<br />
+		e:lang(pt) { quotes: "«" "»" '"' '"' }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>counter-reset</code></td>
+      <td>Inicializa um contador identificado na propriedade 'content'</td>
+      <td>[ [ &lt;name&gt; &lt;inteiro&gt;? ]+ | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+        <code>h1 {counter-reset: secao; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>counter-increment</code></td>
+      <td>Incrementa um contador identificado na propriedade 'content'</td>
+      <td>[ [ &lt;name&gt; &lt;inteiro&gt;? ]+ | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+      <code>
+        H2:before {<br />
+         content: counter(capitulo) "." counter(secao) " ";<br />
+         counter-increment: secao;<br />
+      }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>list-style</code></td>
+      <td>Atalho para definir de uma só vez todas as propriedades de lista: type, position e image</td>
+      <td>[ &lt;list-style-type&gt; || &lt;list-style-position&gt; || &lt;list-style-image&gt; ]</td>
+      <td>Exemplo:<br />
+        <code>        li {list-style: decimal-leading-zero outside url(imagem.jpg); }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>list-style-image</code></td>
+      <td>Imagem aplicada aos elementos de uma lista</td>
+      <td>[ url(&quot;http://...&quot;) | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+      <code>li {<br />
+list-style-image: url(&quot;http://png.com/ellipse.png&quot;);}</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>list-style-type</code></td>
+      <td>Estilo visual aplicado aos marcadores de uma lista</td>
+      <td>[ <strong>disc</strong> | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none ]</td>
+      <td><p><strong>disc</strong> - ponto sólido<br />
+          <strong>circle</strong> - círculo vazio<br />
+          <strong>square</strong> - quadrado vazio<br />
+          <strong>decimal </strong>- números decimas, iniciando com 1<br />
+          <strong>decimal-leading-zero</strong> - números decimais com zeros iniciais à esquerda (ex.: 01, 02, 03, ..., 98, 99)<br />
+        lower-roman - números romanos minúsculos (i, ii, iii, iv, v, etc.). <br />
+        <strong>upper-roman</strong> - números romanos maiúsculos (I, II, III, IV, V, etc.)<br />
+        <strong>georgian </strong>- numeração georgeana tradicional (an, ban, gan, ..., he, tan, in, in-an, ...)<br />
+        <strong>armenian </strong>- numeração armênia tradicional<br />
+        <strong>lower-latin | lower-alpha </strong>- letras ascii minúsculas (a, b, c, ... z)<br />
+        <strong>upper-latin | upper-alpha </strong>- letras ascii maiúsculas (A, B, C, ... Z)<br />
+        <strong>lower-greek</strong> - caracteres gregos clássicos alpha, beta, gama, ... (α, β, γ, …)<br />
+        <strong>none </strong>– nenhum marcador de lista</p>
+        <p>Exemplo:        <code>li {list-style-type: lower-alpha;}</code></p></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>list-style-position</code></td>
+      <td>Posicionamento interno dos marcadores de uma lista</td>
+      <td>[ inside | <strong>outside</strong> ]</td>
+      <td><strong>inside</strong> – conteúdo da lista será indentado, mas o texto não será alinhado após quebra de linha<br />
+		<strong>outside</strong> – diferente de inside, o texto será alinhado na indentação mesmo com quebra de linha<br /><br />
+        Exemplo:<br />
+        <code>ul {list-style-position: outside; }<br />
+		ul.compact {list-style-position: inside;}</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-cores">Cores e Fundo</h2>
+<table>
+  <caption>Módulo de cores e fundo</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>color</code></td>
+      <td>Cor do texto presente no elemento</td>
+      <td>&lt;color&gt;</td>
+      <td>Exemplo:<br />
+        <code>e {color: red; }<br />
+        e {color: rgb(255,0,0); }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>background-color</code></td>
+      <td>Cor de fundo do elemento</td>
+      <td>[ &lt;color&gt; | <strong>transparent</strong> ]</td>
+      <td>Para 'transparent' será adotada a cor de fundo do elemento superior e na ausência deste, a cor de fundo padrão do browser<br /><br />
+		Exemplo:<br />
+        <code>e {background-color: #f00; }<br />
+		e {background-color: transparent; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>background-image</code></td>
+      <td>Imagem de fundo do elemento</td>
+      <td>[ url(...) | <strong>none</strong> ]</td>
+      <td>Exemplo:<br />
+        <code>e {background-image: url(http://caminho/imagem.jpg); }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>background-repeat</code></td>
+      <td>Define se e como a imagem de fundo utilizada se repetirá</td>
+      <td>[ <strong>repeat</strong> | repeat-x | repeat-y | no-repeat ]</td>
+      <td><strong>repeat:</strong> a imagem é repetida em ambas as direções: horizontal e vertical<br />
+        <strong>repeat-x: </strong>a imagem é repetida somente horizontalmente<br />
+        <strong>repeat-y:</strong> a imagem é repetida somente verticalmente.<br />
+        <strong>no-repeat:</strong> a imagem não será repetida e somente uma cópia da mesma será renderizada<br /><br />
+      Exemplo:<br />
+      <code>e {background-repeat: no-repeat;}</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>background-attachment</code></td>
+      <td>Define se a imagem de fundo utilizada será fixa ou com rolagem</td>
+      <td>[ <strong>scroll</strong> | fixed ]</td>
+      <td><strong>scroll:</strong> a imagem acompanha a rolagem da página na janela do browser, mantendo-se como imagem de fundo<br />
+			<strong>fixed:</strong> a imagem é fixada na página e não acompanhará a rolagem da página</td>
+    </tr>
+    <tr>
+      <td scope="row"><code>background-position</code></td>
+      <td>Posição da imagem de fundo utilizada.</td>
+      <td>[ [ &lt;porcentagem&gt; | &lt;tamanho&gt; | left | center | right ] [ &lt;porcentagem&gt; | &lt;tamanho&gt; | top | center | bottom]? ] | [ [ left | center | right ] || [ top | center | bottom ] ] </td>
+      <td><p><strong>top:</strong> Equivalente a '0%' do posicionamento vertical<br />
+          <strong>right:</strong> Equivalente a '100%' do posicionamento horizontal<br />
+          <strong>bottom:</strong> Equivalente a '100%' do posicionamento vertical<br />
+          <strong>left:</strong> Equivalente a '0%' do posicionamento horizontal.	<br />					
+          <strong>center:</strong> Equivalente a '50%' do posicionamento horizontal ou '50%' do posicionamento vertical</p>
+      <p>Exemplo:<br />
+      <code>body {background-position: right top; }<br />
+			body {background-position: 100% 0; }</code></p></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>background</code></td>
+      <td>Atalho para definir de uma só vez todas as propriedades de imagem de fundo</td>
+      <td>[ &lt;background-color&gt; || &lt;background-image&gt; || &lt;background-repeat&gt; || &lt;background-attachment&gt; || &lt;background-position&gt; ]</td>
+      <td>Exemplo:<br />
+        <code>e {background: red url("chess.png")<br />repeat-x fixed 50% right; }</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-paginacao">Paginação para impressão</h2>
+<table>
+  <caption>Módulo de paginação para impressão</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>page-break-before</code></td>
+      <td>Define quebra de página antes do elemento</td>
+      <td>[ <strong>auto</strong> | always | avoid | left | right ]</td>
+      <td><strong>auto:</strong> insere quebra de página somente se necessário<br />
+        <strong>always:</strong> sempre insere quebra de página antes do elemento<br />
+        <strong>avoid:</strong> evita inserir quebra de página antes do elemento<br />
+        <strong>left:</strong> insere uma ou duas quebras de páginas antes do elemento, de modo que a página gerada seja uma página par<br />
+        <strong>right:</strong> insere uma ou duas quebras de páginas antes do elemento, de modo que a página gerada seja uma página ímpar<br /><br />
+      Exemplo: <code>e {page-break-before: always; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>page-break-after</code></td>
+      <td>Define quebra de página após o elemento</td>
+      <td>[ <strong>auto</strong> | always | avoid | left | right ]</td>
+      <td><strong>auto:</strong> insere quebra de página somente se necessário<br />
+        <strong>always:</strong> sempre insere quebra de página após o elemento<br />
+        <strong>avoid:</strong> evita inserir quebra de página após o elemento<br />
+        <strong>left:</strong> insere uma ou duas quebras de páginas após o elemento, de modo que a página gerada seja uma página par<br />
+        <strong>right:</strong> insere uma ou duas quebras de páginas após o elemento, de modo que a página gerada seja uma página ímpar<br /><br />
+		Exemplo: <code>e {page-break-after: always; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>page-break-inside</code></td>
+      <td>Define ou evita quebra de páginas dentro de um elemento</td>
+      <td>[ avoid | <strong>auto</strong> ]</td>
+      <td><strong>auto:</strong> insere quebra de página somente se necessário
+		<strong>avoid:</strong> evita inserir quebra de página dentro do elemento
+      	Exemplo:<br />
+        <code>e {page-break-inside: avoid; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>orphans</code></td>
+      <td>Número mínimo de linhas antes da quebra de um parágrafo que pode aparecer no final de uma página</td>
+      <td>&lt;número inteiro&gt;</td>
+      <td>Somente valores positivos são permitidos<br /><br />
+      Exemplo:<br />
+      <code>e {orphans: 2; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>widows</code></td>
+      <td>Número mínimo de linhas após a quebra de um parágrafo que pode aparecer no início de uma página</td>
+      <td>&lt;número inteiro&gt;</td>
+      <td>Somente valores positivos são permitidos<br /><br />
+      Exemplo:<br />
+      <code>e {widows: 2; }</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-fontes">Fontes tipográficas</h2>
+<table>
+  <caption>Módulo de fontes tipográficas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>font-family</code></td>
+      <td>Família(s) de fontes</td>
+      <td>[ [ &lt;nome-fonte&gt; | &lt;família-genérica&gt; ] [, &lt;nome-fonte&gt; | &lt;família-genérica&gt; ]* ]</td>
+      <td>As seguintes famílias-genéricas de fontes são definidas em CSS2.1:
+      <ul>
+		<li>'serif'</li>
+		<li>'sans-serif' </li>
+		<li>'cursive'</li> 
+		<li>'fantasy'</li>
+		<li>'monospace'</li>
+      </ul>
+      Exemplo: <code>e {font-family: "New Century Schoolbook", serif; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>font-style</code></td>
+      <td>Estilo utilizado na fonte</td>
+      <td>[ <strong>normal</strong> | italic | oblique ]</td>
+      <td><strong>normal:</strong> fonte do elemento sem efeito itálico ou oblíquo<br />
+        <strong>italic:</strong> fonte do elemento com efeito itálico<br />
+        <strong>oblique:</strong> fonte do elemento com efeito oblíquo<br /><br />
+
+      	Exemplo:<br />
+        <code>e {font-style: italic; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>font-variant</code></td>
+      <td>Exibe o texto em pequena caixa-alta (versalete) ou fonte normal</td>
+      <td>[ <strong>normal</strong> | small-caps ]</td>
+      <td><strong>normal:</strong> fonte do elemento sem efeito de capitalização
+		<strong>small-caps:</strong> fonte do elemento com efeito de pequena caixa alta (versalete)<br /><br />
+      Exemplo:<br />
+      <code>e {font-variant: small-caps; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>font-weight</code></td>
+      <td>Peso da fonte</td>
+      <td>[ <strong>normal</strong> | bold | bolder | lighter | 100 | 200 | 300 | <strong>400</strong> | 500 | 600 | 700 | 800 | 900 ]</td>
+      <td><strong>normal: </strong>fonte do elemento com efeito padrão de peso (corresponde ao valor 400)<br />
+        <strong>bold:</strong> fonte do elemento com efeito de negrito (corresponde ao valor 700)<br />
+        <strong>bolder:</strong> fonte do elemento com o valor de peso imediatamente superior ao do valor herdado (p.ex: de 400 para 500)<br />
+        <strong>lighter:</strong> fonte do elemento com o valor de peso imediatamente inferior ao do valor herdado (p.ex: de 400 para 300)<br /><br />
+      Exemplo:<br />
+      <code>e {font-weight: bold; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>font-size</code></td>
+      <td>Tamanho da fonte </td>
+      <td>[ [ xx-small | x-small | small | <strong>medium</strong> | large | x-large | xx-large] | [larger | smaller] | &lt;tamanho&gt; | &lt;porcentagem&gt; ]</td>
+      <td><strong>medium:</strong> fonte do elemento com valor padrão de tamanho e equivalente ao padrão do browser. Os demais valores ( xx-small | x-small | small | large | x-large | xx-large) são calculados pelo browser considerando esse valor 'medium'.<br />
+    <strong>larger | smaller:</strong> aumenta ou diminui o tamanho em relação ao valor herdado.<br />
+    <strong>tamanho:</strong> valor absoluto. Não são permitidos valores negativos.<br />
+    <strong>porcentagem:</strong> porcentagem do tamanho do valor herdado.<br /><br />
+      Exemplo:<br />
+      <code>
+e {font-size: 90%; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>font</code></td>
+      <td>Atalho para definir de uma só vez todas as propriedades de fonte</td>
+      <td>[ [ [ &lt;font-style&gt; || &lt;font-variant&gt; || &lt;font-weight&gt; ]? &lt;font-size&gt; [ / &lt;line-height&gt; ]? &lt;font-family&gt; ] | caption | icon | menu | message-box | small-caption | status-bar ]</td>
+      <td>Além dos valores para as propriedades de estilo, variação, peso, tamanho, altura da linha e família, pode-se utilizar os seguintes, 
+de acordo com o ambiente do usuário:<br /><br />
+        
+        <strong>caption:</strong> fonte utilizada por controles com legenda (ex.: botões, drop-downs, etc.)<br />
+        <strong>icon:</strong> fonte utilizada em ícones<br />
+        <strong>menu:</strong> fonte utilizada em menus do sistema (ex.: dropdown menus e menus suspensos)<br />
+        <strong>message-box:</strong> fonte utilizada em caixas de diálogo.<br />
+        <strong>small-caption:</strong> fonte utilizada em controles com legenda reduzida<br />
+        <strong>status-bar:</strong> fonte utiliza em barra de status das janelas<br /><br />
+      Exemplo:<br />
+      <code>e {font: 300 italic 1.3em/1.7em "Helvetica", sans-serif; }</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-texto">Texto</h2>
+<table>
+  <caption>Módulo de texto</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>text-indent</code></td>
+      <td>Recuo à esquerda da primeira linha em um bloco de texto</td>
+      <td>[ &lt;tamanho&gt; | &lt;porcentagem&gt; ]</td>
+      <td>Exemplo: <br />
+      <code>e {text-indent: 3em; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>text-align</code></td>
+      <td>Alinhamento do texto</td>
+      <td>[ <strong>left</strong> | right | center | justify ]</td>
+      <td><strong>left:</strong> alinhamento do texto à esquerda<br />
+        <strong>right:</strong> alinhamento do texto à direita<br />
+        <strong>center:</strong> alinhamento do texto centralizado<br />
+        <strong>justify:</strong> alinhamento do texto justificado<br /><br />
+
+      	Exemplo:<br />
+        <code>e {text-align: center; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>text-decoration</code></td>
+      <td>Efeitos decorativos no texto como sublinhado, tachado, linha acima e piscante</td>
+      <td>[ <strong>none</strong> | [ underline || overline || line-through || blink ] ]</td>
+      <td><strong>none:</strong> não produz decoração no texto do elemento<br />
+        <strong>underline:</strong> cada linha de texto do elemento terá uma linha abaixo (sublinhado)<br />
+        <strong>overline:</strong> cada linha de texto do elemento terá uma linha acima<br />
+        <strong>line-through:</strong> cada linha de texto do elemento terá uma linha cortando-o ao meio (tachado)<br />
+        <strong>blink:</strong> textos piscantes alternadamente entre visíveis e não visíveis<br /><br />
+      Exemplo:<br />
+      <code>e {text-decoration: underline; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>letter-spacing</code></td>
+      <td>Espaçamento entre caracteres</td>
+      <td>[ <strong>normal</strong> | &lt;tamanho&gt; ]</td>
+      <td>Exemplo:<br />
+      <code>e {letter-spacing: 0.1em; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>word-spacing</code></td>
+      <td>Espaçamento entre palavras</td>
+      <td>[ <strong>normal</strong> | &lt;tamanho&gt; ]</td>
+      <td>Exemplo:<br />
+      <code>e {word-spacing: 1em; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>text-transform</code></td>
+      <td>Transforma o texto em maiúsculas/minúsculas</td>
+      <td>[ capitalize | uppercase | lowercase | <strong>none</strong> ]</td>
+      <td><strong>capitalize:</strong> coloca o primeiro caracter de cada palavra do elemento em maiúsculas (caixa alta)<br />
+        <strong>uppercase:</strong> coloca todos os caracteres de cada palavra do elemento em maiúsculas (caixa alta)<br />
+        <strong>lowercase</strong>: coloca todos os caracteres de cada palavra do elemento em minúsculas (caixa baixa)<br />
+        <strong>none:</strong> não aplica efeitos de capitalização<br /><br />
+      Exemplo:<br />
+      <code>e {text-transform: capitalize; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>white-space</code></td>
+      <td>Definições sobre espaços em branco num determinado elemento</td>
+      <td>[ <strong>normal</strong> | pre | nowrap | pre-wrap | pre-line ]</td>
+      <td><strong>normal:</strong> utiliza a configuração padrão do browser para espaçamentos em branco<br />
+        <strong>pre:</strong> todos os espaços em branco presentes no código fonte serão exibidos no elemento<br />
+        <strong>nowrap:</strong> os espaços em branco serão tratados como 'normal', mas as quebras de linha serão suprimidas<br />
+        <strong>pre-wrap:</strong> todos os espaços em branco contantes no código-fonte serão exibidos no elemento<br />
+        <strong>pre-line:</strong> os espaços em branco serão tratados como normal. <br /><br />
+      Exemplo:<br />
+      <code>e {white-space: pre; }</code></td>
+    </tr>
+</tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-tabelas">Tabelas</h2>
+<table>
+  <caption>Módulo de tabelas</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>caption-side</code></td>
+      <td>Posicionamento do título em relação à tabela</td>
+      <td>[ <strong>top</strong> | bottom ]</td>
+      <td><strong>top:</strong> Posicionamento do título antes da área da tabela<br />
+		<strong>bottom:</strong> Posicionamento do título abaixo da área da tabela<br /><br />
+      Exemplo: <br />
+      <code>e {caption-side: bottom; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>table-layout</code></td>
+      <td>Define o algoritmo usado para a renderização da tabela</td>
+      <td>[ <strong>auto</strong> | fixed ]</td>
+      <td><strong>auto:</strong> utiliza algum algoritmo de leiaute automático.<br />
+		<strong>fixed:</strong> utiliza algoritmo de leiaute fixo.<br /><br />
+
+      	Exemplo:<br />
+        <code>table {table-layout: fixed; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>border-collapse</code></td>
+      <td>Seleciona o modelo de bordas a ser utilizado</td>
+      <td>[ collapse | <strong>separate</strong> ]</td>
+      <td><strong>separate:</strong> as bordas serão renderizadas para cada célula, dado a impressão de linha dupla
+		<strong>collapse:</strong> as bordas das células serão mescladas, dando a impressão de uma única linha<br /><br />
+      Exemplo:<br />
+      <code>table {border-collapse: collapse; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>border-spacing</code></td>
+      <td>Distância entre as bordas de células adjacentes (quando 'border-collapse=separated')</td>
+      <td>&lt;tamanho&gt; &lt;tamanho&gt;?</td>
+      <td>Exemplo:<br />
+      <code>table {border-spacing: 15pt; }<br />
+	  table {border-spacing: 10pt 5pt; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>empty-cells</code></td>
+      <td>Visibilidade das bordas de células sem conteúdo</td>
+      <td>[ <strong>show</strong> | hide ]</td>
+      <td><strong>show:</strong> exibe as células vazias da tabela<br />
+		<strong>hide:</strong> não exibe as células vazias da tabela<br /><br />
+		Exemplo:<br />
+      <code>table {empty-cells: hide; }</code></td>
+    </tr>
+    </tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+
+<h2 id="mod-interface">Interface de usuário</h2>
+<table>
+  <caption>Módulo de interface de usuário</caption>
+  <thead>
+    <tr>
+      <th class="elemento" scope="col">Propriedade</th>
+      <th class="semantica" scope="col">Descrição</th>
+      <th class="atributos" scope="col">Valores</th>
+      <th class="atributos" scope="col">Descrição / Exemplos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="impar">
+      <td scope="row"><code>cursor</code></td>
+      <td>Especifica o cursor</td>
+      <td>[ [http://.../cursor.ico,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ]</td>
+      <td>Exemplo: <br />
+      <code>e {cursor:help; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>outline-width</code></td>
+      <td>Largura da linha de contorno</td>
+      <td>&lt;border-width&gt;</td>
+      <td>Aceita os mesmos valores de 'border-width'<br /><br />
+
+      	Exemplo:<br />
+        <code>e {outline-width: thin; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>outline-style</code></td>
+      <td>Estilo da linha de contorno</td>
+      <td>&lt;border-style&gt;</td>
+      <td>Aceita os mesmos valores de 'border-style'<br /><br />
+      Exemplo:<br />
+      <code>e {outline-style: dotted; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>outline-color</code></td>
+      <td>Cor da linha de contorno</td>
+      <td>[ &lt;color&gt; | <strong>invert</strong> ]</td>
+      <td><strong>color:</strong> valor correspondente a uma cor<br />
+		<strong>invert:</strong> cor inversa à área do elemento (prática comum para tornar o 'focus' visível)<br /><br />
+      Exemplo:<br />
+      <code>e {outline-color: #f00; }</code></td>
+    </tr>
+    <tr class="impar">
+      <td scope="row"><code>outline</code></td>
+      <td>Atalho para definir de uma só vez todas as propriedades de outline</td>
+      <td>[ &lt;outline-color&gt; || &lt;outline-style&gt; || &lt;outline-width&gt; ]</td>
+      <td>
+		Exemplo:<br />
+      <code>active {outline: black dotted thick; }</code></td>
+    </tr>
+    <tr>
+      <td scope="row"><code>speak-header</code></td>
+      <td>(Aural) Freqüência em que os 'headers' da tabela serão pronunciados. Utilizado quando 'media=speech'</td>
+      <td>[ <strong>once</strong> | always ]</td>
+      <td><strong>once:</strong> Os títulos de tabelas serão 'falados' uma vez, antes da série de células<br />
+		<strong>always:</strong> Os títulos de tabelas serão 'falados' sempre que ocorrer uma célula pertinente<br /><br />
+      Exemplo:<br />
+      <code>e {speak-header: always; }</code></td>
+    </tr>
+    </tbody>
+</table>
+<p><em>Obs.: Valores <strong>em negrito</strong> são os adotados como padrão</em></p>
+
+<hr class="referencias"/>
+<ul id="referencias">
+  <li><a href="http://www.w3.org/TR/CSS21/" hreflang="en-us" title="Acesso a especificação CSS 2.1">Especificação CSS 2.1</a></li>
+  <li><a href="http://www.w3c.br/divulgacao/pdf/guia-css-w3cbr.pdf" title="Download da versão em PDF">Download da versão em PDF</a></li>
+  <li><a href="http://www.w3c.br/" title="Página principal do W3C Escritório Brasil">W3C Escritório Brasil</a></li>
+</ul>
+
+<hr/>
+<div id="piepagina">
+<a id="piepg" class="invisible">fim da página</a>
+
+<address>
+<a href="http://www.nic.br/"><img src="../../../img/logo-nic-sm.gif" alt="NIC.br - Núcleo de Informação e Coordenação do Ponto br" title="NIC.br - Núcleo de Informação e Coordenação do Ponto br"/></a>
+<a href="http://validator.w3.org/check?uri=referer"><img src="../../../img/valid-xhtml10.png" alt="Válido XHTML 1.0!" /></a>
+<span class="whiteout">|</span> <a href="http://jigsaw.w3.org/css-validator/"><img src="../../../img/valid-css.png" alt="Válido CSS!" /></a>
+</address>
+
+
+<p class="small">Webmaster · Última atualização: 25/08/2009 13:00PM</p>
+
+<p class="copyright">
+<a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2004-2008 <a href="http://www.w3.org/">W3C</a>® (<a href="http://www.csail.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>, <a href="http://www.keio.ac.jp/">Keio</a>), Todos os direitos reservados.  Aplicam-se as normas para <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">responsabilidade</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">marcas  registradas</a>, <a href="http://www.w3.org/Consortium/Legal/copyright-documents">uso de  documentos</a> e <a href="http://www.w3.org/Consortium/Legal/copyright-software">licença de  software</a> do W3C. Sua interação com este site seguirá nossas  especificações de privacidade para o <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">público</a> e para <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">filiados</a>.
+
+</p>
+</div>
+
+</body>
+</html>

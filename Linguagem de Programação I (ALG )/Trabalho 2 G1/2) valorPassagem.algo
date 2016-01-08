@@ -1,0 +1,48 @@
+/* 2. Escrever um algoritmo que receba como entrada o destino de um passageiro (conforme tabela
+abaixo), se a viagem inclui retorno (ida e volta), calcule e informe o preço da passagem a ser
+adquirida (Adaptado de Lopes & Garcia, 2002): */
+
+algoritmo valorPassagem
+var
+	caracter destino, retorno;
+	real valor;
+	
+inicio
+	escreva("Escolha e digite a região de destino: Norte, Nordeste, Centro-Oeste ou Sul");
+	leia(destino);
+	escreva("Digite 1 para incluir o retorno ou deixe em branco para não incluir retorno:");
+	leia(retorno);
+	se (destino=="norte") entao
+		inicio
+			valor=500.00;
+			se (retorno=="1") entao
+				inicio
+					valor=valor+400.00;
+				fim
+		fim
+	senao se (destino=="nordeste") entao
+		inicio
+			valor=350.00;
+			se (retorno=="1") entao
+				inicio
+					valor=valor+300.00;
+				fim
+		fim
+	senao se (destino=="centro-oeste") entao
+		inicio
+			valor=350.00;
+			se (retorno=="1") entao
+				inicio
+					valor=valor+200.00;
+				fim
+		fim
+	senao se (destino=="sul") entao
+		inicio
+			valor=300.00;
+			se (retorno=="1") entao
+				inicio
+					valor=valor+250.00;
+				fim
+		fim
+	escreva("O valor da sua passagem é R$:",valor);
+fim

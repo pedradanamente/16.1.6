@@ -1,0 +1,121 @@
+/* CSS TAG 			 *
+----------------------
+************** */
+body {
+	background-color:#EEE;
+	margin:0px;
+	font-family:Arial;
+	font-size:13px;
+}
+a:link {
+	text-decoration:none;
+}
+/* CSS ID 			 *
+----------------------
+************** */
+#fixado {
+	position:fixed;
+	margin-top:-40px;
+	height:40px;
+	width:100%;
+	background-color:#CCC;
+	border-bottom:1px solid gray;
+}
+#base {
+	width:868px;
+	margin:40px auto 0px auto;
+	padding:15px;
+	border-right:1px solid gray;
+	border-left:1px solid gray;
+	border-bottom:1px solid gray;
+}
+#conteudo {
+	float:left;
+	width:700px;
+	min-height:400px;
+}
+#rodape {
+	border-top:1px solid gray;
+	clear:both;
+	text-align:center;
+	padding:15px 0 15px 0;
+	color:#000;
+}
+#right {
+	float:right;
+	width:150px;
+}
+/* CSS CLASSE 	 *
+----------------------
+************** */
+.fl { float:left; }
+.fr { float:right; }
+
+/* TOPO                                    *
+************************ */
+.topo {
+	margin:0 auto;
+	width:900px;
+}
+.topo ul {
+	margin:0px;
+	padding:0px;
+}
+.topo li {
+	float:left;
+	font-family:Arial;
+	letter-spacing:1px;
+	list-style-type:none;
+}
+.topo li:hover {
+	background-color:#FFF;
+}
+.topo div {
+	padding-right:30px;
+	height:30px;
+	padding-top:10px;
+}
+.topo a:link {
+	color:#000;
+}
+.topo a:visited {
+	color:#000;
+}
+
+/* MENU DIREITA                       *
+************************ */
+.menu {
+	margin-bottom:15px;
+}
+.menu div {
+	padding-left:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	height:100%;
+}
+.menu ul {
+	margin:0px;
+	padding:0px;
+	border:1px solid gray;
+}
+.menu li {
+	font-family:Tahoma;
+	list-style-type:none;
+	background-color:#CCC;
+}
+.menu li:hover {
+	background-color:white;
+}
+.menu a:link {
+	color:#000;
+}
+.menu a:visited {
+	color:#000;
+}
+
+/* Details                         *
+******************* */
+.details {
+	display:none;
+	clear:both;
+}

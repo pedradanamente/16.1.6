@@ -1,0 +1,38 @@
+AULA 26.03
+
+-Comando USE <BD>
+-Comando IF EXISTS() DROP TABLE
+-Selecionar alunos que tenham nota de G1 ou G2 acima da média
+	AND / OR
+-Selecionar alunos que moram em cidade que inicie com 'CA' ou que tenham parte do nome com 'marc'
+	LIKE
+-Exibir as cidades dos alunos sendo que não deve repetir os nomes
+	DISTINCT
+-Selecionar alunos que tenham tido notas: 5, 6, 7, 8, 9, 10
+	IN (NOT IN)
+-NOT BETWEEN / IN
+
+-Selecionar menor nota de G1: 
+	SELECT MIN(G1) FROM ALUNO
+-Selecionar maior nota de G1:
+	SELECT MAX(G1) FROM ALUNO
+-Selecionar somas das notas de G1
+	SELECT SUM(G1) FROM ALUNO
+-Selecionar médias das notas de G1
+	SELECT AVG(G1) FROM ALUNO
+-Selecionar total de notas de G1 maior que 6
+	SELECT COUNT(G1) FROM ALUNO WHERE G1 > 6
+
+-Exibir nome e menor nota
+	SELECT NOME, G1 FROM ALUNO WHERE G1 = (SELECT MIN(G1) FROM ALUNO)
+
+-Selecionar alunos que realizaram a prova de G1 em abril
+	SELECT * FROM ALUNOS WHERE MONTH(DATA_PROVA_G1)=4 --MES
+	SELECT * FROM ALUNOS WHERE DAY(DATA_PROVA_G1)=5 --DIA
+	SELECT * FROM ALUNOS WHERE YEAR(DATA_PROVA_G1)=2012 --ANO
+	
+-Selecionar alunos que tenham parte do nome com 'MA'
+	SELECT * FROM ALUNO WHERE NOME LIKE '%MA%'
+	
+-Selecionar nome com distinção de semelhantes
+	SELECT DISTINCT(NOME) FROM ALUNO

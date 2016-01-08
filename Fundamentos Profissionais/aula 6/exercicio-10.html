@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+		<meta name="author" content="André S Machado" />
+		<meta name="description" content="Formulário 2 - Avaliação" />
+		<meta name="keywords" content="aula, fundamentos, profissionais, arquivo, modelo, exercicio, formulario" />
+		<title>Exercício nº 10</title>
+	</head>
+	<body>
+		
+		<form action="" enctype="multipart/form-data">
+		
+			<fieldset>
+				<legend>Dados Pessoais</legend>
+				<br/>
+				<table border="0">
+					<tr>
+						<td>Nome:</td>	<td><input type="text" name="nome" maxlength="255" /></td>
+					</tr>
+					<tr>
+						<td>E-mail:</td>	<td><input type="text" name="email" maxlength="255" /></td>
+					</tr>
+				</table>
+				<br/>
+				<table border="0">
+					<tr><td>Em que moeda prefere receber seu salário:</td></tr>
+					<tr><td><label><input type="radio" name="moeda" value="real" /> Real</label></td></tr>
+					<tr><td><label><input type="radio" name="moeda" value="dolar" /> Dolar</label></td></tr>
+					<tr><td><label><input type="radio" name="moeda" value="euro" /> Euro</label></td></tr>
+					<tr><td><label><input type="radio" name="moeda" value="yen" /> Yen</label></td></tr>
+				</table>
+				<br/>
+				<label>Anexar currículo: <input type="file" /></label>
+				<br/><br/>
+				<table border="0">
+					<tr>
+						<td>Seus times favoritos?</td>
+					</tr>
+					<tr>
+						<td>
+							<select name="times" size="4px" multiple="multiple">
+								<option value="inter">Internacional</option>
+								<option value="gremio">Grêmio</option>
+								<option value="caxias">Caxias</option>
+								<option value="juventude">Juventude</option>
+								<option value="botafogo">Botafogo</option>
+								<option value="corintians">Corintians</option>
+								<option value="cachoeira">Cachoeira</option>
+								<option value="palmeiras">Palmeiras</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Outro(s) time(s)? Qual(is)?</td>
+						<td><input type="text" name="timesOutro" /></td>
+					</tr>
+				</table>
+				
+				<p>Gostaria de fazer comentários?</p>
+				<textarea cols="100" rows="6" name="comentario">Faça seu comentário aqui</textarea> 
+			</fieldset>
+			<p><input type="submit" name="enviar" value="Enviar" /><input type="reset" name="limpar" value="Limpar" /></p>
+			
+		</form>
+		
+	</body>
+</html>

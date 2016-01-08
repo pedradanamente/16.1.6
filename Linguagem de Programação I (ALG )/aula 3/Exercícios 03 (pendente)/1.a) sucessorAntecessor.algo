@@ -1,0 +1,15 @@
+/* a) Escreva um algorítmo que leia um numero inteiro e imprima seu sucessor e antecessor.
+============================================================================== */
+
+algoritmo sucessorAntecessor
+var
+	inteiro	numero, numeroSucessor, numeroAntecessor;
+
+inicio
+	escreva("Digite um numero:");
+	leia(numero);
+	numeroSucessor=(numero++);
+	numeroAntecessor=(numero--);
+	escreva("Numero sucessor é:",numeroSucessor);
+	escreva("Numero antecessor é:",numeroAntecessor);
+fim

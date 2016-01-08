@@ -1,0 +1,15 @@
+algoritmo verificaSenha
+var
+	inteiro senha, senhaValida;
+
+inicio
+	senhaValida=123;
+	escreva("Digite sua senha:");
+	leia(senha);
+	enquanto (senha != senhaValida) faça
+	inicio
+		escreva("Senha incorreta! Digite novamente a senha:");
+		leia(senha);
+	fim
+	escreva("Senha OK");
+fim

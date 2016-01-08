@@ -1,0 +1,10 @@
+or = entre (select)
+and = valores diretos (select)
+
+alterar formato data /comando/ -> Set Dateformat Dmy;
+					update...
+
+
+UPDATE ALUNO SET G1='7.0', DATA_PROVA_G1='20/03/2012'
+
+SELECT MIN(G1) FROM ALUNO <- PROCURAR MENOR NOTA

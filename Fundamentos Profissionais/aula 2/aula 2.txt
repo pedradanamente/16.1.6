@@ -1,0 +1,244 @@
+#######################################################
+RESUMO AULA 1
+
+HTML -> Hypertexto
+
+Url -> 
+HTTP: Protocolo
+Dominio: Nome do servidor
+arquivo.html: Nome do arquivo
+
+DNS -> Tradução do nome do endereço em formato caracter para o ip do endereço
+
+HTTP -> Responsavel por fazer a comunicação entre cliente x servidor
+
+#######################################################
+
+xhtml: é considerado uma evolução do html, Hypertext Markup Language
+Porem vem sendo substituido pelo HTML5
+
+Hoje quando falamos HTML, estamos nos referindo ao xhtml
+
+No inicio, antes do xhtml, o html era confuso por ser tudo por conta dele,
+por ter difersas informações junto com a formatação, javascript,
+tudo integrado ao código
+
+Ja o xhtml traz uma ideia do desenvolvimento em camadas, 
+por que separa a estrutura do site/pagina em um arquivo
+
+(X)HTML -> Estrutura / Conteudo
+* CSS -> Estilos
+* JavaScript -> Funcoes de comportamento
+
+No html, nao existia esta separacao, era tudo feito dentro da pagina, sem uso de estilos css e javascript que são outras tecnologias
+em arquivos separados, deixando de estar no mesmo arquivo como o html
+
+eXtensible Hypertext Markup Language
+VANTAGENS:
+
+1- Mais limpo em relacao ao html
+
+é uma linguagem de marcacao e nao de programacao
+
+é um arquivo de extencao htm ou html
+
+é indicado nomes minusculos e sem espacamentos, como todos os demais conteudos, imagens, scripts, pastas, ...
+
+#######################################################
+O elemento HTML é constituido por 3 partes:
+
+MARCADOS ou TAG
+Inicio
+Conteudo
+Final
+
+Inicio, conteudo e fim: <p>CONTEUDO</p>
+
+Inicio -> ABERTURA DA TAG <p> sao constituidas pelo simbolo de "<" e ">" mais uma palavra reservada,: (p, form, img, etc)
+
+Conteudo -> CONTEUDO 
+
+Fim -> Fecha tag </p>
+#######################################################
+
+Exemplos de marcadores de inicio:
+
+<p>
+<a>
+
+Além disso, alguns elementos tem atributos que personalizam as caracteristicas
+
+<a href="pagina2.html"> Ir para pagina 2 </a>
+href é um atributo de onde vai enviar o usuario, caminho do arquivo
+
+<img src="arquivo.jpg">
+src é um atributo da localizacao da imagem
+
+<div id="">
+div é um bloco de texto que pode ter o atributo id mostrando o que identifica o div para capturar suas caracteristicas a partir do id
+
+#######################################################
+
+Exemplo de marcadores de conteudo:
+
+é o que vai aparecer, pode ser escrito de qualquer forma
+
+#######################################################
+
+Exemplo de final:
+
+Representa que esta encerrando o elemento, fechando a tag
+
+</a>
+</p>
+</table>
+
+#######################################################
+
+CARACTERISTICAS DO XHTML
+
+Ele apresenta algumas caracteristicas que eram permitidas e agora deixaram de ser permitidas
+
+* Os elementos tem que ser alinhados, um tem que ficar dentro do outro
+
+Errado:
+<b><i>CONTEUDO</b></i>
+
+Certo:
+<b><i>CONTEUDO<i></b>
+
+Tags devem ser fechadas conforme foram abertas,
+Primeiras sao as ultimas a serem fechadas ...
+
+* Seus elementos devem ser sempre fechados
+<p>Isto é um paragrafo
+<p>Isto é outro paragrafo
+
+Falta fechar os paragrafos
+
+<p>Paragrafo1</p>
+<p>Paragrafo2</p>
+
+Preferencialmente devem conter marcador de fim
+
+Nem todas as tags vao ter
+Exemplo: <br> 
+
+Nao é: <br> </br>
+Correto: <br/>
+
+Outro exemplo para hr:
+<hr/>
+
+* Forma correta escrever elementos de TAG e ATRIBUTOS de letra minuscula
+
+Errado: <table WIDTH="100%">
+Certo:  <table width="100%">
+
+
+Valores dos ATRIBUTOS devem estar sempre entre ASPAS ""
+
+E o = que esta atribuindo o valor ao atributo
+
+
+* Minimização´de atributos é proibido
+Errado: <input checked> <input readonly> <option selected>
+No html antigo era permitido
+
+Correto: <input checked=""checked"> <input readonly="readonly">
+
+
+#######################################################
+
+Estrutura da tag HTML Inicio ao Fim
+
+è montada da seguinte Forma:
+
+<html>
+<!-- Inicio do Html -->
+<head>
+<!-- cabeçalho -->
+<title>titulo</title>
+
+<body>
+<!-- Inicio do Corpo -->
+<!-- Aqui vai tudo que é apresentado ao usuario final -->
+</body>
+
+<!-- Fecha o html -->
+</html>
+#######################################################
+
+Ja no XHTML
+Tem o trecho do codigo <!DOCTYPE html> //HTML5
+
+#######################################################
+
+Doctype = Definicao dada pelo documento, que indica ao navegador que tipo de xhtml, para auxiliar o navegador a interpletar,
+
+o navegador pode interpletar sozinho, mas com isso nao ocorre erro e é mais otimizado
+
+Existem 3
+
+A mais usada é Strict, a segunda Transacional, e a Frameset
+
+1- XHTML 1.0 Strict
+Possui todos elementos e atributos HTML, mas nao inclui elementos de apresentacao ou obsoletos, como fonte, nao permite frameset
+Onde voce definia o tamanho da fonte <font-size> dentro do html,
+Ele nao permite este tipo de coisa
+
+Nao permite os frames que sao as paginas divididas
+
+
+2- XHTML 1.0 Transacional
+Permite o que o Strict nao permite, mas nao permite os frames
+
+
+3- Frameset possui todos atributos do Transacional, e alem disso permite a utilizacao dos frames também
+
+
+------------
+Nós vamos utilizar o strict ...
+------------
+
+<ul> ABRIR UMA LISTA
+<li> Informacao nova dentro da lista
+
+Lista pode ser com a bolinha ou com numeracao 1, 2, 3
+#######################################################
+
+Falando do <head>
+-> Cabeçalho
+
+Diversas informacoes necessarias/importantes para o html
+
+é no cabeçalho definido 
+- titulo
+- meta tags: contem informacoes relativas ao documento como as palavras chaves para os mecanismo de busca
+- autor
+- descricao da pagina
+- tempo de atualizacao automatica
+- entre outras
+
+#######################################################
+
+TITULOS
+Existem 6 niveis
+
+<h1> <h2> <h3> <h4> <h5> <h6>
+
+#######################################################
+
+Tags de formatação permitidas para xhtml
+
+Negrito
+<b> </b> -> NAO
+<strong> </strong> -> Sim
+
+Italico
+<i> </i> -> NAO
+<em> <em> -> Sim
+
+#######################################################
+
+

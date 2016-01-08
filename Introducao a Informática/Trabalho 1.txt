@@ -1,0 +1,48 @@
+Trabalho de Introdução a Informática
+AULA: 03
+Professor: Márcio Puntel
+Instituição: Ulbra
+Curso: Sistemas de Informação
+Tipo de alerta: Máximo
+
+Arquitetura e Organização do Modelo Von Newmann
+- Entender o que ele fez
+- O que foi arquitetura e organização
+- O que ele propôes
+- O que tinha de problemas e de bom
+- Ajudou a evoluir, não ajudou
+- Acho que se tal modelo de um mesmo pesquisador da epoca evoluiu melhor
+
+PESQUISAR E CRIAR UMA RESENHA
+
+- Mínimo de 30 linhas
+- Enviar até dia 13/03
+
+e-mail para entregar: marcio.puntel@ulbra.edu.br
+
+
+// Observações:
+
+Hardware
+- Peças
+- Periféricos
+- Componentes
+- Eletrônica
+- Processamento
+- Armazenamento
+
+Peopleware
+- Quem faz
+- Quem usa
+- Experiência
+- Processos
+- Know how
+- Necessidades
+- Produtividade
+
+Software
+- Codigo
+- Logico
+- Regras
+- Integracao
+- Automação
